@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "streetKart",
+			"Path": "D:\\Actual Shit\\dev\\Projects\\StreetKart\\streetKart\\Source\\streetKart.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "streetKartEditor",
+			"Path": "D:\\Actual Shit\\dev\\Projects\\StreetKart\\streetKart\\Source\\streetKartEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
