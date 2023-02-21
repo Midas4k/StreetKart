@@ -5,7 +5,27 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "MasterVehicle.generated.h"
+USTRUCT(BlueprintType)
+struct FSuspensionStruct
+{
+	GENERATED_BODY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float RestLength;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float Travel;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float Stiffness;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float Damper;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float ForceMin;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float ForceMax;
+	
+};
 
+USTRUCT(BlueprintType)
+struct FWheelStruct
+{
+	GENERATED_BODY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float Radius;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float Mass;
+	
+};
 UCLASS()
 class STREETKART_API AMasterVehicle : public APawn
 {
@@ -14,10 +34,18 @@ class STREETKART_API AMasterVehicle : public APawn
 public:
 	// Sets default values for this pawn's properties
 	AMasterVehicle();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) FSuspensionStruct SuspensionStruct;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) FWheelStruct WheelStruct;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	virtual void RaycastInit();
+	virtual void SuspensionInit();
+	virtual void RayCast(float dt);
+	virtual void UpdateSuspension();
+	virtual void GetSuspensionForce(float dt);
+	virtual void ApplySuspensionForce();
 #pragma region Mesh Components
 	UPROPERTY(VisibleDefaultsOnly, Category=Default)
 	USceneComponent* VehicleRoot;
@@ -87,7 +115,19 @@ protected:
   
 #pragma endregion Mesh Components
   
-    
+    //USceneComponent* TopLinkArray[4];
+	//TArray<USceneComponent*> TopLinksArray;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)TArray<USceneComponent*>TopLinksArray;
+	TArray<bool> WheelContact;
+	TArray<FHitResult> HitResults;
+	float RayLengths[4];
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)TArray<float>SusLengths;
+	TArray<float>Fz;
+	float LastSusLengths[4];
+	
+	
+	UPROPERTY(EditAnywhere, Category="Collision")
+	TEnumAsByte<ECollisionChannel> TraceChannelProperty = ECC_Pawn;
 
 public:
 	//Variables (public)

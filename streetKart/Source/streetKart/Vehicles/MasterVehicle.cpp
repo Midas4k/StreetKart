@@ -3,6 +3,8 @@
 
 #include "MasterVehicle.h"
 
+#include <string>
+
 // Sets default values
 AMasterVehicle::AMasterVehicle()
 {
@@ -10,15 +12,18 @@ AMasterVehicle::AMasterVehicle()
 	PrimaryActorTick.bCanEverTick = true;
 
 #pragma region Create Defaults
+	/*
 	VehicleRoot = CreateDefaultSubobject<USceneComponent>(TEXT("Vehicle Root"));
 	VehicleRoot->SetMobility(EComponentMobility::Movable);
 	SetRootComponent(VehicleRoot);
+	*/
 	
 	VehicleHullMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Vehicle Body"));
 	VehicleHullMesh->AttachToComponent(VehicleRoot,FAttachmentTransformRules::KeepRelativeTransform);
 	VehicleHullMesh->bCastDynamicShadow = true;
-	VehicleHullMesh->SetRelativeLocation(FVector{.0f,.0f,.0f});
-	VehicleHullMesh->SetRelativeRotation(FRotator{.0f,.0f,.0f});
+	//VehicleHullMesh->SetRelativeLocation(FVector{.0f,.0f,.0f});
+	//VehicleHullMesh->SetRelativeRotation(FRotator{.0f,.0f,.0f});
+	SetRootComponent(VehicleHullMesh);
 	//VehicleHullMesh->SetMobility(EComponentMobility::Movable);
 
 	VehicleHoodMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Vehicle Hood"));
@@ -107,6 +112,22 @@ AMasterVehicle::AMasterVehicle()
 void AMasterVehicle::BeginPlay()
 {
 	Super::BeginPlay();
+	/*
+	TopLinkArray[0] = TopLink_FL;
+	TopLinkArray[1] = TopLink_FR;
+	TopLinkArray[2] = TopLink_RL;
+	TopLinkArray[3] = TopLink_RR;
+	*/
+	TopLinksArray.Add(TopLink_FL);
+	TopLinksArray.Add(TopLink_FR);
+	TopLinksArray.Add(TopLink_RL);
+	TopLinksArray.Add(TopLink_RR);
+	WheelContact.SetNum(4);
+	HitResults.SetNum(4);
+	SusLengths.SetNum(4);
+	Fz.SetNum(4);
+	RaycastInit();
+	SuspensionInit();
 	
 }
 
@@ -114,6 +135,10 @@ void AMasterVehicle::BeginPlay()
 void AMasterVehicle::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	RayCast(DeltaTime);
+	UpdateSuspension();
+	GetSuspensionForce(DeltaTime);
+	ApplySuspensionForce();
 
 }
 
@@ -123,4 +148,100 @@ void AMasterVehicle::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 }
+
+void AMasterVehicle::RaycastInit()
+{
+	for(int i=0; i<4; i++)
+	{
+		RayLengths[i] = SuspensionStruct.RestLength + SuspensionStruct.Travel + WheelStruct.Radius;
+	}
+}
+
+void AMasterVehicle::SuspensionInit()
+{
+	for(int i=0; i<4; i++)
+	{
+		SusLengths[i] = SuspensionStruct.RestLength;
+		LastSusLengths[i] = SusLengths[i];
+	}
+}
+
+void AMasterVehicle::RayCast(float dt)
+{
+	for(int i =0; i <4; i++)
+	{
+		FHitResult Hit;
+		
+		FVector RayStart = TopLinksArray[i]->GetComponentLocation();
+		FVector RayEnd = RayStart - (TopLinksArray[i]->GetUpVector() * RayLengths[i]);
+
+		FCollisionQueryParams QueryParams;
+		QueryParams.AddIgnoredActor(this);
+
+		GetWorld()->LineTraceSingleByChannel(Hit, RayStart, RayEnd, TraceChannelProperty, QueryParams);
+
+		DrawDebugLine(GetWorld(), RayStart, RayEnd, Hit.bBlockingHit ? FColor::Green : FColor::Red, false, dt*1.01f, 0, 10.0f);
+
+		if(Hit.bBlockingHit)
+		{
+			WheelContact[i] = true;
+			HitResults[i] = Hit;
+		}else
+		{
+			WheelContact[i] = false;
+		}
+	}
+}
+void AMasterVehicle::UpdateSuspension()
+{
+	for(int i=0; i <4; i++)
+	{
+		if(WheelContact[i])
+		{
+			FVector temp = TopLinksArray[i]->GetUpVector() * WheelStruct.Radius;
+			FVector temp2 = HitResults[i].Location + temp;
+
+			float VLength =FMath::Clamp( (temp2 - TopLinksArray[i]->GetComponentLocation()).Length(),
+				SuspensionStruct.RestLength - SuspensionStruct.Travel,
+				SuspensionStruct.RestLength + SuspensionStruct.Travel);
+
+			SusLengths[i] = VLength;
+			
+		}else
+		{
+			SusLengths[i] = SuspensionStruct.RestLength + SuspensionStruct.Travel;
+		}
+	}
+}
+
+void AMasterVehicle::GetSuspensionForce(float dt)
+{
+	for(int i=0; i <4; i++)
+	{
+		float springForce = SuspensionStruct.Stiffness * (SuspensionStruct.RestLength - SusLengths[i]);
+		float damperForce = SuspensionStruct.Damper * ((LastSusLengths[i] - SusLengths[i]) / dt);
+
+		Fz[i] = FMath::Clamp(damperForce + springForce,
+			SuspensionStruct.ForceMin,
+			SuspensionStruct.ForceMax);
+
+		LastSusLengths[i] = SusLengths[i];
+
+		GEngine->AddOnScreenDebugMessage(-1, dt, FColor::Yellow, FString::Printf(TEXT("Fz %i : Force %f"),i,Fz[i]));
+	}
+}
+
+void AMasterVehicle::ApplySuspensionForce()
+{
+	for(int i =0; i<4; i++)
+	{
+		FVector force = TopLinksArray[i]->GetUpVector() * (Fz[i] * 100);
+		VehicleHullMesh->AddForceAtLocation(force,TopLinksArray[i]->GetComponentLocation());
+	}
+}
+
+
+
+
+
 

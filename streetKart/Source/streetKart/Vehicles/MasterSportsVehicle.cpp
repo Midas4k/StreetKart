@@ -5,6 +5,7 @@
 
 AMasterSportsVehicle::AMasterSportsVehicle()
 {
+#pragma region  Setting Meshes
 	//SETTING DEFAULT HULL MESH
 	ConstructorHelpers::FObjectFinder<USkeletalMesh> DefaultMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Sports_01"));
 	if (DefaultMeshSearch.Succeeded()) VehicleHullMesh->SetSkeletalMesh(DefaultMeshSearch.Object);
@@ -67,5 +68,17 @@ AMasterSportsVehicle::AMasterSportsVehicle()
 		VehicleRLTyreMesh->SetSkeletalMesh(TyreMeshSearch.Object);
 		VehicleRRTyreMesh->SetSkeletalMesh(TyreMeshSearch.Object);
 	}
-	
+#pragma endregion  Setting Meshes
+
+#pragma region Struct Values
+	SuspensionStruct.RestLength = 35.0f;
+	SuspensionStruct.Travel= 10.0f;
+	SuspensionStruct.Stiffness = 600.0f;
+	SuspensionStruct.Damper = 10.0f;
+	SuspensionStruct.ForceMin = -2000.0f;
+	SuspensionStruct.ForceMax = 6000.0f;
+
+	WheelStruct.Radius = 40.0f;
+	WheelStruct.Mass = 15.0f;
+#pragma endregion Struct Values
 }
