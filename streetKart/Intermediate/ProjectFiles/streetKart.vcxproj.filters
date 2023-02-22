@@ -23,6 +23,9 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Config\HoloLens">
       <UniqueIdentifier>{4C8DD267-CDE7-336F-8602-F5F485D22BAB}</UniqueIdentifier>
     </Filter>
@@ -1453,6 +1456,24 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\streetKart\streetKartGameModeBase.h">
       <Filter>Source\streetKart</Filter>
+    </ClInclude>
+    <Filter Include="Source\streetKart\Gamemodes">
+      <UniqueIdentifier>{477C013C-ED68-3630-A898-6F477AD61165}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\streetKart\Gamemodes\RacingGameModeBase.cpp">
+      <Filter>Source\streetKart\Gamemodes</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\streetKart\Gamemodes\RacingGameModeBase.h">
+      <Filter>Source\streetKart\Gamemodes</Filter>
+    </ClInclude>
+    <Filter Include="Source\streetKart\Player">
+      <UniqueIdentifier>{2AE948FD-47B0-3956-9582-573E01AA0D72}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\streetKart\Player\CarPlayerController.cpp">
+      <Filter>Source\streetKart\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\streetKart\Player\CarPlayerController.h">
+      <Filter>Source\streetKart\Player</Filter>
     </ClInclude>
     <Filter Include="Source\streetKart\Vehicles">
       <UniqueIdentifier>{6461B849-7217-304C-8F13-4363D7DF82AF}</UniqueIdentifier>

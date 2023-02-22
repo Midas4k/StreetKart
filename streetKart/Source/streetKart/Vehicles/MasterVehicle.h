@@ -26,6 +26,19 @@ struct FWheelStruct
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) float Mass;
 	
 };
+
+USTRUCT(BlueprintType)
+struct FEngineStruct
+{
+	GENERATED_BODY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) UCurveFloat* torque_curve;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float idle_rpm;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float max_rpm;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float inertia;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float back_torque;
+	
+	
+};
 UCLASS()
 class STREETKART_API AMasterVehicle : public APawn
 {
@@ -34,8 +47,26 @@ class STREETKART_API AMasterVehicle : public APawn
 public:
 	// Sets default values for this pawn's properties
 	AMasterVehicle();
+
+		
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+	// Called to bind functionality to input
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	
+	virtual void MoveRight(float iValue);
+	virtual void MoveForward(float iValue);
+	virtual void CameraOrbit(float mouseX);
+	virtual void CameraPitch(float mouseY);
+	virtual void Throttle(float iValue);
+	virtual void ShiftUp();
+	virtual void ShiftDown();
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) FSuspensionStruct SuspensionStruct;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) FWheelStruct WheelStruct;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) FEngineStruct EngineStruct;
+	
 
 protected:
 	// Called when the game starts or when spawned
@@ -46,6 +77,18 @@ protected:
 	virtual void UpdateSuspension();
 	virtual void GetSuspensionForce(float dt);
 	virtual void ApplySuspensionForce();
+	virtual void AdjustWheels();
+	virtual void GetWheelLinearVelocity();
+	virtual void GetTyreForce();
+	virtual void ApplyTyreForce();
+	virtual void WheelRotation(float dt);
+	virtual void GetThrottleValue(float iValue);
+	virtual void GetEngineTorque();
+	
+
+	
+
+	
 #pragma region Mesh Components
 	UPROPERTY(VisibleDefaultsOnly, Category=Default)
 	USceneComponent* VehicleRoot;
@@ -114,29 +157,52 @@ protected:
 	USkeletalMeshComponent* VehicleRRTyreMesh;
   
 #pragma endregion Mesh Components
-  
-    //USceneComponent* TopLinkArray[4];
-	//TArray<USceneComponent*> TopLinksArray;
+
+	UPROPERTY(VisibleAnywhere) class USpringArmComponent* SpringArm;
+	UPROPERTY(VisibleAnywhere) class UCameraComponent* Camera;
+
+	FTimerHandle TimerHandle;
+	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)TArray<USceneComponent*>TopLinksArray;
 	TArray<bool> WheelContact;
 	TArray<FHitResult> HitResults;
 	float RayLengths[4];
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)TArray<float>SusLengths;
 	TArray<float>Fz;
+	TArray<float>Fx;
+	TArray<float>Fy;
 	float LastSusLengths[4];
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)TArray<USceneComponent*>WheelMeshs;
+
+	float deltaTime;
+	float SteeringAngle;
+	float SteerAngleMax;
+	float ThrottleValue;
+	float AccelValue;
+	float DecelValue;
+	bool VThrottleFilter;
+
+	float EngineRPM;
+	float EngineTorque;
+	float EngineAngularVelocity;
+	float RPM_to_RadPS;
+	float RadPS_to_RPM;
+
+	float GearInit[7] = {-3.615f, 0.0f, 3.583f, 2.038f, 1.414f, 1.108f, 0.878f};
+	TArray<float>GearRatio;
+	int Gear;
+	float MainGear;
+	float Effciency;
+	float GearChangeTime;
+
+	float TotalGearRatio;
+
+	
+
+	TArray<FVector> WheelLinearVelocityLocal;
 	
 	
 	UPROPERTY(EditAnywhere, Category="Collision")
 	TEnumAsByte<ECollisionChannel> TraceChannelProperty = ECC_Pawn;
-
-public:
-	//Variables (public)
 	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-private:
-	//Variables(private)
 };

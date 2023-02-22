@@ -12,11 +12,15 @@ void EmptyLinkFunctionForGeneratedCodeMasterVehicle() {}
 	STREETKART_API UScriptStruct* Z_Construct_UScriptStruct_FSuspensionStruct();
 	UPackage* Z_Construct_UPackage__Script_streetKart();
 	STREETKART_API UScriptStruct* Z_Construct_UScriptStruct_FWheelStruct();
+	STREETKART_API UScriptStruct* Z_Construct_UScriptStruct_FEngineStruct();
+	ENGINE_API UClass* Z_Construct_UClass_UCurveFloat_NoRegister();
 	STREETKART_API UClass* Z_Construct_UClass_AMasterVehicle_NoRegister();
 	STREETKART_API UClass* Z_Construct_UClass_AMasterVehicle();
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UEnum* Z_Construct_UEnum_Engine_ECollisionChannel();
 // End Cross Module References
 	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_SuspensionStruct;
@@ -225,6 +229,121 @@ template<> STREETKART_API UScriptStruct* StaticStruct<FWheelStruct>()
 		}
 		return Z_Registration_Info_UScriptStruct_WheelStruct.InnerSingleton;
 	}
+	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_EngineStruct;
+class UScriptStruct* FEngineStruct::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_EngineStruct.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_EngineStruct.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FEngineStruct, Z_Construct_UPackage__Script_streetKart(), TEXT("EngineStruct"));
+	}
+	return Z_Registration_Info_UScriptStruct_EngineStruct.OuterSingleton;
+}
+template<> STREETKART_API UScriptStruct* StaticStruct<FEngineStruct>()
+{
+	return FEngineStruct::StaticStruct();
+}
+	struct Z_Construct_UScriptStruct_FEngineStruct_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_torque_curve_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_torque_curve;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_idle_rpm_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_idle_rpm;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_max_rpm_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_max_rpm;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_inertia_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_inertia;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_back_torque_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_back_torque;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UECodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEngineStruct_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Vehicles/MasterVehicle.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FEngineStruct_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FEngineStruct>();
+	}
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_torque_curve_MetaData[] = {
+		{ "Category", "EngineStruct" },
+		{ "ModuleRelativePath", "Vehicles/MasterVehicle.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_torque_curve = { "torque_curve", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FEngineStruct, torque_curve), Z_Construct_UClass_UCurveFloat_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_torque_curve_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_torque_curve_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_idle_rpm_MetaData[] = {
+		{ "Category", "EngineStruct" },
+		{ "ModuleRelativePath", "Vehicles/MasterVehicle.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_idle_rpm = { "idle_rpm", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FEngineStruct, idle_rpm), METADATA_PARAMS(Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_idle_rpm_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_idle_rpm_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_max_rpm_MetaData[] = {
+		{ "Category", "EngineStruct" },
+		{ "ModuleRelativePath", "Vehicles/MasterVehicle.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_max_rpm = { "max_rpm", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FEngineStruct, max_rpm), METADATA_PARAMS(Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_max_rpm_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_max_rpm_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_inertia_MetaData[] = {
+		{ "Category", "EngineStruct" },
+		{ "ModuleRelativePath", "Vehicles/MasterVehicle.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_inertia = { "inertia", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FEngineStruct, inertia), METADATA_PARAMS(Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_inertia_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_inertia_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_back_torque_MetaData[] = {
+		{ "Category", "EngineStruct" },
+		{ "ModuleRelativePath", "Vehicles/MasterVehicle.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_back_torque = { "back_torque", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FEngineStruct, back_torque), METADATA_PARAMS(Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_back_torque_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_back_torque_MetaData)) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FEngineStruct_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_torque_curve,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_idle_rpm,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_max_rpm,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_inertia,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEngineStruct_Statics::NewProp_back_torque,
+	};
+	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FEngineStruct_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_streetKart,
+		nullptr,
+		&NewStructOps,
+		"EngineStruct",
+		sizeof(FEngineStruct),
+		alignof(FEngineStruct),
+		Z_Construct_UScriptStruct_FEngineStruct_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FEngineStruct_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FEngineStruct_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FEngineStruct_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FEngineStruct()
+	{
+		if (!Z_Registration_Info_UScriptStruct_EngineStruct.InnerSingleton)
+		{
+			UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_EngineStruct.InnerSingleton, Z_Construct_UScriptStruct_FEngineStruct_Statics::ReturnStructParams);
+		}
+		return Z_Registration_Info_UScriptStruct_EngineStruct.InnerSingleton;
+	}
 	void AMasterVehicle::StaticRegisterNativesAMasterVehicle()
 	{
 	}
@@ -247,6 +366,10 @@ template<> STREETKART_API UScriptStruct* StaticStruct<FWheelStruct>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_WheelStruct_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_WheelStruct;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_EngineStruct_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_EngineStruct;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_VehicleRoot_MetaData[];
 #endif
@@ -343,6 +466,14 @@ template<> STREETKART_API UScriptStruct* StaticStruct<FWheelStruct>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_VehicleRRTyreMesh_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_VehicleRRTyreMesh;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpringArm_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_SpringArm;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Camera_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_Camera;
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_TopLinksArray_Inner;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_TopLinksArray_MetaData[];
@@ -353,6 +484,11 @@ template<> STREETKART_API UScriptStruct* StaticStruct<FWheelStruct>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_SusLengths_MetaData[];
 #endif
 		static const UECodeGen_Private::FArrayPropertyParams NewProp_SusLengths;
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_WheelMeshs_Inner;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_WheelMeshs_MetaData[];
+#endif
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_WheelMeshs;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_TraceChannelProperty_MetaData[];
 #endif
@@ -386,6 +522,13 @@ template<> STREETKART_API UScriptStruct* StaticStruct<FWheelStruct>()
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AMasterVehicle_Statics::NewProp_WheelStruct = { "WheelStruct", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMasterVehicle, WheelStruct), Z_Construct_UScriptStruct_FWheelStruct, METADATA_PARAMS(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_WheelStruct_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_WheelStruct_MetaData)) }; // 635695163
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMasterVehicle_Statics::NewProp_EngineStruct_MetaData[] = {
+		{ "Category", "MasterVehicle" },
+		{ "ModuleRelativePath", "Vehicles/MasterVehicle.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AMasterVehicle_Statics::NewProp_EngineStruct = { "EngineStruct", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMasterVehicle, EngineStruct), Z_Construct_UScriptStruct_FEngineStruct, METADATA_PARAMS(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_EngineStruct_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_EngineStruct_MetaData)) }; // 1450945749
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMasterVehicle_Statics::NewProp_VehicleRoot_MetaData[] = {
 		{ "Category", "Default" },
@@ -578,14 +721,28 @@ template<> STREETKART_API UScriptStruct* StaticStruct<FWheelStruct>()
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMasterVehicle_Statics::NewProp_VehicleRRTyreMesh = { "VehicleRRTyreMesh", nullptr, (EPropertyFlags)0x00200800000b0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMasterVehicle, VehicleRRTyreMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_VehicleRRTyreMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_VehicleRRTyreMesh_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMasterVehicle_Statics::NewProp_SpringArm_MetaData[] = {
+		{ "Category", "MasterVehicle" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Vehicles/MasterVehicle.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMasterVehicle_Statics::NewProp_SpringArm = { "SpringArm", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMasterVehicle, SpringArm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_SpringArm_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_SpringArm_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMasterVehicle_Statics::NewProp_Camera_MetaData[] = {
+		{ "Category", "MasterVehicle" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Vehicles/MasterVehicle.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMasterVehicle_Statics::NewProp_Camera = { "Camera", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMasterVehicle, Camera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_Camera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_Camera_MetaData)) };
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMasterVehicle_Statics::NewProp_TopLinksArray_Inner = { "TopLinksArray", nullptr, (EPropertyFlags)0x00000000000a0008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMasterVehicle_Statics::NewProp_TopLinksArray_MetaData[] = {
 		{ "Category", "MasterVehicle" },
-		{ "Comment", "//USceneComponent* TopLinkArray[4];\n//TArray<USceneComponent*> TopLinksArray;\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Vehicles/MasterVehicle.h" },
-		{ "ToolTip", "USceneComponent* TopLinkArray[4];\nTArray<USceneComponent*> TopLinksArray;" },
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AMasterVehicle_Statics::NewProp_TopLinksArray = { "TopLinksArray", nullptr, (EPropertyFlags)0x002008800002001d, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMasterVehicle, TopLinksArray), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_TopLinksArray_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_TopLinksArray_MetaData)) };
@@ -597,6 +754,15 @@ template<> STREETKART_API UScriptStruct* StaticStruct<FWheelStruct>()
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AMasterVehicle_Statics::NewProp_SusLengths = { "SusLengths", nullptr, (EPropertyFlags)0x0020080000020015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMasterVehicle, SusLengths), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_SusLengths_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_SusLengths_MetaData)) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMasterVehicle_Statics::NewProp_WheelMeshs_Inner = { "WheelMeshs", nullptr, (EPropertyFlags)0x00000000000a0008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMasterVehicle_Statics::NewProp_WheelMeshs_MetaData[] = {
+		{ "Category", "MasterVehicle" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Vehicles/MasterVehicle.h" },
+	};
+#endif
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AMasterVehicle_Statics::NewProp_WheelMeshs = { "WheelMeshs", nullptr, (EPropertyFlags)0x002008800002001d, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMasterVehicle, WheelMeshs), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_WheelMeshs_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMasterVehicle_Statics::NewProp_WheelMeshs_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMasterVehicle_Statics::NewProp_TraceChannelProperty_MetaData[] = {
 		{ "Category", "Collision" },
@@ -607,6 +773,7 @@ template<> STREETKART_API UScriptStruct* StaticStruct<FWheelStruct>()
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMasterVehicle_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_SuspensionStruct,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_WheelStruct,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_EngineStruct,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_VehicleRoot,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_VehicleHullMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_VehicleHoodMesh,
@@ -631,10 +798,14 @@ template<> STREETKART_API UScriptStruct* StaticStruct<FWheelStruct>()
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_VehicleFRTyreMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_VehicleRLTyreMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_VehicleRRTyreMesh,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_SpringArm,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_Camera,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_TopLinksArray_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_TopLinksArray,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_SusLengths_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_SusLengths,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_WheelMeshs_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_WheelMeshs,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMasterVehicle_Statics::NewProp_TraceChannelProperty,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AMasterVehicle_Statics::StaticCppClassTypeInfo = {
@@ -676,11 +847,12 @@ template<> STREETKART_API UScriptStruct* StaticStruct<FWheelStruct>()
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_Statics::ScriptStructInfo[] = {
 		{ FSuspensionStruct::StaticStruct, Z_Construct_UScriptStruct_FSuspensionStruct_Statics::NewStructOps, TEXT("SuspensionStruct"), &Z_Registration_Info_UScriptStruct_SuspensionStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSuspensionStruct), 9971416U) },
 		{ FWheelStruct::StaticStruct, Z_Construct_UScriptStruct_FWheelStruct_Statics::NewStructOps, TEXT("WheelStruct"), &Z_Registration_Info_UScriptStruct_WheelStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWheelStruct), 635695163U) },
+		{ FEngineStruct::StaticStruct, Z_Construct_UScriptStruct_FEngineStruct_Statics::NewStructOps, TEXT("EngineStruct"), &Z_Registration_Info_UScriptStruct_EngineStruct, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FEngineStruct), 1450945749U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMasterVehicle, AMasterVehicle::StaticClass, TEXT("AMasterVehicle"), &Z_Registration_Info_UClass_AMasterVehicle, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMasterVehicle), 2355928473U) },
+		{ Z_Construct_UClass_AMasterVehicle, AMasterVehicle::StaticClass, TEXT("AMasterVehicle"), &Z_Registration_Info_UClass_AMasterVehicle, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMasterVehicle), 3659766722U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_3222393110(TEXT("/Script/streetKart"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_2544738775(TEXT("/Script/streetKart"),
 		Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_Statics::ScriptStructInfo),
 		nullptr, 0);

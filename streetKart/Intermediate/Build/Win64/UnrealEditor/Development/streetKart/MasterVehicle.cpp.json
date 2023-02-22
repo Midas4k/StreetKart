@@ -8,7 +8,13 @@
             "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\unrealeditor\\development\\streetkart\\definitions.streetkart.h",
             "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\source\\streetkart\\vehicles\\mastervehicle.h",
             "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\unrealeditor\\inc\\streetkart\\mastervehicle.generated.h",
-            "c:\\program files (x86)\\microsoft visual studio\\2019\\community\\vc\\tools\\msvc\\14.29.30133\\include\\string"
+            "d:\\program files (x86)\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\camera\\cameracomponent.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\cameracomponent.generated.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\springarmcomponent.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\springarmcomponent.generated.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\kismetmathlibrary.generated.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
