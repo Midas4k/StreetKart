@@ -32,12 +32,20 @@ struct FEngineStruct
 {
 	GENERATED_BODY()
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) UCurveFloat* torque_curve;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) float idle_rpm;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) float max_rpm;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) int idle_rpm;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) int max_rpm;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) float inertia;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) float back_torque;
 	
 	
+};
+
+UENUM()
+enum EDriveType_Enum
+{
+	FWD,
+	RWD,
+	AWD
 };
 UCLASS()
 class STREETKART_API AMasterVehicle : public APawn
@@ -81,9 +89,14 @@ protected:
 	virtual void GetWheelLinearVelocity();
 	virtual void GetTyreForce();
 	virtual void ApplyTyreForce();
-	virtual void WheelRotation(float dt);
+	virtual void WheelRotation();
 	virtual void GetThrottleValue(float iValue);
 	virtual void GetEngineTorque();
+	virtual void TransmissionInit();
+	virtual void GetDriveTorque();
+	virtual void WheelInit();
+	virtual void WheelAcceleration();
+
 	
 
 	
@@ -182,6 +195,8 @@ protected:
 	float DecelValue;
 	bool VThrottleFilter;
 
+	FString GearOut;
+
 	float EngineRPM;
 	float EngineTorque;
 	float EngineAngularVelocity;
@@ -192,10 +207,16 @@ protected:
 	TArray<float>GearRatio;
 	int Gear;
 	float MainGear;
-	float Effciency;
+	float Efficiency;
 	float GearChangeTime;
 
 	float TotalGearRatio;
+
+	TArray<float> DriveTorque;
+	TArray<float> TorqueRatio;
+	EDriveType_Enum DriveType;
+	TArray<float> WheelInertia;
+	TArray<float> WheelAngularVelocity;
 
 	
 

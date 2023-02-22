@@ -34,10 +34,10 @@ template<> STREETKART_API UScriptStruct* StaticStruct<struct FWheelStruct>();
 
 template<> STREETKART_API UScriptStruct* StaticStruct<struct FEngineStruct>();
 
-#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_SPARSE_DATA
-#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_RPC_WRAPPERS
-#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_RPC_WRAPPERS_NO_PURE_DECLS
-#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_INCLASS_NO_PURE_DECLS \
+#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_SPARSE_DATA
+#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_RPC_WRAPPERS
+#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMasterVehicle(); \
 	friend struct Z_Construct_UClass_AMasterVehicle_Statics; \
@@ -46,7 +46,7 @@ public: \
 	DECLARE_SERIALIZER(AMasterVehicle)
 
 
-#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_INCLASS \
+#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_INCLASS \
 private: \
 	static void StaticRegisterNativesAMasterVehicle(); \
 	friend struct Z_Construct_UClass_AMasterVehicle_Statics; \
@@ -55,7 +55,7 @@ public: \
 	DECLARE_SERIALIZER(AMasterVehicle)
 
 
-#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_STANDARD_CONSTRUCTORS \
+#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AMasterVehicle(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMasterVehicle) \
@@ -68,7 +68,7 @@ private: \
 public:
 
 
-#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_ENHANCED_CONSTRUCTORS \
+#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AMasterVehicle(AMasterVehicle&&); \
@@ -79,25 +79,25 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AMasterVehicle)
 
 
-#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_42_PROLOG
-#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_GENERATED_BODY_LEGACY \
+#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_50_PROLOG
+#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_SPARSE_DATA \
-	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_RPC_WRAPPERS \
-	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_INCLASS \
-	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_STANDARD_CONSTRUCTORS \
+	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_SPARSE_DATA \
+	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_RPC_WRAPPERS \
+	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_INCLASS \
+	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_GENERATED_BODY \
+#define FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_SPARSE_DATA \
-	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_INCLASS_NO_PURE_DECLS \
-	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_45_ENHANCED_CONSTRUCTORS \
+	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_SPARSE_DATA \
+	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_INCLASS_NO_PURE_DECLS \
+	FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h_53_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -108,4 +108,8 @@ template<> STREETKART_API UClass* StaticClass<class AMasterVehicle>();
 #define CURRENT_FILE_ID FID_streetKart_Source_streetKart_Vehicles_MasterVehicle_h
 
 
+#define FOREACH_ENUM_EDRIVETYPE_ENUM(op) \
+	op(FWD) \
+	op(RWD) \
+	op(AWD) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -130,6 +130,8 @@ AMasterVehicle::AMasterVehicle()
 	EngineStruct.inertia = .3f;
 	EngineStruct.back_torque = -100.0f;
 #pragma endregion Engine Struct
+
+	//VehicleHullMesh->SetCenterOfMass(FVector(35,0,-35));
 }
 
 // Called when the game starts or when spawned
@@ -158,11 +160,13 @@ void AMasterVehicle::BeginPlay()
 	Fx.SetNum(4);
 	Fy.SetNum(4);
 	Fz.SetNum(4);
+	WheelInertia.SetNum(4);
+	WheelAngularVelocity.SetNum(4);
 
 	Gear = 1;
 	GearRatio.Append(GearInit, ARRAY_COUNT(GearInit));
 	MainGear = 3.82f;
-	Effciency = .8f;
+	Efficiency = .8f;
 	GearChangeTime = .5f;
 
 	RPM_to_RadPS = (PI * 2)/ 60;
@@ -170,10 +174,18 @@ void AMasterVehicle::BeginPlay()
 	RadPS_to_RPM = 1 / RPM_to_RadPS;
 
 	WheelLinearVelocityLocal.SetNum(4);
-	//DOESNT CURRENTLY WORK?????
-	VehicleHullMesh->SetCenterOfMass(FVector(35,0,-35));
+	DriveType = EDriveType_Enum::RWD;
+
+	DriveTorque.SetNum(4);
+	TorqueRatio.Add(.5f);
+	TorqueRatio.Add(.5f);
+	
 	RaycastInit();
 	SuspensionInit();
+	TransmissionInit();
+	WheelInit();
+
+
 	
 }
 
@@ -182,6 +194,8 @@ void AMasterVehicle::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	deltaTime = DeltaTime;
+	GetDriveTorque();
+	WheelAcceleration();
 	RayCast(DeltaTime);
 	UpdateSuspension();
 	GetSuspensionForce(DeltaTime);
@@ -189,10 +203,37 @@ void AMasterVehicle::Tick(float DeltaTime)
 	GetWheelLinearVelocity();
 	GetTyreForce();
 	ApplyTyreForce();
-	WheelRotation(DeltaTime);
-	
-	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Purple, FString::Printf(TEXT("Gear: %i"),Gear));
+	WheelRotation();
 
+
+#pragma region GearDebug
+	switch (Gear){
+	case 0:
+		GearOut = "R";
+		break;
+	case 1:
+		GearOut = "N";
+		break;
+	case 2:
+		GearOut = "1";
+		break;
+	case 3:
+		GearOut = "2";
+		break;
+	case 4:
+		GearOut = "3";
+		break;
+	case 5:
+		GearOut = "4";
+		break;
+	case 6:
+		GearOut = "5";
+		break;
+	default:
+		break;
+	}
+	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Purple, FString::Printf(TEXT("Gear: %s Total Gear Ratio: %f"),*GearOut, TotalGearRatio));
+#pragma endregion GearDebug
 }
 
 // Called to bind functionality to input
@@ -386,23 +427,6 @@ void AMasterVehicle::ApplyTyreForce()
 	}
 }
 
-void AMasterVehicle::WheelRotation(float dt)
-{
-	for(int i=0; i<4;i++)
-	{
-		float Value = (WheelLinearVelocityLocal[i].X / (WheelStruct.Radius / 100)) * dt;
-		FMath::RadiansToDegrees(Value);
-		if(i == 0 || i == 2)
-		{
-			WheelMeshs[i]->AddLocalRotation(FRotator(Value,0,0));
-		}else
-		{
-			WheelMeshs[i]->AddLocalRotation(FRotator(-Value,0,0));
-		}
-		
-	}
-}
-
 void AMasterVehicle::Throttle(float iValue)
 {
 	GetThrottleValue(iValue);
@@ -449,7 +473,7 @@ void AMasterVehicle::ShiftUp()
 {
 	GetWorld()->GetTimerManager().SetTimer(TimerHandle, [&]()
 	{
-		Gear = FMath::Min(Gear + 1,GearRatio.Num() - 1);
+		Gear = FMath::Min(Gear + 1,GearRatio.Num()-1);
 		TotalGearRatio = GearRatio[Gear] * MainGear;
 	}, GearChangeTime, false);
 
@@ -466,5 +490,103 @@ void AMasterVehicle::ShiftDown()
 	}, GearChangeTime, false);
 }
 
+void AMasterVehicle::TransmissionInit()
+{
+	switch (DriveType)
+	{
+	case 0: //FWD
+		TorqueRatio[0] = 1.0f;
+		TorqueRatio[1] = 0.0f;
+		break;
+	case 1: //RWD
+		TorqueRatio[0] = 0.0f;
+		TorqueRatio[1] = 1.0f;
+		break;
+	case 3://AWD
+		TorqueRatio[0] = FMath::Min(TorqueRatio[0], 1);
+		TorqueRatio[1] = 1 - TorqueRatio[0];
+		break;
+	default:
+		break;
+	}
+}
 
+void AMasterVehicle::GetDriveTorque()
+{
+	for(int i=0;i<4;i++)
+	{
+		float Value  = FMath::Max(EngineTorque, 0 )* TotalGearRatio;
+		switch(i)
+		{
+		case 0:
+			DriveTorque[i] = (Value * TorqueRatio[0]) * .5f;
+			break;
+		case 1:
+			DriveTorque[i] = (Value * TorqueRatio[0]) * .5f;
+			break;
+		case 2:
+			DriveTorque[i] = (Value * TorqueRatio[1]) * .5f;
+			break;
+		case 3:
+			DriveTorque[i] = (Value * TorqueRatio[1]) * .5f;
+			break;
+		default:
+			break;
+		}
+		GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Cyan, FString::Printf(TEXT("Drive Torque %i : %f"),i,DriveTorque[i]));
+	}
+}
 
+void AMasterVehicle::WheelInit()
+{
+	for(int i=0;i <4;i++)
+	{
+		
+		WheelInertia[i] = (FMath::Pow(WheelStruct.Radius / 100,2) * WheelStruct.Mass) * .5f;
+	}
+}
+
+void AMasterVehicle::WheelAcceleration()
+{
+	float MaxWheelSpeed;
+	if(Gear != 0)
+	{
+		//max wheel speed on current gear
+		MaxWheelSpeed = EngineAngularVelocity / TotalGearRatio;
+	}else
+	{
+		MaxWheelSpeed = 9999.0f;
+	}
+
+	
+	for(int i =0; i<4;i++)
+	{
+		//AngularAcceleration = Torque/Inertia
+		float AngularAccel = DriveTorque[i] / WheelInertia[i];
+
+		//AngularVelocity += AngularAccel * dt
+		 
+		float AngularVelocity = WheelAngularVelocity[i] + (AngularAccel * deltaTime);
+
+		//Clamp Max Wheel Speed
+		WheelAngularVelocity[i] = FMath::Min(FMath::Abs(AngularVelocity),FMath::Abs(MaxWheelSpeed)) * FMath::Sign(MaxWheelSpeed);
+		
+		GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Emerald, FString::Printf(TEXT("Wheel %i : RPM: %f"),i,
+			FMath::RadiansToDegrees(WheelAngularVelocity[i])));
+	}
+}
+
+void AMasterVehicle::WheelRotation()
+{
+	for(int i=0;i<4;i++)
+	{
+		
+		float Value = FMath::RadiansToDegrees(WheelAngularVelocity[i]) * deltaTime;
+		
+		if(i == 1 || i ==3)
+		{
+			Value *=-1;
+		}
+		WheelMeshs[i]->AddLocalRotation(FRotator(Value,0,0));
+	}
+}
