@@ -24,6 +24,8 @@ struct FWheelStruct
 	GENERATED_BODY()
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) float Radius;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) float Mass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float Cornering_Stiffness;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float Long_Stiffness;
 	
 };
 
@@ -72,7 +74,7 @@ public:
 	virtual void ShiftDown();
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) FSuspensionStruct SuspensionStruct;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) FWheelStruct WheelStruct;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) FWheelStruct WheelStruct; //Potentially make an Array for more customisation
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) FEngineStruct EngineStruct;
 	
 
@@ -87,7 +89,7 @@ protected:
 	virtual void ApplySuspensionForce();
 	virtual void AdjustWheels();
 	virtual void GetWheelLinearVelocity();
-	virtual void GetTyreForce();
+	virtual void GetTyreForceSimple();
 	virtual void ApplyTyreForce();
 	virtual void WheelRotation();
 	virtual void GetThrottleValue(float iValue);
@@ -96,6 +98,9 @@ protected:
 	virtual void GetDriveTorque();
 	virtual void WheelInit();
 	virtual void WheelAcceleration();
+	virtual void GetLongSlipVelocity();
+	virtual void GetCombinedSlipForce();
+	virtual void DebugDrawing(float dt);
 
 	
 
@@ -217,6 +222,10 @@ protected:
 	EDriveType_Enum DriveType;
 	TArray<float> WheelInertia;
 	TArray<float> WheelAngularVelocity;
+	TArray<float> LongSlipVelocity;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) UCurveFloat* ForceCurve;
+	float LongSlipNormalized;
+	float LateralSlipNormalized;
 
 	
 

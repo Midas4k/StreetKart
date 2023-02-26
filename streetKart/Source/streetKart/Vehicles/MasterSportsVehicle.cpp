@@ -46,10 +46,10 @@ AMasterSportsVehicle::AMasterSportsVehicle()
 	VehicleWindowDecalMesh->SetupAttachment(VehicleHullMesh, TEXT("WindowDecal_Socket"));
 	VehicleWindowDecalMesh->bCastDynamicShadow = true;
 
-	Wheel_FL->SetRelativeLocation(FVector{.0f,.0f,-37.0f});
-	Wheel_FR->SetRelativeLocation(FVector{.0f,.0f,-37.0f});
-	Wheel_RL->SetRelativeLocation(FVector{.0f,.0f,-37.0f});
-	Wheel_RR->SetRelativeLocation(FVector{.0f,.0f,-37.0f});
+	Wheel_FL->SetRelativeLocation(FVector{.0f,.0f,-45.0f});
+	Wheel_FR->SetRelativeLocation(FVector{.0f,.0f,-45.0f});
+	Wheel_RL->SetRelativeLocation(FVector{.0f,.0f,-45.0f});
+	Wheel_RR->SetRelativeLocation(FVector{.0f,.0f,-45.0f});
 
 	ConstructorHelpers::FObjectFinder<USkeletalMesh> RimMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Attach_Wheel_01"));
 	if (RimMeshSearch.Succeeded())
@@ -71,7 +71,7 @@ AMasterSportsVehicle::AMasterSportsVehicle()
 #pragma endregion  Setting Meshes
 
 #pragma region Struct Values
-	SuspensionStruct.RestLength = 35.0f;
+	SuspensionStruct.RestLength = 45.0f;
 	SuspensionStruct.Travel= 10.0f;
 	SuspensionStruct.Stiffness = 600.0f;
 	SuspensionStruct.Damper = 10.0f;
@@ -80,5 +80,7 @@ AMasterSportsVehicle::AMasterSportsVehicle()
 
 	WheelStruct.Radius = 40.0f;
 	WheelStruct.Mass = 15.0f;
+	WheelStruct.Cornering_Stiffness = 1.0f;
+	WheelStruct.Long_Stiffness = 1.0f;
 #pragma endregion Struct Values
 }
