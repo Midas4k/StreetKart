@@ -101,6 +101,9 @@ protected:
 	virtual void GetLongSlipVelocity();
 	virtual void GetCombinedSlipForce();
 	virtual void DebugDrawing(float dt);
+	virtual void GetFrictionTorque();
+	virtual void WheelAccelerateEngine();
+	virtual void temp();
 
 	
 
@@ -227,7 +230,8 @@ protected:
 	float LongSlipNormalized;
 	float LateralSlipNormalized;
 
-	
+	float ClutchAngularVelocity;
+	float TotalDriveAxisAngularVelocity;
 
 	TArray<FVector> WheelLinearVelocityLocal;
 	

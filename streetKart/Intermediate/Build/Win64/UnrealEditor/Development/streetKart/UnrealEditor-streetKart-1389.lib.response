@@ -1,0 +1,23 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-streetKart-1389.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\streetKartEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\RacingGameModeBase.cpp.obj"
+"D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\CarPlayerController.cpp.obj"
+"D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\MasterSportsVehicle.cpp.obj"
+"D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\streetKart.cpp.obj"
+"D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\streetKartGameModeBase.cpp.obj"
+"D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\MasterVehicle.cpp.obj"
+"D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\CarPlayerController.gen.cpp.obj"
+"D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\MasterSportsVehicle.gen.cpp.obj"
+"D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\MasterVehicle.gen.cpp.obj"
+"D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\RacingGameModeBase.gen.cpp.obj"
+"D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\streetKart.init.gen.cpp.obj"
+"D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\streetKartGameModeBase.gen.cpp.obj"
+"D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\Default.rc2.res"
+/OUT:"D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-1389.lib"
