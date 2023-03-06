@@ -3,6 +3,8 @@
 
 #include "MasterVehicle.h"
 
+#include "StaticMeshAttributes.h"
+#include "VectorTypes.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/KismetMathLibrary.h"
@@ -150,6 +152,7 @@ void AMasterVehicle::BeginPlay()
 	SteerAngleMax = 45.0f;
 	AccelValue = 0.02f;
 	DecelValue = 0.05f;
+	BrakeBias = .7f;
 
 	WheelContact.SetNum(4);
 	HitResults.SetNum(4);
@@ -160,12 +163,16 @@ void AMasterVehicle::BeginPlay()
 	WheelInertia.SetNum(4);
 	WheelAngularVelocity.SetNum(4);
 	LongSlipVelocity.SetNum(4);
+	BrakeTorque.SetNum(4);
+	BrakeBiasRatio.SetNum(2);
+	BrakeStength = 1500.0f;
 
 	Gear = 1;
 	GearRatio.Append(GearInit, ARRAY_COUNT(GearInit));
 	MainGear = 3.82f;
 	Efficiency = .8f;
 	GearChangeTime = .5f;
+	TorqueBias = .3f;
 
 	RPM_to_RadPS = (PI * 2)/ 60;
 
@@ -182,8 +189,7 @@ void AMasterVehicle::BeginPlay()
 	SuspensionInit();
 	TransmissionInit();
 	WheelInit();
-
-
+	BrakesINI();
 	
 }
 
@@ -204,9 +210,12 @@ void AMasterVehicle::Tick(float DeltaTime)
 	GetCombinedSlipForce();
 	ApplyTyreForce();
 	GetFrictionTorque();
-	WheelAccelerateEngine();
-	temp();
+	ApplyBrakeForce();
+	GetTotalDriveVelocity();
+	WheelsAccelerateEngine();
+	//DrawDebugComponents();
 	WheelRotation();//Always Last
+	
 	
 
 
@@ -261,6 +270,44 @@ void AMasterVehicle::SuspensionInit()
 	{
 		SusLengths[i] = SuspensionStruct.RestLength;
 		LastSusLengths[i] = SusLengths[i];
+	}
+}
+
+void AMasterVehicle::BrakesINI()
+{
+	
+	//FMath::Clamp(BrakeBias, 0,1);
+	BrakeBiasRatio[0] = FMath::Clamp(BrakeBias, 0,1);
+	BrakeBiasRatio[1] = 1- FMath::Clamp(BrakeBias, 0,1);
+}
+
+void AMasterVehicle::WheelInit()
+{
+	for(int i=0;i <4;i++)
+	{
+		
+		WheelInertia[i] = (FMath::Pow(WheelStruct.Radius / 100,2) * WheelStruct.Mass) * .5f;
+	}
+}
+
+void AMasterVehicle::TransmissionInit()
+{
+	switch (DriveType)
+	{
+	case 0: //FWD
+		TorqueRatio[0] = 1.0f;
+		TorqueRatio[1] = 0.0f;
+		break;
+	case 1: //RWD
+		TorqueRatio[0] = 0.0f;
+		TorqueRatio[1] = 1.0f;
+		break;
+	case 3://AWD
+		TorqueRatio[0] = FMath::Min(TorqueRatio[0], 1);
+		TorqueRatio[1] = 1 - TorqueRatio[0];
+		break;
+	default:
+		break;
 	}
 }
 
@@ -396,24 +443,6 @@ void AMasterVehicle::GetWheelLinearVelocity()
 	}
 }
 
-void AMasterVehicle::GetTyreForceSimple()
-{
-	for(int i=0; i <4;i++)
-	{
-		if(WheelContact[i])
-		{
-			Fy[i] = FMath::Clamp(Fz[i] * WheelLinearVelocityLocal[i].Y * -1,-Fz[i] , Fz[i]);
-		
-			Fx[i] = (GetActorForwardVector() * Fz[i] * .1f).Length();
-			//Fx[i] = (0 * Fz[i] * .5f);
-		}else
-		{
-			Fx[i] = 0;
-			Fy[i] = 0;
-		}
-	}
-}
-
 void AMasterVehicle::ApplyTyreForce()
 {
 	for(int i=0; i<4;i++)
@@ -493,27 +522,6 @@ void AMasterVehicle::ShiftDown()
 	}, GearChangeTime, false);
 }
 
-void AMasterVehicle::TransmissionInit()
-{
-	switch (DriveType)
-	{
-	case 0: //FWD
-		TorqueRatio[0] = 1.0f;
-		TorqueRatio[1] = 0.0f;
-		break;
-	case 1: //RWD
-		TorqueRatio[0] = 0.0f;
-		TorqueRatio[1] = 1.0f;
-		break;
-	case 3://AWD
-		TorqueRatio[0] = FMath::Min(TorqueRatio[0], 1);
-		TorqueRatio[1] = 1 - TorqueRatio[0];
-		break;
-	default:
-		break;
-	}
-}
-
 void AMasterVehicle::GetDriveTorque()
 {
 	for(int i=0;i<4;i++)
@@ -536,16 +544,6 @@ void AMasterVehicle::GetDriveTorque()
 		default:
 			break;
 		}
-		//GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Cyan, FString::Printf(TEXT("Drive Torque %i : %f"),i,DriveTorque[i]));
-	}
-}
-
-void AMasterVehicle::WheelInit()
-{
-	for(int i=0;i <4;i++)
-	{
-		
-		WheelInertia[i] = (FMath::Pow(WheelStruct.Radius / 100,2) * WheelStruct.Mass) * .5f;
 	}
 }
 
@@ -560,7 +558,6 @@ void AMasterVehicle::WheelAcceleration()
 	{
 		MaxWheelSpeed = 9999.0f;
 	}
-
 	
 	for(int i =0; i<4;i++)
 	{
@@ -568,15 +565,17 @@ void AMasterVehicle::WheelAcceleration()
 		float AngularAccel = DriveTorque[i] / WheelInertia[i];
 
 		//AngularVelocity += AngularAccel * dt
-		 
+		
 		float AngularVelocity = WheelAngularVelocity[i] + (AngularAccel * deltaTime);
+		//float AngularVelocity = (AngularAccel * deltaTime);
+		
+		
+
+		WheelAngularVelocity[i] = FMath::Min(FMath::Abs(AngularVelocity),FMath::Abs(MaxWheelSpeed)) * FMath::Sign(MaxWheelSpeed);
 
 		//Clamp Max Wheel Speed
-		WheelAngularVelocity[i] = FMath::Min(FMath::Abs(AngularVelocity),FMath::Abs(MaxWheelSpeed)) * FMath::Sign(MaxWheelSpeed);
+		//WheelAngularVelocity[i] = FMath::Min(FMath::Abs(AngularVelocity),MaxWheelSpeed * FMath::Sign(MaxWheelSpeed));
 		
-		
-		//GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Emerald, FString::Printf(TEXT("Wheel %i : RPM: %f"),i,
-		//	FMath::RadiansToDegrees(WheelAngularVelocity[i])));
 	}
 }
 
@@ -605,10 +604,10 @@ void AMasterVehicle::GetLongSlipVelocity()
 		//Car Speed = Wheel Local Velocity.x
 		const float WheelSpeed = WheelAngularVelocity[i]*(WheelStruct.Radius / 100);
 
-		float SlipVelocity; //= WheelSpeed - WheelLinearVelocityLocal[i].X;
+		float SlipVelocity = WheelSpeed - WheelLinearVelocityLocal[i].X;
 		
-		if(Gear >0) SlipVelocity = WheelLinearVelocityLocal[i].X + WheelSpeed;
-		else SlipVelocity = WheelLinearVelocityLocal[i].X - WheelSpeed;
+		//if(Gear >0) SlipVelocity = WheelLinearVelocityLocal[i].X + WheelSpeed;
+		//else SlipVelocity = WheelLinearVelocityLocal[i].X - WheelSpeed;
 		
 		LongSlipVelocity[i] = SlipVelocity;
 		//GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Orange, FString::Printf(TEXT("WLVL %i: %f"),i,LongSlipVelocity[i]));
@@ -640,14 +639,15 @@ void AMasterVehicle::GetCombinedSlipForce()
 
 		if(WheelContact[i])
 		{
-			const float CornerStiffness = FMath::Clamp(WheelLinearVelocityLocal[i].Y * WheelStruct.Cornering_Stiffness *-1, -1,1);
+			const float CornerStiffness = FMath::Clamp(WheelLinearVelocityLocal[i].Y * -WheelStruct.Cornering_Stiffness, -1,1);
 			LateralSlipNormalized = CornerStiffness;
 
 			//if(CarSpeed*SlipSpeed >0)Traction; Else friction;
 			if( WheelLinearVelocityLocal[i].X * LongSlipVelocity[i] > 0)
 			{
 				//Traction = DriveTorque / R
-				const float Traction = DriveTorque[i] / (WheelStruct.Radius / 100); //Wheel Radius M
+				float R = (WheelStruct.Radius / 100);
+				const float Traction = DriveTorque[i] / R ; //Wheel Radius M
 				LongSlipNormalized =FMath::Clamp(Traction / FMath::Max(Fz[i], 0.000001f),-2 ,2); // LongSlipNormalized = Traction/maxFriction
 				//GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Orange, FString::Printf(TEXT("T LongSlipNormalized %i : %f"),i, LongSlipNormalized));
 			} else
@@ -657,7 +657,16 @@ void AMasterVehicle::GetCombinedSlipForce()
 			}
 			
 			//Combined Slip
-			FVector2D SlipVec = UKismetMathLibrary::MakeVector2D(LongSlipNormalized,LateralSlipNormalized);
+			FVector2D SlipVec = FVector2D(LongSlipNormalized,LateralSlipNormalized);
+			float combinedSlip = SlipVec.Size();
+
+			SlipVec.Normalize();
+			auto tireForceNormalized = ForceCurve->GetFloatValue(combinedSlip) *SlipVec;
+			auto tireForce = FMath::Max(Fz[i], 0.f) * tireForceNormalized;
+
+			Fx[i] = tireForce.X;
+			Fy[i] = tireForce.Y;
+			/*
 			const float CombinedSlip = ForceCurve->GetFloatValue(SlipVec.Length());
 			UKismetMathLibrary::Normalize2D(SlipVec);
 			FVector2D SlipVecScaled = UKismetMathLibrary::Multiply_Vector2DFloat(SlipVec, CombinedSlip);
@@ -666,6 +675,7 @@ void AMasterVehicle::GetCombinedSlipForce()
 			Fx[i] = TireForce.X;
 			Fy[i] = TireForce.Y;
 			//GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Orange, FString::Printf(TEXT("SlipVecScaled: X: %f Y: %f"),SlipVecScaled.X, SlipVecScaled.Y));
+			*/
 			
 			
 		}else
@@ -685,13 +695,13 @@ void AMasterVehicle::DebugDrawing(float dt)
 			switch(j)
 			{
 			case 0:
-				DrawDebugLine(GetWorld(),WheelMeshs[i]->GetComponentLocation() , WheelMeshs[i]->GetForwardVector() * (Fx[i]/2000),  FColor::Emerald, false, dt* 1.01f, 0, 5.0f);
+				DrawDebugLine(GetWorld(),TopLinksArray[i]->GetComponentLocation() , TopLinksArray[i]->GetForwardVector() * (Fx[i]/2000),  FColor::Emerald, false, dt* 1.01f, 0, 5.0f);
 				break;
 			case 1:
-				DrawDebugLine(GetWorld(),WheelMeshs[i]->GetComponentLocation() , WheelMeshs[i]->GetRightVector() * (Fy[i]/2000),  FColor::Yellow, false, dt* 1.01f, 0, 5.0f);
+				DrawDebugLine(GetWorld(),TopLinksArray[i]->GetComponentLocation() , TopLinksArray[i]->GetRightVector() * (Fy[i]/2000),  FColor::Yellow, false, dt* 1.01f, 0, 5.0f);
 				break;
 			case 2:
-				DrawDebugLine(GetWorld(),WheelMeshs[i]->GetComponentLocation() , WheelMeshs[i]->GetUpVector()* (Fz[i] / 2000),  FColor::Blue, false, dt* 1.01f, 0, 5.0f);
+				DrawDebugLine(GetWorld(),TopLinksArray[i]->GetComponentLocation() , TopLinksArray[i]->GetUpVector()* (Fz[i] / 2000),  FColor::Blue, false, dt* 1.01f, 0, 5.0f);
 				break;
 			default:
 				break;
@@ -707,18 +717,20 @@ void AMasterVehicle::GetFrictionTorque()
 	{
 		if(WheelContact[i])
 		{
-			//Friction Torque = Friction * R(in M)
-			const float FrictionTorque = FMath::Max(Fz[i], 0) * (WheelStruct.Radius / 100) * FMath::Clamp((LongSlipVelocity[i] / -10),-1,1);
-			//Angular Acceleration =  Torque / Inertia
-			const float AngularAcceleration = FrictionTorque / WheelInertia[i];
+			//Friction Torque = Friction * R
+			float test = FMath::Max(Fz[i], 0) * (WheelStruct.Radius / 100);
+			float FrictionTorque = test * FMath::Clamp(LongSlipVelocity[i]/ -10, -1, 1);
+			//Angular Acceleration = Torque / Inertia
+			float AngularAcceleration = FrictionTorque / WheelInertia[i];
+			//GEngine->AddOnScreenDebugMessage(-1, deltaTime, FColor::Cyan, FString::Printf(TEXT("T: %f , FT: %f , AA %f"),test,FrictionTorque, AngularAcceleration));
 
-			WheelAngularVelocity[i] += AngularAcceleration * deltaTime;
-			//GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Orange, FString::Printf(TEXT("WAV %i: %f"),i,WheelAngularVelocity[i]));
+			WheelAngularVelocity[i] = WheelAngularVelocity[i] + (AngularAcceleration * deltaTime);
+			GEngine->AddOnScreenDebugMessage(-1, deltaTime, FColor::Cyan, FString::Printf(TEXT("Wheel: %i , AngVelo: %f"),i,WheelAngularVelocity[i]));
 		}
 	}
 }
 
-void AMasterVehicle::WheelAccelerateEngine()
+void AMasterVehicle::GetTotalDriveVelocity()
 {
 	//Wheels Brake/Accelerate the engine
 	//Total Drive Axis Velocity = Total Wheel Velocity / # Driving Wheels
@@ -729,24 +741,22 @@ void AMasterVehicle::WheelAccelerateEngine()
 	switch(DriveType)
 	{
 	case 0://FWD
-		TotalDriveAxisAngularVelocity = (WheelLinearVelocityLocal[0].X + WheelLinearVelocityLocal[1].X) /2;
+		TotalDriveAxisAngularVelocity = (WheelAngularVelocity[0] + WheelAngularVelocity[1]) * .5f;
 		break;
 	case 1://RWD
-		//TotalDriveAxisAngularVelocity = (WheelAngularVelocity[2] + WheelAngularVelocity[3]) /2;
-		TotalDriveAxisAngularVelocity = (WheelLinearVelocityLocal[2].X + WheelLinearVelocityLocal[3].X)/2;
+		TotalDriveAxisAngularVelocity = (WheelAngularVelocity[2] + WheelAngularVelocity[3]) * .5f;
 		break;
 	case 2://AWD
-		TotalDriveAxisAngularVelocity = (WheelLinearVelocityLocal[0].X + WheelLinearVelocityLocal[1].X + WheelLinearVelocityLocal[2].X + WheelLinearVelocityLocal[3].X) /4;
+		TotalDriveAxisAngularVelocity = (WheelAngularVelocity[0] + WheelAngularVelocity[1] + WheelAngularVelocity[2] + WheelAngularVelocity[3]) * .25f;
 		break;
 	default:
 		break;
 	}
-	const float Speed = (WheelLinearVelocityLocal[0].X +WheelLinearVelocityLocal[1].X +WheelLinearVelocityLocal[2].X +WheelLinearVelocityLocal[3].X) /4;
-	GEngine->AddOnScreenDebugMessage(-1, deltaTime, FColor::Orange, FString::Printf(TEXT("Speed %f"),Speed));
 }
 
-void AMasterVehicle::temp()
+void AMasterVehicle::WheelsAccelerateEngine()
 {
+	/*
 	ClutchAngularVelocity = TotalDriveAxisAngularVelocity * TotalGearRatio;
 	//
 	float k = FVector::DotProduct(VehicleHullMesh->GetForwardVector(),UKismetMathLibrary::Normal(VehicleHullMesh->GetPhysicsLinearVelocity()));
@@ -755,12 +765,94 @@ void AMasterVehicle::temp()
 	float t1 = ClutchAngularVelocity - EngineAngularVelocity;
 	float t2 = t1 * FMath::Lerp(0.07f, .5f,kAbs);
 	float t3 = t2 * 1;
-	float MinValue = RPM_to_RadPS * EngineStruct.idle_rpm;
-	float MaxValue = RPM_to_RadPS * EngineStruct.max_rpm;
+	
 	
 	float t4 = FMath::Clamp((EngineAngularVelocity + (t3*2)), MinValue, MaxValue);
+	//float t4 = EngineAngularVelocity + t3*2;
 	EngineAngularVelocity = t4;
+	*/
+
+	ClutchAngularVelocity = TotalDriveAxisAngularVelocity * TotalGearRatio;
+	GEngine->AddOnScreenDebugMessage(-1, deltaTime, FColor::Green, FString::Printf(TEXT("CAV: %f , TDAAV %f"),ClutchAngularVelocity, TotalDriveAxisAngularVelocity));
+
+	float MinValue = EngineStruct.idle_rpm * RPM_to_RadPS;
+	float MaxValue = EngineStruct.max_rpm * RPM_to_RadPS ;
+
+	FVector vec = VehicleHullMesh->GetPhysicsLinearVelocity();
+	vec.Normalize();
+	
+	float Alpha = FMath::Abs(FVector::DotProduct(VehicleHullMesh->GetForwardVector(), vec));
+
+	float k = FMath::Lerp(0.07f, 0.5f, Alpha);
+	float a = (ClutchAngularVelocity - EngineAngularVelocity);
+	
+	EngineAngularVelocity = FMath::Clamp(EngineAngularVelocity + (a * k * Gear != 1), MinValue ,MaxValue);
+	GEngine->AddOnScreenDebugMessage(-1, deltaTime, FColor::Green, FString::Printf(TEXT("EAV: %f , Clutch Value %f"),EngineAngularVelocity, k));
 
 }
+
+void AMasterVehicle::Braking(float iValue)
+{
+	GetBrakingValue(iValue);
+	GetBrakeTorque();
+}
+
+void AMasterVehicle::GetBrakingValue(float iValue)
+{
+	if(!VBrakeFilter)
+	{
+		BrakeValue = iValue;
+	}else
+	{
+		if(iValue != 0)
+		{
+			BrakeValue = FMath::Min(BrakeValue + AccelValue, 1);
+		}else
+		{
+			BrakeValue = FMath::Max(BrakeValue - DecelValue, 0);
+		}
+	}
+	
+	
+}
+
+void AMasterVehicle::GetBrakeTorque()
+{
+	for(int i =0; i<4;i++)
+	{
+		switch (i)
+		{
+		case 0:
+			BrakeTorque[i] = BrakeBiasRatio[0] * BrakeStength * BrakeValue;
+			break;
+		case 1:
+			BrakeTorque[i] = BrakeBiasRatio[0] * BrakeStength * BrakeValue;
+			break;
+		case 2:
+			BrakeTorque[i] = BrakeBiasRatio[1] * BrakeStength * BrakeValue;
+			break;
+		case 3:
+			BrakeTorque[i] = BrakeBiasRatio[1] * BrakeStength * BrakeValue;
+			break;
+		default:
+			break;
+		}
+	}
+}
+
+void AMasterVehicle::ApplyBrakeForce()
+{
+	for(int i=0;i<4;i++)
+	{
+		
+		float Check = BrakeTorque[i] * (FMath::Sign(WheelAngularVelocity[i]) * 1);
+		WheelAngularVelocity[i] += (Check / WheelInertia[i]) * deltaTime;
+
+		GEngine->AddOnScreenDebugMessage(-1, deltaTime, FColor::Green, FString::Printf(TEXT("check: %f"),Check));
+		//float Check = BrakeTorque[i] * (FMath::Sign(WheelLinearVelocityLocal[i].X * -1));
+		//WheelLinearVelocityLocal[i].X = WheelLinearVelocityLocal[i].X -  (Check / WheelInertia[i])*deltaTime;
+	}
+}
+
 
 

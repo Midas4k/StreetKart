@@ -19,6 +19,7 @@ class STREETKART_API ACarPlayerController : public APlayerController
 	virtual void MoveRight(const float Value);
 	virtual void MoveForward(const float Value);
 	virtual void Throttle(const float Value);
+	virtual void Braking(const float Value);
 	virtual void ShiftUp();
 	virtual void ShiftDown();
 

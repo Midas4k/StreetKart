@@ -70,6 +70,7 @@ public:
 	virtual void CameraOrbit(float mouseX);
 	virtual void CameraPitch(float mouseY);
 	virtual void Throttle(float iValue);
+	virtual void Braking(float iValue);
 	virtual void ShiftUp();
 	virtual void ShiftDown();
 	
@@ -89,7 +90,6 @@ protected:
 	virtual void ApplySuspensionForce();
 	virtual void AdjustWheels();
 	virtual void GetWheelLinearVelocity();
-	virtual void GetTyreForceSimple();
 	virtual void ApplyTyreForce();
 	virtual void WheelRotation();
 	virtual void GetThrottleValue(float iValue);
@@ -102,8 +102,13 @@ protected:
 	virtual void GetCombinedSlipForce();
 	virtual void DebugDrawing(float dt);
 	virtual void GetFrictionTorque();
-	virtual void WheelAccelerateEngine();
-	virtual void temp();
+	virtual void GetTotalDriveVelocity();
+	virtual void WheelsAccelerateEngine();
+	virtual void GetBrakingValue(float iValue);
+	virtual void GetBrakeTorque();
+	virtual void ApplyBrakeForce();
+	virtual void BrakesINI();
+	
 
 	
 
@@ -202,6 +207,15 @@ protected:
 	float AccelValue;
 	float DecelValue;
 	bool VThrottleFilter;
+	bool VBrakeFilter;
+	float BrakeValue;
+	TArray<float> BrakeTorque;
+	TArray<float> BrakeBiasRatio;
+	float BrakeBias;
+	float TorqueBias;
+
+	float BrakeStength;
+	float WheelMaxAngularVelocity;
 
 	FString GearOut;
 

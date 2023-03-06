@@ -44,6 +44,12 @@ void ACarPlayerController::ShiftDown()
 	Cast<AMasterVehicle>(GetPawn())->ShiftDown();
 }
 
+void ACarPlayerController::Braking(const float Value)
+{
+	Cast<AMasterVehicle>(GetPawn())->Braking(Value);
+}
+
+
 
 
 void ACarPlayerController::SetupInputComponent()
@@ -51,6 +57,7 @@ void ACarPlayerController::SetupInputComponent()
 	Super::SetupInputComponent();
 
 	InputComponent->BindAxis("Throttle",this, &ACarPlayerController::Throttle);
+	InputComponent->BindAxis("Braking", this, &ACarPlayerController::Braking);
 	InputComponent->BindAxis("mouseX", this, &ACarPlayerController::MouseX);
 	InputComponent->BindAxis("mouseY",this,&ACarPlayerController::MouseY);
 	InputComponent->BindAxis("Forward", this, &ACarPlayerController::MoveForward);
