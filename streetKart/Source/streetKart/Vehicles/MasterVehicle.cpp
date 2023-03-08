@@ -179,7 +179,7 @@ void AMasterVehicle::BeginPlay()
 	RadPS_to_RPM = 1 / RPM_to_RadPS;
 
 	WheelLinearVelocityLocal.SetNum(4);
-	DriveType = EDriveType_Enum::RWD;
+	DriveType = EDriveType_Enum::AWD;
 
 	DriveTorque.SetNum(4);
 	TorqueRatio.Add(.5f);
@@ -550,7 +550,7 @@ void AMasterVehicle::GetDriveTorque()
 void AMasterVehicle::WheelAcceleration()
 {
 	float MaxWheelSpeed;
-	if(Gear != 0)
+	if(Gear != 1)
 	{
 		//max wheel speed on current gear
 		MaxWheelSpeed = EngineAngularVelocity / TotalGearRatio;
@@ -606,8 +606,8 @@ void AMasterVehicle::GetLongSlipVelocity()
 
 		float SlipVelocity = WheelSpeed - WheelLinearVelocityLocal[i].X;
 		
-		//if(Gear >0) SlipVelocity = WheelLinearVelocityLocal[i].X + WheelSpeed;
-		//else SlipVelocity = WheelLinearVelocityLocal[i].X - WheelSpeed;
+		//if(Gear >1) SlipVelocity = WheelLinearVelocityLocal[i].X - WheelSpeed;
+		//else SlipVelocity = WheelLinearVelocityLocal[i].X + WheelSpeed;
 		
 		LongSlipVelocity[i] = SlipVelocity;
 		//GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Orange, FString::Printf(TEXT("WLVL %i: %f"),i,LongSlipVelocity[i]));
@@ -643,17 +643,18 @@ void AMasterVehicle::GetCombinedSlipForce()
 			LateralSlipNormalized = CornerStiffness;
 
 			//if(CarSpeed*SlipSpeed >0)Traction; Else friction;
-			if( WheelLinearVelocityLocal[i].X * LongSlipVelocity[i] > 0)
+			if( FMath::Abs(WheelLinearVelocityLocal[i].X) * LongSlipVelocity[i] > 0)
 			{
 				//Traction = DriveTorque / R
 				float R = (WheelStruct.Radius / 100);
 				const float Traction = DriveTorque[i] / R ; //Wheel Radius M
 				LongSlipNormalized =FMath::Clamp(Traction / FMath::Max(Fz[i], 0.000001f),-2 ,2); // LongSlipNormalized = Traction/maxFriction
-				//GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Orange, FString::Printf(TEXT("T LongSlipNormalized %i : %f"),i, LongSlipNormalized));
+				GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Orange, FString::Printf(TEXT("T %i"),i));
 			} else
 			{
 				LongSlipNormalized =  FMath::Clamp(LongSlipVelocity[i] * WheelStruct.Long_Stiffness,-2,2);
-				//GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Orange, FString::Printf(TEXT("F LongSlipNormalized %i : %f"),i, LongSlipNormalized));
+				
+				GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Orange, FString::Printf(TEXT("F %i"),i));
 			}
 			
 			//Combined Slip
@@ -846,7 +847,7 @@ void AMasterVehicle::ApplyBrakeForce()
 	{
 		
 		float Check = BrakeTorque[i] * (FMath::Sign(WheelAngularVelocity[i]) * 1);
-		WheelAngularVelocity[i] += (Check / WheelInertia[i]) * deltaTime;
+		WheelAngularVelocity[i] -= (Check / WheelInertia[i]) * deltaTime;
 
 		GEngine->AddOnScreenDebugMessage(-1, deltaTime, FColor::Green, FString::Printf(TEXT("check: %f"),Check));
 		//float Check = BrakeTorque[i] * (FMath::Sign(WheelLinearVelocityLocal[i].X * -1));
