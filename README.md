@@ -1,2 +1,2 @@
 # StreetKart
-Street Race style take on Mario Kart
+Street Race game with simcade physics
