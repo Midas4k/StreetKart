@@ -180,7 +180,7 @@ void AMasterVehicle::BeginPlay()
 	RadPS_to_RPM = 1 / RPM_to_RadPS;
 
 	WheelLinearVelocityLocal.SetNum(4);
-	DriveType = EDriveType_Enum::RWD;
+	DriveType = EDriveType_Enum::AWD;
 
 	DriveTorque.SetNum(4);
 	TorqueRatio.Add(.5f);
@@ -848,7 +848,8 @@ void AMasterVehicle::ApplyBrakeForce()
 	{
 		
 		float Check = BrakeTorque[i] * (FMath::Sign(WheelAngularVelocity[i]) * 1);
-		WheelAngularVelocity[i] -= (Check / WheelInertia[i]) * deltaTime;
+		if(WheelAngularVelocity[i] < 2 && AccelValue ==0) WheelAngularVelocity[i] = 0;
+		else WheelAngularVelocity[i] -= (Check / WheelInertia[i]) * deltaTime;
 
 		GEngine->AddOnScreenDebugMessage(-1, deltaTime, FColor::Green, FString::Printf(TEXT("check: %f"),Check));
 		//float Check = BrakeTorque[i] * (FMath::Sign(WheelLinearVelocityLocal[i].X * -1));
