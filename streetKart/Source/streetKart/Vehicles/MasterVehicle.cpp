@@ -124,8 +124,8 @@ AMasterVehicle::AMasterVehicle()
 
 	EngineStruct.idle_rpm = 700.0f;
 	EngineStruct.max_rpm = 7000.0f;
-	EngineStruct.inertia = .3f;
-	EngineStruct.back_torque = -100.0f;
+	EngineStruct.inertia = 0.3f;
+	EngineStruct.back_torque = -90.0f;
 #pragma endregion Engine Struct
 
 	ConstructorHelpers::FObjectFinder<UObject> ForceSearch(TEXT("/Game/Curves/ForceCurve"));
@@ -150,9 +150,10 @@ void AMasterVehicle::BeginPlay()
 #pragma endregion Wheels
 	
 	SteerAngleMax = 45.0f;
-	AccelValue = 0.02f;
-	DecelValue = 0.05f;
-	BrakeBias = .7f;
+	AccelValue = 0.015f;
+	DecelValue = 0.03f;
+	BrakeBias = .7f; //Closer to 1 is more frontal, closer to 0 is rear
+	
 
 	WheelContact.SetNum(4);
 	HitResults.SetNum(4);
@@ -171,7 +172,7 @@ void AMasterVehicle::BeginPlay()
 	GearRatio.Append(GearInit, ARRAY_COUNT(GearInit));
 	MainGear = 3.82f;
 	Efficiency = .8f;
-	GearChangeTime = .5f;
+	GearChangeTime = .1f;
 	TorqueBias = .3f;
 
 	RPM_to_RadPS = (PI * 2)/ 60;
@@ -179,7 +180,7 @@ void AMasterVehicle::BeginPlay()
 	RadPS_to_RPM = 1 / RPM_to_RadPS;
 
 	WheelLinearVelocityLocal.SetNum(4);
-	DriveType = EDriveType_Enum::AWD;
+	DriveType = EDriveType_Enum::RWD;
 
 	DriveTorque.SetNum(4);
 	TorqueRatio.Add(.5f);
@@ -643,18 +644,18 @@ void AMasterVehicle::GetCombinedSlipForce()
 			LateralSlipNormalized = CornerStiffness;
 
 			//if(CarSpeed*SlipSpeed >0)Traction; Else friction;
-			if( FMath::Abs(WheelLinearVelocityLocal[i].X) * LongSlipVelocity[i] > 0)
+			if( FMath::Abs(WheelLinearVelocityLocal[i].X) *LongSlipVelocity[i] > 0)
 			{
 				//Traction = DriveTorque / R
 				float R = (WheelStruct.Radius / 100);
 				const float Traction = DriveTorque[i] / R ; //Wheel Radius M
 				LongSlipNormalized =FMath::Clamp(Traction / FMath::Max(Fz[i], 0.000001f),-2 ,2); // LongSlipNormalized = Traction/maxFriction
-				GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Orange, FString::Printf(TEXT("T %i"),i));
+				GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Orange, FString::Printf(TEXT("T %i , %f"),i,LongSlipVelocity[i]));
 			} else
 			{
 				LongSlipNormalized =  FMath::Clamp(LongSlipVelocity[i] * WheelStruct.Long_Stiffness,-2,2);
 				
-				GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Orange, FString::Printf(TEXT("F %i"),i));
+				GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Orange, FString::Printf(TEXT("F %i, %f"),i,LongSlipVelocity[i]));
 			}
 			
 			//Combined Slip
@@ -785,7 +786,7 @@ void AMasterVehicle::WheelsAccelerateEngine()
 	float Alpha = FMath::Abs(FVector::DotProduct(VehicleHullMesh->GetForwardVector(), vec));
 
 	float k = FMath::Lerp(0.07f, 0.5f, Alpha);
-	float a = (ClutchAngularVelocity - EngineAngularVelocity);
+	float a = ( EngineAngularVelocity- ClutchAngularVelocity);
 	
 	EngineAngularVelocity = FMath::Clamp(EngineAngularVelocity + (a * k * Gear != 1), MinValue ,MaxValue);
 	GEngine->AddOnScreenDebugMessage(-1, deltaTime, FColor::Green, FString::Printf(TEXT("EAV: %f , Clutch Value %f"),EngineAngularVelocity, k));
