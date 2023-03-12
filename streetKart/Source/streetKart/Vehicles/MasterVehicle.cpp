@@ -488,17 +488,27 @@ void AMasterVehicle::GetThrottleValue(float iValue)
 
 void AMasterVehicle::GetEngineTorque()
 {
-	EngineTorque = FMath::Lerp(EngineStruct.back_torque,EngineStruct.torque_curve->GetFloatValue(EngineRPM)*ThrottleValue, ThrottleValue);
+	EngineRPM += deltaTime * FMath::Lerp(-3000, 5000, ThrottleValue);
+	EngineRPM = FMath::Clamp(EngineRPM, EngineStruct.idle_rpm, EngineStruct.max_rpm);
+	float T =0;
+	T = EngineStruct.torque_curve->GetFloatValue(EngineRPM) * ThrottleValue;
+	EngineTorque = FMath::Lerp(EngineStruct.back_torque, T, ThrottleValue);
+	//EngineTorque = FMath::Lerp(EngineStruct.back_torque,EngineStruct.torque_curve->GetFloatValue(EngineRPM)*ThrottleValue, ThrottleValue);
 
 	//Angular Acceleration = Torque/Inertia
-	const float AngularAccel = EngineTorque / EngineStruct.inertia;
+	float AngularAccel = EngineTorque / EngineStruct.inertia;
 	const float MinVal = RPM_to_RadPS * EngineStruct.idle_rpm;
 	const float MaxVal = RPM_to_RadPS * EngineStruct.max_rpm;
 
 	
-	EngineAngularVelocity = FMath::Clamp(EngineAngularVelocity + (AngularAccel * deltaTime), MinVal ,MaxVal );
+	EngineAngularVelocity = FMath::Clamp(EngineAngularVelocity + AngularAccel * deltaTime, MinVal ,MaxVal );
 	EngineRPM = EngineAngularVelocity * RadPS_to_RPM;
-	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Green, FString::Printf(TEXT("RPM: %f Torque: %f"),EngineRPM, EngineTorque));
+	//GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Green, FString::Printf(TEXT("RPM: %f Torque: %f"),EngineRPM, EngineTorque));
+
+	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Blue, FString::Printf(TEXT("engineRPM %f"), EngineRPM));
+	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Blue, FString::Printf(TEXT("engineTorque %f"), EngineTorque));
+	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Blue, FString::Printf(TEXT("torque %f"), T));
+
 }
 
 void AMasterVehicle::ShiftUp()
@@ -527,7 +537,7 @@ void AMasterVehicle::GetDriveTorque()
 {
 	for(int i=0;i<4;i++)
 	{
-		float Value  = FMath::Max(EngineTorque, 0 )* TotalGearRatio;
+		float Value  = FMath::Max(0, EngineTorque)* TotalGearRatio;
 		switch(i)
 		{
 		case 0:
@@ -750,6 +760,7 @@ void AMasterVehicle::GetTotalDriveVelocity()
 		break;
 	case 2://AWD
 		TotalDriveAxisAngularVelocity = (WheelAngularVelocity[0] + WheelAngularVelocity[1] + WheelAngularVelocity[2] + WheelAngularVelocity[3]) * .25f;
+		//TotalDriveAxisAngularVelocity = (WheelLinearVelocityLocal[0].X + WheelLinearVelocityLocal[1].X + WheelLinearVelocityLocal[2].X + WheelLinearVelocityLocal[3].X) /4;
 		break;
 	default:
 		break;
@@ -786,10 +797,12 @@ void AMasterVehicle::WheelsAccelerateEngine()
 	float Alpha = FMath::Abs(FVector::DotProduct(VehicleHullMesh->GetForwardVector(), vec));
 
 	float k = FMath::Lerp(0.07f, 0.5f, Alpha);
-	float a = ( EngineAngularVelocity- ClutchAngularVelocity);
-	
-	EngineAngularVelocity = FMath::Clamp(EngineAngularVelocity + (a * k * Gear != 1), MinValue ,MaxValue);
-	GEngine->AddOnScreenDebugMessage(-1, deltaTime, FColor::Green, FString::Printf(TEXT("EAV: %f , Clutch Value %f"),EngineAngularVelocity, k));
+	float a = ClutchAngularVelocity - EngineAngularVelocity;
+
+	float boVal = Gear != 1;
+	float av = FMath::Clamp(EngineAngularVelocity + (a * k * boVal), MinValue ,MaxValue);
+	EngineAngularVelocity = av;
+	GEngine->AddOnScreenDebugMessage(-1, deltaTime, FColor::Green, FString::Printf(TEXT("EAV: %f , Clutch Value %f , A %f"),EngineAngularVelocity, k,boVal));
 
 }
 
