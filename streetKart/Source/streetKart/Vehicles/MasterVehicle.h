@@ -34,10 +34,13 @@ struct FEngineStruct
 {
 	GENERATED_BODY()
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) UCurveFloat* torque_curve;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) int idle_rpm;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) FVector2D idle_rpm;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) int max_rpm;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) float inertia;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) float back_torque;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float friction_coeff;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float friction;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float rev_limiter_duration;
 	
 	
 };
@@ -108,6 +111,7 @@ protected:
 	virtual void GetBrakeTorque();
 	virtual void ApplyBrakeForce();
 	virtual void BrakesINI();
+	virtual void EngineAccelerating();
 	
 
 	
@@ -216,6 +220,15 @@ protected:
 
 	float BrakeStength;
 	float WheelMaxAngularVelocity;
+	float DriveShaftAngularVelocity;
+
+	float CarSpeed;
+
+	float ClutchCapacity;
+	float ClutchStiffness;
+	float ClutchTorque;
+	float Combustible;
+	float RevLimiterTime;
 
 	FString GearOut;
 

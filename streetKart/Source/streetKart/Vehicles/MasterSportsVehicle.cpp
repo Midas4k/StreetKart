@@ -82,5 +82,6 @@ AMasterSportsVehicle::AMasterSportsVehicle()
 	WheelStruct.Mass = 15.0f;
 	WheelStruct.Cornering_Stiffness = 1.0f;
 	WheelStruct.Long_Stiffness = 1.0f;
+	
 #pragma endregion Struct Values
 }
