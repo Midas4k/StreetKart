@@ -112,6 +112,7 @@ protected:
 	virtual void ApplyBrakeForce();
 	virtual void BrakesINI();
 	virtual void EngineAccelerating();
+	virtual void SimpleDownforce();
 	
 
 	
@@ -223,10 +224,7 @@ protected:
 	float DriveShaftAngularVelocity;
 
 	float CarSpeed;
-
-	float ClutchCapacity;
-	float ClutchStiffness;
-	float ClutchTorque;
+	
 	float Combustible;
 	float RevLimiterTime;
 

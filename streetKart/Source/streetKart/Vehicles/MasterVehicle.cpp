@@ -173,7 +173,7 @@ void AMasterVehicle::BeginPlay()
 	BrakeStength = 1500.0f;
 
 	Gear = 1;
-	GearRatio.Append(GearInit, ARRAY_COUNT(GearInit));
+	GearRatio.Append(GearInit, UE_ARRAY_COUNT(GearInit));
 	MainGear = 3.82f;
 	Efficiency = .8f;
 	GearChangeTime = .1f;
@@ -193,7 +193,7 @@ void AMasterVehicle::BeginPlay()
 	TorqueRatio.Add(.5f);
 	TorqueRatio.Add(.5f);
 
-	ClutchCapacity = 400; // 1.2~1.5 * Engine Max Torque
+	
 	
 	RaycastInit();
 	SuspensionInit();
@@ -208,6 +208,7 @@ void AMasterVehicle::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	deltaTime = DeltaTime;
+	SimpleDownforce();
 	GetDriveTorque();
 	WheelAcceleration();
 	RayCast(DeltaTime);
@@ -216,7 +217,6 @@ void AMasterVehicle::Tick(float DeltaTime)
 	ApplySuspensionForce();
 	AdjustWheels();
 	GetWheelLinearVelocity();
-	GetClutchTorque();
 	GetLongSlipVelocity();
 	GetCombinedSlipForce();
 	ApplyTyreForce();
@@ -468,7 +468,7 @@ void AMasterVehicle::ApplyTyreForce()
 		if(WheelContact[i])
 		{
 			FVector ForwardF = TopLinksArray[i]->GetForwardVector() * Fx[i];
-			FVector RightF =  TopLinksArray[i]->GetRightVector() * Fy[i];
+			FVector RightF =  TopLinksArray[i]->GetRightVector() * Fy[i] * 1.25f;
 			FVector TotalF = (ForwardF + RightF)*100;
 			VehicleHullMesh->AddForceAtLocation(TotalF,HitResults[i].Location);
 			//GEngine->AddOnScreenDebugMessage(-1, deltaTime, FColor::Orange, FString::Printf(TEXT("Fx: %f"),Fx[i]));
@@ -917,8 +917,8 @@ void AMasterVehicle::EngineAccelerating()
 	const float RealInitialTorque = MaxInitialTorque * Power;
 	const float RealEffectiveTorque = RealInitialTorque - EngineFriction;
 	
-	EngineTorque = RealEffectiveTorque - ClutchTorque;
-	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Yellow, FString::Printf(TEXT("CTor: %f"),ClutchTorque));
+	EngineTorque = RealEffectiveTorque;
+	
 
 
 
@@ -932,6 +932,48 @@ void AMasterVehicle::EngineAccelerating()
 	EngineRPM = EngineAngularVelocity * RadPS_to_RPM;
 
 }
+
+void AMasterVehicle::SimpleDownforce()
+{
+	float TotalDownForce = 0;
+	for(int i =0; i < 2; i++)
+	{
+		FVector Location;
+		if(i == 0)
+		{ // Front Axle location
+			Location = (Wheel_FL->GetComponentLocation() + Wheel_FR->GetComponentLocation()) * .5f;
+			
+		}else
+		{ // Rear Axle Location
+			Location = (Wheel_RL->GetComponentLocation() + Wheel_RR->GetComponentLocation()) * .5f;
+		}
+		//cm/s to m/s
+		FVector Velocity  = VehicleHullMesh->GetPhysicsLinearVelocityAtPoint(Location) / 100;
+
+		FRotator CarRot = VehicleHullMesh->GetComponentRotation().GetInverse();
+
+		FVector ToLocalSpace = CarRot.RotateVector(Velocity);
+
+		//V - Airspeed
+		float Force = FMath::Max(ToLocalSpace.X, 0.0f);
+		//CL * A
+		float CLA = 5 / 2;
+		float ForceSq = Force * Force;
+
+		float DownForce = 0.5 * 1.22 * -1 * CLA * ForceSq;
+
+		TotalDownForce += DownForce;
+		GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Yellow, FString::Printf(TEXT("Downforce %i: %f kg"), i,FMath::Abs((DownForce))));
+		//Downforce * 100 to UE force Units
+		FVector ForceAmount = VehicleHullMesh->GetUpVector() * (DownForce * 100);
+
+		VehicleHullMesh->AddForceAtLocation(ForceAmount,Location);
+		DrawDebugLine(GetWorld(), Location, ForceAmount, FColor::Blue,false, deltaTime * 1.0f, 0, 5.0f);
+	}
+	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Yellow, FString::Printf(TEXT("Downforce: %f kg"),FMath::Abs((TotalDownForce))));
+	
+}
+
 
 
 
