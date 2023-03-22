@@ -17,6 +17,8 @@ AMasterVehicle::AMasterVehicle()
 	PrimaryActorTick.bCanEverTick = true;
 
 #pragma region Create Defaults
+
+
 	
 	VehicleHullMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Vehicle Body"));
 	VehicleHullMesh->AttachToComponent(VehicleRoot,FAttachmentTransformRules::KeepRelativeTransform);
@@ -132,7 +134,7 @@ AMasterVehicle::AMasterVehicle()
 	EngineStruct.rev_limiter_duration = 0.02f;
 #pragma endregion Engine Struct
 
-	ConstructorHelpers::FObjectFinder<UObject> ForceSearch(TEXT("/Game/Curves/ForceCurve"));
+	ConstructorHelpers::FObjectFinder<UObject> ForceSearch(TEXT("/Game/Curves/ForceCurve1"));
 	if (ForceSearch.Succeeded()) ForceCurve = Cast<UCurveFloat>(ForceSearch.Object);
 	//VehicleHullMesh->SetCenterOfMass(FVector(35,0,-35));
 }
@@ -260,10 +262,10 @@ void AMasterVehicle::Tick(float DeltaTime)
 #pragma endregion GearDebug
 	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Yellow, FString::Printf(TEXT("RPM: %f Torque: %f"),EngineRPM, EngineTorque));
 	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Yellow, FString::Printf(TEXT("Brake Bias: F: %i, R: %i"),FMath::RoundToInt(BrakeBiasRatio[0]*100), FMath::RoundToInt(BrakeBiasRatio[1]*100)));
-	for(int i=0; i <4;i++)
-	{
-		CarSpeed = (WheelAngularVelocity[0] + WheelAngularVelocity[1] + WheelAngularVelocity[2] + WheelAngularVelocity[3]) / 4;
-	}
+
+	//CarSpeed = (WheelAngularVelocity[0] + WheelAngularVelocity[1] + WheelAngularVelocity[2] + WheelAngularVelocity[3]) / 4;
+	CarSpeed = VehicleHullMesh->GetPhysicsLinearVelocity().Size() * 0.0223694f;
+	
 	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Yellow, FString::Printf(TEXT("Car Speed: %f"),CarSpeed));
 }
 
@@ -428,7 +430,7 @@ void AMasterVehicle::MoveRight(float iValue)
 {
 	if(iValue !=0)
 	{
-		SteeringAngle =FMath::Clamp(SteeringAngle + (iValue *2), -SteerAngleMax,SteerAngleMax);
+		SteeringAngle =FMath::Clamp(SteeringAngle + (iValue *SteeringDamper), -SteerAngleMax,SteerAngleMax);
 	}else
 	{
 		SteeringAngle *= .7f;
@@ -467,14 +469,15 @@ void AMasterVehicle::ApplyTyreForce()
 	{
 		if(WheelContact[i])
 		{
-			FVector ForwardF = TopLinksArray[i]->GetForwardVector() * Fx[i];
-			FVector RightF =  TopLinksArray[i]->GetRightVector() * Fy[i] * 1.25f;
+			FVector ForwardF = TopLinksArray[i]->GetForwardVector() * Fx[i] ;
+			FVector RightF =  TopLinksArray[i]->GetRightVector() * Fy[i] ;
 			FVector TotalF = (ForwardF + RightF)*100;
 			VehicleHullMesh->AddForceAtLocation(TotalF,HitResults[i].Location);
-			//GEngine->AddOnScreenDebugMessage(-1, deltaTime, FColor::Orange, FString::Printf(TEXT("Fx: %f"),Fx[i]));
+			
 			//VehicleHullMesh->AddForceAtLocation(TotalF,WheelMeshs[i]->GetComponentLocation());
 		}
 	}
+	GEngine->AddOnScreenDebugMessage(-1, deltaTime, FColor::Orange, FString::Printf(TEXT("SteerDamp: %f"),SteeringDamper));
 }
 
 void AMasterVehicle::Throttle(float iValue)
@@ -536,8 +539,10 @@ void AMasterVehicle::ShiftUp()
 	{
 		Gear = FMath::Min(Gear + 1,GearRatio.Num()-1);
 		TotalGearRatio = GearRatio[Gear] * MainGear;
+		
 	}, GearChangeTime, false);
-
+	SteeringDamper = 1 - (Gear* .1f);
+	
 	
 	
 }
@@ -549,6 +554,7 @@ void AMasterVehicle::ShiftDown()
 		Gear = FMath::Max(Gear - 1,0);
 		TotalGearRatio = GearRatio[Gear] * MainGear;
 	}, GearChangeTime, false);
+	SteeringDamper = 1 - (Gear* .1f);
 }
 
 void AMasterVehicle::GetDriveTorque()
@@ -953,17 +959,18 @@ void AMasterVehicle::SimpleDownforce()
 		FRotator CarRot = VehicleHullMesh->GetComponentRotation().GetInverse();
 
 		FVector ToLocalSpace = CarRot.RotateVector(Velocity);
-
+		ToLocalSpace.X = FMath::Abs(ToLocalSpace.X);
+		ToLocalSpace.Y = FMath::Abs(ToLocalSpace.Y);
+		ToLocalSpace.Z = FMath::Abs(ToLocalSpace.Z);
 		//V - Airspeed
 		float Force = FMath::Max(ToLocalSpace.X, 0.0f);
 		//CL * A
 		float CLA = 5 / 2;
 		float ForceSq = Force * Force;
 
-		float DownForce = 0.5 * 1.22 * -1 * CLA * ForceSq;
+		float DownForce = 0.7 * 1.22 * -1 * CLA * ForceSq;
 
 		TotalDownForce += DownForce;
-		GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Yellow, FString::Printf(TEXT("Downforce %i: %f kg"), i,FMath::Abs((DownForce))));
 		//Downforce * 100 to UE force Units
 		FVector ForceAmount = VehicleHullMesh->GetUpVector() * (DownForce * 100);
 
@@ -971,6 +978,7 @@ void AMasterVehicle::SimpleDownforce()
 		DrawDebugLine(GetWorld(), Location, ForceAmount, FColor::Blue,false, deltaTime * 1.0f, 0, 5.0f);
 	}
 	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Yellow, FString::Printf(TEXT("Downforce: %f kg"),FMath::Abs((TotalDownForce))));
+	
 	
 }
 

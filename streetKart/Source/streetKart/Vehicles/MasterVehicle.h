@@ -122,7 +122,7 @@ protected:
 	
 #pragma region Mesh Components
 	UPROPERTY(VisibleDefaultsOnly, Category=Default)
-	USceneComponent* VehicleRoot;
+	UStaticMeshComponent* VehicleRoot;
                                       	
 	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
 	USkeletalMeshComponent* VehicleHullMesh;
@@ -223,6 +223,7 @@ protected:
 	float WheelMaxAngularVelocity;
 	float DriveShaftAngularVelocity;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)float SteeringDamper;
 	float CarSpeed;
 	
 	float Combustible;
