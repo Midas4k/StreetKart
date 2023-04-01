@@ -237,7 +237,7 @@ protected:
 	float RPM_to_RadPS;
 	float RadPS_to_RPM;
 
-	float GearInit[7] = {-3.615f, 0.0f, 3.583f, 2.038f, 1.414f, 1.108f, 0.878f};
+	
 	TArray<float>GearRatio;
 	int Gear;
 	float MainGear;

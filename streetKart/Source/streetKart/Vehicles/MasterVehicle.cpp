@@ -122,8 +122,8 @@ AMasterVehicle::AMasterVehicle()
 #pragma endregion Camera Setup
 
 #pragma region Engine Struct
-	ConstructorHelpers::FObjectFinder<UObject> EngineTorqueSearch(TEXT("/Game/Curves/EngineTorqueCurve"));
-	if (EngineTorqueSearch.Succeeded()) EngineStruct.torque_curve = Cast<UCurveFloat>(EngineTorqueSearch.Object);
+	//ConstructorHelpers::FObjectFinder<UObject> EngineTorqueSearch(TEXT("/Game/Curves/EngineTorqueCurve"));
+	//if (EngineTorqueSearch.Succeeded()) EngineStruct.torque_curve = Cast<UCurveFloat>(EngineTorqueSearch.Object);
 
 	EngineStruct.idle_rpm = FVector2D(700.0f, 1500);
 	EngineStruct.max_rpm = 7000.0f;
@@ -159,7 +159,7 @@ void AMasterVehicle::BeginPlay()
 	AccelValue = 0.015f;
 	DecelValue = 0.03f;
 	BrakeBias = .7f; //Closer to 1 is more frontal, closer to 0 is rear
-	
+	//float GearInit[7] = {-3.615f, 0.0f, 3.583f, 2.038f, 1.414f, 1.108f, 0.878f};
 
 	WheelContact.SetNum(4);
 	HitResults.SetNum(4);
@@ -175,8 +175,8 @@ void AMasterVehicle::BeginPlay()
 	BrakeStength = 1500.0f;
 
 	Gear = 1;
-	GearRatio.Append(GearInit, UE_ARRAY_COUNT(GearInit));
-	MainGear = 3.82f;
+	
+	
 	Efficiency = .8f;
 	GearChangeTime = .1f;
 	TorqueBias = .3f;
@@ -968,7 +968,7 @@ void AMasterVehicle::SimpleDownforce()
 		float CLA = 5 / 2;
 		float ForceSq = Force * Force;
 
-		float DownForce = 0.7 * 1.22 * -1 * CLA * ForceSq;
+		float DownForce = 0.5 * 1.22 * -1 * CLA * ForceSq;
 
 		TotalDownForce += DownForce;
 		//Downforce * 100 to UE force Units

@@ -82,6 +82,14 @@ AMasterSportsVehicle::AMasterSportsVehicle()
 	WheelStruct.Mass = 15.0f;
 	WheelStruct.Cornering_Stiffness = 1.0f;
 	WheelStruct.Long_Stiffness = 1.0f;
+
+	ConstructorHelpers::FObjectFinder<UObject> EngineTorqueSearch(TEXT("/Game/Curves/R32TorqueCurve"));
+	if (EngineTorqueSearch.Succeeded()) EngineStruct.torque_curve = Cast<UCurveFloat>(EngineTorqueSearch.Object);
 	
 #pragma endregion Struct Values
+
+	
+	float GearInit[7] = {-3.214f, 0.0f,3.214f, 1.925f, 1.302f,1.000f, 0.752f};
+	MainGear = 4.111f;
+	GearRatio.Append(GearInit, UE_ARRAY_COUNT(GearInit));
 }

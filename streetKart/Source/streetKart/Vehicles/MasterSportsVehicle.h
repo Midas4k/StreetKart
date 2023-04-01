@@ -28,4 +28,7 @@ protected:
 
 	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
 	USkeletalMeshComponent* VehicleWindowDecalMesh;
+
+
+	
 };

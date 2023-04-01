@@ -1,0 +1,17 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\source\\streetkart\\vehicles\\mymastersupervehicle.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\streetkarteditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\unrealeditor\\development\\streetkart\\definitions.streetkart.h",
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\source\\streetkart\\vehicles\\mymastersupervehicle.h",
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\source\\streetkart\\vehicles\\mastervehicle.h",
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\unrealeditor\\inc\\streetkart\\mastervehicle.generated.h",
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\unrealeditor\\inc\\streetkart\\mymastersupervehicle.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
