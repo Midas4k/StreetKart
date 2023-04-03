@@ -1496,11 +1496,5 @@
     <ClInclude Include="..\..\Source\streetKart\Vehicles\MasterVehicle.h">
       <Filter>Source\streetKart\Vehicles</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\streetKart\Vehicles\MyMasterSuperVehicle.cpp">
-      <Filter>Source\streetKart\Vehicles</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\streetKart\Vehicles\MyMasterSuperVehicle.h">
-      <Filter>Source\streetKart\Vehicles</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

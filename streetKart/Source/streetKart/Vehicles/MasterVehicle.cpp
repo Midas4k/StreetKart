@@ -189,7 +189,7 @@ void AMasterVehicle::BeginPlay()
 	RadPS_to_RPM = 1 / RPM_to_RadPS;
 
 	WheelLinearVelocityLocal.SetNum(4);
-	DriveType = EDriveType_Enum::AWD;
+	
 
 	DriveTorque.SetNum(4);
 	TorqueRatio.Add(.5f);
@@ -233,32 +233,11 @@ void AMasterVehicle::Tick(float DeltaTime)
 
 
 #pragma region GearDebug
-	switch (Gear){
-	case 0:
-		GearOut = "R";
-		break;
-	case 1:
-		GearOut = "N";
-		break;
-	case 2:
-		GearOut = "1";
-		break;
-	case 3:
-		GearOut = "2";
-		break;
-	case 4:
-		GearOut = "3";
-		break;
-	case 5:
-		GearOut = "4";
-		break;
-	case 6:
-		GearOut = "5";
-		break;
-	default:
-		break;
-	}
-	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Purple, FString::Printf(TEXT("Gear: %s Total Gear Ratio: %f"),*GearOut, TotalGearRatio));
+	if(Gear == 0) GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Purple, FString::Printf(TEXT("Gear: %hs Total Gear Ratio: %f"),"R", TotalGearRatio));
+	else if (Gear == 1) GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Purple, FString::Printf(TEXT("Gear: %hs Total Gear Ratio: %f"),"N", TotalGearRatio));
+	else GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Purple, FString::Printf(TEXT("Gear: %i Total Gear Ratio: %f"),Gear-1, TotalGearRatio));
+
+	
 #pragma endregion GearDebug
 	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Yellow, FString::Printf(TEXT("RPM: %f Torque: %f"),EngineRPM, EngineTorque));
 	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Yellow, FString::Printf(TEXT("Brake Bias: F: %i, R: %i"),FMath::RoundToInt(BrakeBiasRatio[0]*100), FMath::RoundToInt(BrakeBiasRatio[1]*100)));
@@ -965,7 +944,7 @@ void AMasterVehicle::SimpleDownforce()
 		//V - Airspeed
 		float Force = FMath::Max(ToLocalSpace.X, 0.0f);
 		//CL * A
-		float CLA = 5 / 2;
+		float CLA = CLAValue.X / CLAValue.Y;
 		float ForceSq = Force * Force;
 
 		float DownForce = 0.5 * 1.22 * -1 * CLA * ForceSq;

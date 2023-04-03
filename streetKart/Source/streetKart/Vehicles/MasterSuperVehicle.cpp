@@ -84,5 +84,6 @@ AMasterSuperVehicle::AMasterSuperVehicle()
 	float GearInit[8] = {-2.81f, 0.0f,3.31f, 2.05f, 1.46f, 1.14f, .94f, .78f};
 	MainGear = 3.08f;
 	GearRatio.Append(GearInit, UE_ARRAY_COUNT(GearInit));
+	DriveType = EDriveType_Enum::AWD;
 	
 }
