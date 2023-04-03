@@ -225,8 +225,6 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)float SteeringDamper;
 	float CarSpeed;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)FVector2D CLAValue;
 	
 	float Combustible;
 	float RevLimiterTime;

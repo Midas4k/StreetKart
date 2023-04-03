@@ -88,7 +88,7 @@ AMasterSportsVehicle::AMasterSportsVehicle()
 	
 #pragma endregion Struct Values
 
-	DriveType = EDriveType_Enum::AWD;
+	
 	float GearInit[7] = {-3.214f, 0.0f,3.214f, 1.925f, 1.302f,1.000f, 0.752f};
 	MainGear = 4.111f;
 	GearRatio.Append(GearInit, UE_ARRAY_COUNT(GearInit));
