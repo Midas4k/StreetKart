@@ -1478,6 +1478,18 @@
     <Filter Include="Source\streetKart\Vehicles">
       <UniqueIdentifier>{6461B849-7217-304C-8F13-4363D7DF82AF}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\streetKart\Vehicles\MasterHatchVehicle.cpp">
+      <Filter>Source\streetKart\Vehicles</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\streetKart\Vehicles\MasterHatchVehicle.h">
+      <Filter>Source\streetKart\Vehicles</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\streetKart\Vehicles\MasterMuscleVehicle.cpp">
+      <Filter>Source\streetKart\Vehicles</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\streetKart\Vehicles\MasterMuscleVehicle.h">
+      <Filter>Source\streetKart\Vehicles</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\streetKart\Vehicles\MasterSportsVehicle.cpp">
       <Filter>Source\streetKart\Vehicles</Filter>
     </ClCompile>
@@ -1494,12 +1506,6 @@
       <Filter>Source\streetKart\Vehicles</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\streetKart\Vehicles\MasterVehicle.h">
-      <Filter>Source\streetKart\Vehicles</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\streetKart\Vehicles\MyMasterSuperVehicle.cpp">
-      <Filter>Source\streetKart\Vehicles</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\streetKart\Vehicles\MyMasterSuperVehicle.h">
       <Filter>Source\streetKart\Vehicles</Filter>
     </ClInclude>
   </ItemGroup>

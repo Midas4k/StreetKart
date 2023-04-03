@@ -80,6 +80,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) FSuspensionStruct SuspensionStruct;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) FWheelStruct WheelStruct; //Potentially make an Array for more customisation
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) FEngineStruct EngineStruct;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite) EDriveType_Enum DriveType;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite)TEnumAsByte<EDriveType_Enum> DriveType;
 	
 
 protected:
