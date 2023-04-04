@@ -38,6 +38,10 @@ AMasterMuscleVehicle::AMasterMuscleVehicle()
 	ConstructorHelpers::FObjectFinder<USkeletalMesh> ScoopMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Sports_01_Roof_Scoop_01"));
 	if (ScoopMeshSearch.Succeeded()) VehicleRoofScoopMesh->SetSkeletalMesh(ScoopMeshSearch.Object);
 
+	VehicleIntercoolerMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Vehicle Intercooler"));
+	VehicleIntercoolerMesh->SetupAttachment(VehicleHullMesh, TEXT("Intercooler_Socket"));
+	VehicleIntercoolerMesh->bCastDynamicShadow = true;
+
 	Wheel_FL->SetRelativeLocation(FVector{.0f,.0f,-45.0f});
 	Wheel_FR->SetRelativeLocation(FVector{.0f,.0f,-45.0f});
 	Wheel_RL->SetRelativeLocation(FVector{.0f,.0f,-45.0f});
@@ -80,11 +84,20 @@ AMasterMuscleVehicle::AMasterMuscleVehicle()
 	if (EngineTorqueSearch.Succeeded()) EngineStruct.torque_curve = Cast<UCurveFloat>(EngineTorqueSearch.Object);
 	
 #pragma endregion Struct Value
-	DriveType = EDriveType_Enum::RWD;
 
 	
-	float GearInit[6] = {-2.58f, 0.0f,2.66f, 1.91f, 1.39f, 1.00f};
-	MainGear = 3.55f;
-	GearRatio.Append(GearInit, UE_ARRAY_COUNT(GearInit));
+	
+	
+	// = EDriveType_Enum::RWD;
+	//float GearInit[6] = {-2.58f, 0.0f,2.66f, 1.91f, 1.39f, 1.00f};
+	//MainGear = 3.55f;
+	//GearRatio.Append(GearInit, UE_ARRAY_COUNT(GearInit));
 		
+}
+
+void AMasterMuscleVehicle::BeginPlay()
+{
+	DriveType = static_cast<EDriveType_Enum>(DriveInt);
+	Super::BeginPlay();
+	
 }

@@ -18,6 +18,8 @@ public:
 
 protected:
 	
+	virtual void BeginPlay() override;
+	
 	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
 	USkeletalMeshComponent* VehicleSpoilerMesh;
 	

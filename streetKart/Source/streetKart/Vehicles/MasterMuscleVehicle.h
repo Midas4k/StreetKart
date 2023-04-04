@@ -17,6 +17,8 @@ public:
 	AMasterMuscleVehicle();
 
 protected:
+
+	virtual void BeginPlay() override;
 	
 	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
 	USkeletalMeshComponent* VehicleSpoilerMesh;
@@ -29,7 +31,5 @@ protected:
 
 	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
 	USkeletalMeshComponent* VehicleWindowDecalMesh;
-
-
 	
 };

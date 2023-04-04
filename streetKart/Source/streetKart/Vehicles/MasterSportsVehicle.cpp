@@ -45,6 +45,8 @@ AMasterSportsVehicle::AMasterSportsVehicle()
 	VehicleWindowDecalMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Vehicle Window Decal"));
 	VehicleWindowDecalMesh->SetupAttachment(VehicleHullMesh, TEXT("WindowDecal_Socket"));
 	VehicleWindowDecalMesh->bCastDynamicShadow = true;
+	
+	
 
 	Wheel_FL->SetRelativeLocation(FVector{.0f,.0f,-45.0f});
 	Wheel_FR->SetRelativeLocation(FVector{.0f,.0f,-45.0f});
@@ -88,8 +90,15 @@ AMasterSportsVehicle::AMasterSportsVehicle()
 	
 #pragma endregion Struct Values
 
-	DriveType = EDriveType_Enum::AWD;
-	float GearInit[7] = {-3.214f, 0.0f,3.214f, 1.925f, 1.302f,1.000f, 0.752f};
-	MainGear = 4.111f;
-	GearRatio.Append(GearInit, UE_ARRAY_COUNT(GearInit));
+	
+	//float GearInit[7] = {-3.214f, 0.0f,3.214f, 1.925f, 1.302f,1.000f, 0.752f};
+	//MainGear = 4.111f;
+	//GearRatio.Append(GearInit, UE_ARRAY_COUNT(GearInit));
+}
+
+void AMasterSportsVehicle::BeginPlay()
+{
+	DriveType = static_cast<EDriveType_Enum>(DriveInt);
+	Super::BeginPlay();
+	
 }

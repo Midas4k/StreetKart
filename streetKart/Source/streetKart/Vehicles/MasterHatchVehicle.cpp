@@ -81,8 +81,16 @@ AMasterHatchVehicle::AMasterHatchVehicle()
 #pragma endregion Struct Values
 
 	DriveType = EDriveType_Enum::AWD;
-	float GearInit[8] = {-1.42f, 0.0f,3.23f, 1.95f, 1.32f, 1.03f, 1.13f, .94f};
-	MainGear = 4.06f;
-	GearRatio.Append(GearInit, UE_ARRAY_COUNT(GearInit));
+	//float GearInit[8] = {-1.42f, 0.0f,3.23f, 1.95f, 1.32f, 1.03f, 1.13f, .94f};
+	//MainGear = 4.06f;
+	
+	//GearRatio.Append(GearInit, UE_ARRAY_COUNT(GearInit));
+	
+}
+
+void AMasterHatchVehicle::BeginPlay()
+{
+	DriveType = static_cast<EDriveType_Enum>(DriveInt);
+	Super::BeginPlay();
 	
 }

@@ -16,6 +16,8 @@ class STREETKART_API AMasterSportsVehicle : public AMasterVehicle
 public:
 	AMasterSportsVehicle();
 protected:
+
+	virtual void BeginPlay() override;
 	
 	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
 	USkeletalMeshComponent* VehicleSpoilerMesh;
@@ -28,6 +30,7 @@ protected:
 
 	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
 	USkeletalMeshComponent* VehicleWindowDecalMesh;
+	
 
 
 	

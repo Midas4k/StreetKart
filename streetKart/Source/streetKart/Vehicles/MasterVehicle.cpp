@@ -53,6 +53,14 @@ AMasterVehicle::AMasterVehicle()
 	VehicleFenderMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Vehicle Fender"));
 	VehicleFenderMesh->SetupAttachment(VehicleHullMesh, TEXT("Fender_Socket"));
 	VehicleFenderMesh->bCastDynamicShadow = true;
+	
+	VehicleSeatMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Vehicle Seats"));
+	VehicleSeatMesh->SetupAttachment(VehicleHullMesh, TEXT("Seat_Socket"));
+	VehicleSeatMesh->bCastDynamicShadow = true;
+
+	VehicleRollCageMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Vehicle Roll Cage"));
+	VehicleRollCageMesh->SetupAttachment(VehicleHullMesh, TEXT("RollCage_Socket"));
+	VehicleRollCageMesh->bCastDynamicShadow = true;
 
 	//CREATING THE TOP LINKS FOR THE RAYCAST
 	TopLink_FL = CreateDefaultSubobject<USceneComponent>(TEXT("Toplink FL"));

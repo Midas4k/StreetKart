@@ -188,6 +188,13 @@ protected:
 
 	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
 	USkeletalMeshComponent* VehicleRRTyreMesh;
+
+
+	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
+	USkeletalMeshComponent* VehicleSeatMesh;
+
+	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
+	USkeletalMeshComponent* VehicleRollCageMesh;
   
 #pragma endregion Mesh Components
 
@@ -226,6 +233,7 @@ protected:
 	float DriveShaftAngularVelocity;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)float SteeringDamper;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)int DriveInt;
 	float CarSpeed;
 	
 	float Combustible;
@@ -240,13 +248,16 @@ protected:
 	float RadPS_to_RPM;
 
 	
-	TArray<float>GearRatio;
+	//TArray<float>GearRatio;
 	int Gear;
-	float MainGear;
+	//float MainGear;
 	float Efficiency;
 	float GearChangeTime;
 
 	float TotalGearRatio;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<float>GearRatio;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)float MainGear;
 
 	TArray<float> DriveTorque;
 	TArray<float> TorqueRatio;
