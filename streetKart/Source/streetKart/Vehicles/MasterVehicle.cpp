@@ -956,9 +956,10 @@ void AMasterVehicle::SimpleDownforce()
 		float CLA = 5 / 2;
 		float ForceSq = Force * Force;
 
-		float DownForce = 0.5 * 1.22 * -1 * CLA * ForceSq;
-
+		float DownForce =0.5 * 1.22 * -1 * CLA * ForceSq;
+		DownForce = FMath::Max(DownForce, -12000);
 		TotalDownForce += DownForce;
+		
 		//Downforce * 100 to UE force Units
 		FVector ForceAmount = VehicleHullMesh->GetUpVector() * (DownForce * 100);
 
@@ -966,6 +967,7 @@ void AMasterVehicle::SimpleDownforce()
 		DrawDebugLine(GetWorld(), Location, ForceAmount, FColor::Blue,false, deltaTime * 1.0f, 0, 5.0f);
 	}
 	GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Yellow, FString::Printf(TEXT("Downforce: %f kg"),FMath::Abs((TotalDownForce))));
+	
 	
 	
 }

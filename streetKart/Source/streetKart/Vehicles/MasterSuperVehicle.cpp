@@ -75,8 +75,6 @@ AMasterSuperVehicle::AMasterSuperVehicle()
 	WheelStruct.Cornering_Stiffness = 1.0f;
 	WheelStruct.Long_Stiffness = 1.0f;
 
-	ConstructorHelpers::FObjectFinder<UObject> EngineTorqueSearch(TEXT("/Game/Curves/R32TorqueCurve"));
-	if (EngineTorqueSearch.Succeeded()) EngineStruct.torque_curve = Cast<UCurveFloat>(EngineTorqueSearch.Object);
 	
 #pragma endregion Struct Values
 

@@ -1490,6 +1490,12 @@
     <ClInclude Include="..\..\Source\streetKart\Vehicles\MasterMuscleVehicle.h">
       <Filter>Source\streetKart\Vehicles</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\streetKart\Vehicles\MasterSedanVehicle.cpp">
+      <Filter>Source\streetKart\Vehicles</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\streetKart\Vehicles\MasterSedanVehicle.h">
+      <Filter>Source\streetKart\Vehicles</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\streetKart\Vehicles\MasterSportsVehicle.cpp">
       <Filter>Source\streetKart\Vehicles</Filter>
     </ClCompile>
@@ -1500,6 +1506,18 @@
       <Filter>Source\streetKart\Vehicles</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\streetKart\Vehicles\MasterSuperVehicle.h">
+      <Filter>Source\streetKart\Vehicles</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\streetKart\Vehicles\MasterTruckVehicle.cpp">
+      <Filter>Source\streetKart\Vehicles</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\streetKart\Vehicles\MasterTruckVehicle.h">
+      <Filter>Source\streetKart\Vehicles</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\streetKart\Vehicles\MasterUtilityVehicle.cpp">
+      <Filter>Source\streetKart\Vehicles</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\streetKart\Vehicles\MasterUtilityVehicle.h">
       <Filter>Source\streetKart\Vehicles</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\streetKart\Vehicles\MasterVehicle.cpp">
