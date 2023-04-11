@@ -41,6 +41,8 @@ struct FEngineStruct
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) float friction_coeff;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) float friction;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) float rev_limiter_duration;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float ShiftUpRPM;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) float ShiftDownRPM;
 	
 	
 };
@@ -115,6 +117,8 @@ protected:
 	virtual void BrakesINI();
 	virtual void EngineAccelerating();
 	virtual void SimpleDownforce();
+	virtual void AutoReverse();
+	virtual void AutoShift();
 	
 
 	
@@ -214,6 +218,10 @@ protected:
 	float LastSusLengths[4];
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)TArray<USceneComponent*>WheelMeshs;
 
+
+	float MaxWheelSpeed;
+	bool SwapThrottleBrake;
+	float lastAutoShiftTime;
 	float deltaTime;
 	float SteeringAngle;
 	float SteerAngleMax;
@@ -234,6 +242,7 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)float SteeringDamper;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)int DriveInt;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)bool Automatic;
 	float CarSpeed;
 	
 	float Combustible;

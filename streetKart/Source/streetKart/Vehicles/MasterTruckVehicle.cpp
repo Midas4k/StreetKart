@@ -13,11 +13,7 @@ AMasterTruckVehicle::AMasterTruckVehicle()
 	ConstructorHelpers::FObjectFinder<USkeletalMesh> FBumperMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Truck_01_Front_Bumper_01"));
 	if (FBumperMeshSearch.Succeeded()) VehicleFBumperMesh->SetSkeletalMesh(FBumperMeshSearch.Object);
 	
-	//ConstructorHelpers::FObjectFinder<USkeletalMesh> RBumperMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Truck_01_Rear_Bumper_01"));
-	//if (RBumperMeshSearch.Succeeded()) VehicleRBumperMesh->SetSkeletalMesh(RBumperMeshSearch.Object);
-
-	ConstructorHelpers::FObjectFinder<USkeletalMesh> HoodMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Truck_01_Bonnet_01"));
-	if (HoodMeshSearch.Succeeded()) VehicleHoodMesh->SetSkeletalMesh(HoodMeshSearch.Object);
+	
 
 	ConstructorHelpers::FObjectFinder<USkeletalMesh> ChassisMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Truck_01_Undercarriage_01"));
 	if (ChassisMeshSearch.Succeeded()) VehicleChassisMesh->SetSkeletalMesh(ChassisMeshSearch.Object);
@@ -35,8 +31,6 @@ AMasterTruckVehicle::AMasterTruckVehicle()
 	VehicleRoofScoopMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Vehicle Roof Scoop"));
 	VehicleRoofScoopMesh->SetupAttachment(VehicleHullMesh, TEXT("RoofScoop_Socket"));
 	VehicleRoofScoopMesh->bCastDynamicShadow = true;
-	//ConstructorHelpers::FObjectFinder<USkeletalMesh> ScoopMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Truck_01_Roof_Scoop_01"));
-	//if (ScoopMeshSearch.Succeeded()) VehicleRoofScoopMesh->SetSkeletalMesh(ScoopMeshSearch.Object);
 
 	VehicleIntercoolerMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Vehicle Intercooler"));
 	VehicleIntercoolerMesh->SetupAttachment(VehicleHullMesh, TEXT("Intercooler_Socket"));

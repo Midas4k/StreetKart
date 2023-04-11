@@ -135,9 +135,9 @@ void EmptyLinkFunctionForGeneratedCodeMasterHatchVehicle() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Vehicles_MasterHatchVehicle_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMasterHatchVehicle, AMasterHatchVehicle::StaticClass, TEXT("AMasterHatchVehicle"), &Z_Registration_Info_UClass_AMasterHatchVehicle, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMasterHatchVehicle), 1862671198U) },
+		{ Z_Construct_UClass_AMasterHatchVehicle, AMasterHatchVehicle::StaticClass, TEXT("AMasterHatchVehicle"), &Z_Registration_Info_UClass_AMasterHatchVehicle, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMasterHatchVehicle), 1050878111U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Vehicles_MasterHatchVehicle_h_1215596304(TEXT("/Script/streetKart"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Vehicles_MasterHatchVehicle_h_4231709250(TEXT("/Script/streetKart"),
 		Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Vehicles_MasterHatchVehicle_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Vehicles_MasterHatchVehicle_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
