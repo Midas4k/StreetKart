@@ -7,26 +7,12 @@ AMasterUtilityVehicle::AMasterUtilityVehicle()
 {
 #pragma region Setting Meshes
 	//SETTING DEFAULT HULL MESH
-	ConstructorHelpers::FObjectFinder<USkeletalMesh> DefaultMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Ute_01"));
-	if (DefaultMeshSearch.Succeeded()) VehicleHullMesh->SetSkeletalMesh(DefaultMeshSearch.Object);
-
-	ConstructorHelpers::FObjectFinder<USkeletalMesh> FBumperMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Ute_01_Front_Bumper_01"));
-	if (FBumperMeshSearch.Succeeded()) VehicleFBumperMesh->SetSkeletalMesh(FBumperMeshSearch.Object);
 	
-	//ConstructorHelpers::FObjectFinder<USkeletalMesh> RBumperMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Ute_01_Rear_Bumper_01"));
-	//if (RBumperMeshSearch.Succeeded()) VehicleRBumperMesh->SetSkeletalMesh(RBumperMeshSearch.Object);
-
-	ConstructorHelpers::FObjectFinder<USkeletalMesh> HoodMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Ute_01_Bonnet_01"));
-	if (HoodMeshSearch.Succeeded()) VehicleHoodMesh->SetSkeletalMesh(HoodMeshSearch.Object);
-
-	ConstructorHelpers::FObjectFinder<USkeletalMesh> ChassisMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Ute_01_Undercarriage_01"));
-	if (ChassisMeshSearch.Succeeded()) VehicleChassisMesh->SetSkeletalMesh(ChassisMeshSearch.Object);
 	
 	VehicleSpoilerMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Vehicle Spoiler"));
 	VehicleSpoilerMesh->SetupAttachment(VehicleHullMesh, TEXT("Spoiler_Socket"));
 	VehicleSpoilerMesh->bCastDynamicShadow = true;
-	ConstructorHelpers::FObjectFinder<USkeletalMesh> SpoilerMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Ute_01_Spoiler_02"));
-	if (SpoilerMeshSearch.Succeeded()) VehicleSpoilerMesh->SetSkeletalMesh(SpoilerMeshSearch.Object);
+	
 	
 	VehicleWindowDecalMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Vehicle Window Decal"));
 	VehicleWindowDecalMesh->SetupAttachment(VehicleHullMesh, TEXT("WindowDecal_Socket"));
@@ -46,23 +32,7 @@ AMasterUtilityVehicle::AMasterUtilityVehicle()
 	Wheel_RL->SetRelativeLocation(FVector{.0f,.0f,-45.0f});
 	Wheel_RR->SetRelativeLocation(FVector{.0f,.0f,-45.0f});
 
-	ConstructorHelpers::FObjectFinder<USkeletalMesh> RimMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Attach_Wheel_01"));
-	if (RimMeshSearch.Succeeded())
-	{
-		VehicleFLRimMesh->SetSkeletalMesh(RimMeshSearch.Object);
-		VehicleFRRimMesh->SetSkeletalMesh(RimMeshSearch.Object);
-		VehicleRLRimMesh->SetSkeletalMesh(RimMeshSearch.Object);
-		VehicleRRRimMesh->SetSkeletalMesh(RimMeshSearch.Object);
-	}
-
-	ConstructorHelpers::FObjectFinder<USkeletalMesh> TyreMeshSearch(TEXT("/Game/PolygonStreetRacer/Meshes/Vehicles_Rigged/Parts/SK_Veh_Attach_Tyre_01"));
-	if (TyreMeshSearch.Succeeded())
-	{
-		VehicleFLTyreMesh->SetSkeletalMesh(TyreMeshSearch.Object);
-		VehicleFRTyreMesh->SetSkeletalMesh(TyreMeshSearch.Object);
-		VehicleRLTyreMesh->SetSkeletalMesh(TyreMeshSearch.Object);
-		VehicleRRTyreMesh->SetSkeletalMesh(TyreMeshSearch.Object);
-	}
+	
 
 #pragma endregion Setting Meshes
 
