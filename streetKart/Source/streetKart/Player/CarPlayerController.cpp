@@ -49,9 +49,6 @@ void ACarPlayerController::Braking(const float Value)
 	Cast<AMasterVehicle>(GetPawn())->Braking(Value);
 }
 
-
-
-
 void ACarPlayerController::SetupInputComponent()
 {
 	Super::SetupInputComponent();
@@ -65,4 +62,8 @@ void ACarPlayerController::SetupInputComponent()
 	InputComponent->BindAction("ShiftUp", IE_Pressed, this, &ACarPlayerController::ShiftUp);
 	InputComponent->BindAction("ShiftDown", IE_Pressed, this, &ACarPlayerController::ShiftDown);
 }
+
+
+
+
 

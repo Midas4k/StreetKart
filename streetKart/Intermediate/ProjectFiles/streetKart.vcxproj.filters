@@ -1457,6 +1457,27 @@
     <ClInclude Include="..\..\Source\streetKart\streetKartGameModeBase.h">
       <Filter>Source\streetKart</Filter>
     </ClInclude>
+    <Filter Include="Source\streetKart\CheckpointSystem">
+      <UniqueIdentifier>{1350C86A-6DFA-3121-8CF9-E85D014B93BC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\streetKart\CheckpointSystem\Checkpoint.cpp">
+      <Filter>Source\streetKart\CheckpointSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\streetKart\CheckpointSystem\Checkpoint.h">
+      <Filter>Source\streetKart\CheckpointSystem</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\streetKart\CheckpointSystem\MySaveGame.cpp">
+      <Filter>Source\streetKart\CheckpointSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\streetKart\CheckpointSystem\MySaveGame.h">
+      <Filter>Source\streetKart\CheckpointSystem</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\streetKart\CheckpointSystem\Tracker.cpp">
+      <Filter>Source\streetKart\CheckpointSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\streetKart\CheckpointSystem\Tracker.h">
+      <Filter>Source\streetKart\CheckpointSystem</Filter>
+    </ClInclude>
     <Filter Include="Source\streetKart\Gamemodes">
       <UniqueIdentifier>{477C013C-ED68-3630-A898-6F477AD61165}</UniqueIdentifier>
     </Filter>

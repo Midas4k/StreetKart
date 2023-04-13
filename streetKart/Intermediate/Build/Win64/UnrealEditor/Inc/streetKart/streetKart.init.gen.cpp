@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodestreetKart_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xF880DE7F,
-				0xC7F191F1,
+				0x87113431,
+				0x4ABE3501,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_streetKart.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_streetKart.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_streetKart(Z_Construct_UPackage__Script_streetKart, TEXT("/Script/streetKart"), Z_Registration_Info_UPackage__Script_streetKart, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xF880DE7F, 0xC7F191F1));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_streetKart(Z_Construct_UPackage__Script_streetKart, TEXT("/Script/streetKart"), Z_Registration_Info_UPackage__Script_streetKart, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x87113431, 0x4ABE3501));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

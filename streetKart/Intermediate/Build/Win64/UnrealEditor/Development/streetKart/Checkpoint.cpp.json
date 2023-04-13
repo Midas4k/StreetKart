@@ -1,0 +1,33 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\source\\streetkart\\checkpointsystem\\checkpoint.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\streetkarteditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\unrealeditor\\development\\streetkart\\definitions.streetkart.h",
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\source\\streetkart\\checkpointsystem\\checkpoint.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\components\\arrowcomponent.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\arrowcomponent.generated.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\shapecomponent.generated.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\boxcomponent.generated.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\kismetmathlibrary.generated.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl",
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\source\\streetkart\\vehicles\\mastervehicle.h",
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\unrealeditor\\inc\\streetkart\\mastervehicle.generated.h",
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\unrealeditor\\inc\\streetkart\\checkpoint.generated.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\particles\\particlesystemcomponent.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\particles\\particlesystem.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\particles\\particleperfstats.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\particlesystem.generated.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\particles\\emitter.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\emitter.generated.h",
+            "d:\\program files (x86)\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\particlesystemcomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

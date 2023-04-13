@@ -23,10 +23,78 @@ class STREETKART_API ACarPlayerController : public APlayerController
 	virtual void ShiftUp();
 	virtual void ShiftDown();
 
+	UFUNCTION(BlueprintCallable) static void InitText(){
+		
+	}
+	
+	UFUNCTION(BlueprintCallable) static void SaveGameCheck(){
+		
+	}
+	
+	UFUNCTION(BlueprintCallable) static void SaveTheGame(){
+		
+	}
+	
+	UFUNCTION(BlueprintCallable) static void LoadTheGame(){
+		
+	}
+	
+	UFUNCTION(BlueprintCallable) static void LapTimeCheck(){
+		
+	}
+	UFUNCTION(BlueprintCallable) static void RaceTimeCheck(){
+		
+	}
+	UFUNCTION(BlueprintCallable) static void UpdateGoals(){
+		
+	}
+protected:
+
+#pragma region ValueVariables
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)int ActualLap = 1;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)int MaxLaps = 3;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)float ActualRaceTime;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)float ActualLapTime;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)float GoldTime;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)float SilverTime;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)float BronzeTime;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)float BestLapTime;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)float BestRaceTime;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)float DefaultBestLapTime;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)float DefaultBestRaceTime;
+
+#pragma endregion ValueVariables
+
+#pragma region TextVariables
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)FText RaceTimeText;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)FText CurrentLapText;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)FText MaxLapText;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)FText GoldTimeText;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)FText SilverTimeText;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)FText BronzeTimeText;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)FText BestTimeText;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)FText BestLapText;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)FText NameOfMap;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)FText ReadyText;
+	
+
+#pragma endregion TextVariables
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)bool RaceComplete;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)bool RaceStart;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)FTransform RespawnLocation;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)FString SaveSlot;
+
+
+	
 public:
 	ACarPlayerController();
 	virtual ~ACarPlayerController() = default;
 
 	virtual void SetupInputComponent();
+	
+	
 	
 };

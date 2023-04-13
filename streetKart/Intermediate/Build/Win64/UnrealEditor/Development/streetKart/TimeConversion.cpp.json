@@ -1,0 +1,15 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\source\\streetkart\\checkpointsystem\\timeconversion.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\streetkarteditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\unrealeditor\\development\\streetkart\\definitions.streetkart.h",
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\source\\streetkart\\checkpointsystem\\timeconversion.h",
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\unrealeditor\\inc\\streetkart\\timeconversion.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
