@@ -23,31 +23,6 @@ class STREETKART_API ACarPlayerController : public APlayerController
 	virtual void ShiftUp();
 	virtual void ShiftDown();
 
-	UFUNCTION(BlueprintCallable) static void InitText(){
-		
-	}
-	
-	UFUNCTION(BlueprintCallable) static void SaveGameCheck(){
-		
-	}
-	
-	UFUNCTION(BlueprintCallable) static void SaveTheGame(){
-		
-	}
-	
-	UFUNCTION(BlueprintCallable) static void LoadTheGame(){
-		
-	}
-	
-	UFUNCTION(BlueprintCallable) static void LapTimeCheck(){
-		
-	}
-	UFUNCTION(BlueprintCallable) static void RaceTimeCheck(){
-		
-	}
-	UFUNCTION(BlueprintCallable) static void UpdateGoals(){
-		
-	}
 protected:
 
 #pragma region ValueVariables

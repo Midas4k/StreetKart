@@ -15,222 +15,8 @@ void EmptyLinkFunctionForGeneratedCodeCarPlayerController() {}
 	UPackage* Z_Construct_UPackage__Script_streetKart();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
 // End Cross Module References
-	DEFINE_FUNCTION(ACarPlayerController::execUpdateGoals)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		ACarPlayerController::UpdateGoals();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ACarPlayerController::execRaceTimeCheck)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		ACarPlayerController::RaceTimeCheck();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ACarPlayerController::execLapTimeCheck)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		ACarPlayerController::LapTimeCheck();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ACarPlayerController::execLoadTheGame)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		ACarPlayerController::LoadTheGame();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ACarPlayerController::execSaveTheGame)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		ACarPlayerController::SaveTheGame();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ACarPlayerController::execSaveGameCheck)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		ACarPlayerController::SaveGameCheck();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ACarPlayerController::execInitText)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		ACarPlayerController::InitText();
-		P_NATIVE_END;
-	}
 	void ACarPlayerController::StaticRegisterNativesACarPlayerController()
 	{
-		UClass* Class = ACarPlayerController::StaticClass();
-		static const FNameNativePtrPair Funcs[] = {
-			{ "InitText", &ACarPlayerController::execInitText },
-			{ "LapTimeCheck", &ACarPlayerController::execLapTimeCheck },
-			{ "LoadTheGame", &ACarPlayerController::execLoadTheGame },
-			{ "RaceTimeCheck", &ACarPlayerController::execRaceTimeCheck },
-			{ "SaveGameCheck", &ACarPlayerController::execSaveGameCheck },
-			{ "SaveTheGame", &ACarPlayerController::execSaveTheGame },
-			{ "UpdateGoals", &ACarPlayerController::execUpdateGoals },
-		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_ACarPlayerController_InitText_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACarPlayerController_InitText_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Player/CarPlayerController.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACarPlayerController_InitText_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACarPlayerController, nullptr, "InitText", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04042401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACarPlayerController_InitText_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACarPlayerController_InitText_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_ACarPlayerController_InitText()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACarPlayerController_InitText_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ACarPlayerController_LapTimeCheck_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACarPlayerController_LapTimeCheck_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Player/CarPlayerController.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACarPlayerController_LapTimeCheck_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACarPlayerController, nullptr, "LapTimeCheck", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04042401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACarPlayerController_LapTimeCheck_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACarPlayerController_LapTimeCheck_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_ACarPlayerController_LapTimeCheck()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACarPlayerController_LapTimeCheck_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ACarPlayerController_LoadTheGame_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACarPlayerController_LoadTheGame_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Player/CarPlayerController.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACarPlayerController_LoadTheGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACarPlayerController, nullptr, "LoadTheGame", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04042401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACarPlayerController_LoadTheGame_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACarPlayerController_LoadTheGame_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_ACarPlayerController_LoadTheGame()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACarPlayerController_LoadTheGame_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ACarPlayerController_RaceTimeCheck_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACarPlayerController_RaceTimeCheck_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Player/CarPlayerController.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACarPlayerController_RaceTimeCheck_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACarPlayerController, nullptr, "RaceTimeCheck", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04042401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACarPlayerController_RaceTimeCheck_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACarPlayerController_RaceTimeCheck_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_ACarPlayerController_RaceTimeCheck()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACarPlayerController_RaceTimeCheck_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ACarPlayerController_SaveGameCheck_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACarPlayerController_SaveGameCheck_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Player/CarPlayerController.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACarPlayerController_SaveGameCheck_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACarPlayerController, nullptr, "SaveGameCheck", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04042401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACarPlayerController_SaveGameCheck_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACarPlayerController_SaveGameCheck_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_ACarPlayerController_SaveGameCheck()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACarPlayerController_SaveGameCheck_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ACarPlayerController_SaveTheGame_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACarPlayerController_SaveTheGame_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Player/CarPlayerController.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACarPlayerController_SaveTheGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACarPlayerController, nullptr, "SaveTheGame", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04042401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACarPlayerController_SaveTheGame_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACarPlayerController_SaveTheGame_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_ACarPlayerController_SaveTheGame()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACarPlayerController_SaveTheGame_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ACarPlayerController_UpdateGoals_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACarPlayerController_UpdateGoals_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Player/CarPlayerController.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACarPlayerController_UpdateGoals_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACarPlayerController, nullptr, "UpdateGoals", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04042401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ACarPlayerController_UpdateGoals_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ACarPlayerController_UpdateGoals_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_ACarPlayerController_UpdateGoals()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACarPlayerController_UpdateGoals_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ACarPlayerController);
 	UClass* Z_Construct_UClass_ACarPlayerController_NoRegister()
@@ -240,7 +26,6 @@ void EmptyLinkFunctionForGeneratedCodeCarPlayerController() {}
 	struct Z_Construct_UClass_ACarPlayerController_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
-		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -353,15 +138,6 @@ void EmptyLinkFunctionForGeneratedCodeCarPlayerController() {}
 	UObject* (*const Z_Construct_UClass_ACarPlayerController_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_APlayerController,
 		(UObject* (*)())Z_Construct_UPackage__Script_streetKart,
-	};
-	const FClassFunctionLinkInfo Z_Construct_UClass_ACarPlayerController_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ACarPlayerController_InitText, "InitText" }, // 306185132
-		{ &Z_Construct_UFunction_ACarPlayerController_LapTimeCheck, "LapTimeCheck" }, // 2992229676
-		{ &Z_Construct_UFunction_ACarPlayerController_LoadTheGame, "LoadTheGame" }, // 4210869195
-		{ &Z_Construct_UFunction_ACarPlayerController_RaceTimeCheck, "RaceTimeCheck" }, // 2525236096
-		{ &Z_Construct_UFunction_ACarPlayerController_SaveGameCheck, "SaveGameCheck" }, // 2059958484
-		{ &Z_Construct_UFunction_ACarPlayerController_SaveTheGame, "SaveTheGame" }, // 91937252
-		{ &Z_Construct_UFunction_ACarPlayerController_UpdateGoals, "UpdateGoals" }, // 247828268
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACarPlayerController_Statics::Class_MetaDataParams[] = {
@@ -589,11 +365,11 @@ void EmptyLinkFunctionForGeneratedCodeCarPlayerController() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		FuncInfo,
+		nullptr,
 		Z_Construct_UClass_ACarPlayerController_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		UE_ARRAY_COUNT(FuncInfo),
+		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_ACarPlayerController_Statics::PropPointers),
 		0,
 		0x009002A4u,
@@ -617,9 +393,9 @@ void EmptyLinkFunctionForGeneratedCodeCarPlayerController() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Player_CarPlayerController_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACarPlayerController, ACarPlayerController::StaticClass, TEXT("ACarPlayerController"), &Z_Registration_Info_UClass_ACarPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACarPlayerController), 3340662265U) },
+		{ Z_Construct_UClass_ACarPlayerController, ACarPlayerController::StaticClass, TEXT("ACarPlayerController"), &Z_Registration_Info_UClass_ACarPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACarPlayerController), 3536864431U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Player_CarPlayerController_h_3092594193(TEXT("/Script/streetKart"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Player_CarPlayerController_h_1964443383(TEXT("/Script/streetKart"),
 		Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Player_CarPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_streetKart_Source_streetKart_Player_CarPlayerController_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

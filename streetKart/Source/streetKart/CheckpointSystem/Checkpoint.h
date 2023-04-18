@@ -39,19 +39,6 @@ protected:
 #pragma endregion component
 	
 
-	UFUNCTION(BlueprintCallable) static bool CheckCollision(const UObject* Actor, const UArrowComponent* ArrowComp){
-		bool isPlayer;
-		if(Cast<AMasterVehicle>(Actor))
-		{
-
-			isPlayer = true;
-
-		}else
-		{
-			isPlayer = false;
-		}
-		return isPlayer;
-	}
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

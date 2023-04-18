@@ -14,28 +14,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define STREETKART_CarPlayerController_generated_h
 
 #define FID_streetKart_Source_streetKart_Player_CarPlayerController_h_15_SPARSE_DATA
-#define FID_streetKart_Source_streetKart_Player_CarPlayerController_h_15_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execUpdateGoals); \
-	DECLARE_FUNCTION(execRaceTimeCheck); \
-	DECLARE_FUNCTION(execLapTimeCheck); \
-	DECLARE_FUNCTION(execLoadTheGame); \
-	DECLARE_FUNCTION(execSaveTheGame); \
-	DECLARE_FUNCTION(execSaveGameCheck); \
-	DECLARE_FUNCTION(execInitText);
-
-
-#define FID_streetKart_Source_streetKart_Player_CarPlayerController_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execUpdateGoals); \
-	DECLARE_FUNCTION(execRaceTimeCheck); \
-	DECLARE_FUNCTION(execLapTimeCheck); \
-	DECLARE_FUNCTION(execLoadTheGame); \
-	DECLARE_FUNCTION(execSaveTheGame); \
-	DECLARE_FUNCTION(execSaveGameCheck); \
-	DECLARE_FUNCTION(execInitText);
-
-
+#define FID_streetKart_Source_streetKart_Player_CarPlayerController_h_15_RPC_WRAPPERS
+#define FID_streetKart_Source_streetKart_Player_CarPlayerController_h_15_RPC_WRAPPERS_NO_PURE_DECLS
 #define FID_streetKart_Source_streetKart_Player_CarPlayerController_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACarPlayerController(); \

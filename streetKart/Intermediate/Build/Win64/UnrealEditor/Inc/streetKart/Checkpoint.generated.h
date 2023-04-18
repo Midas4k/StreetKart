@@ -8,24 +8,14 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class UObject;
-class UArrowComponent;
 #ifdef STREETKART_Checkpoint_generated_h
 #error "Checkpoint.generated.h already included, missing '#pragma once' in Checkpoint.h"
 #endif
 #define STREETKART_Checkpoint_generated_h
 
 #define FID_streetKart_Source_streetKart_CheckpointSystem_Checkpoint_h_17_SPARSE_DATA
-#define FID_streetKart_Source_streetKart_CheckpointSystem_Checkpoint_h_17_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execCheckCollision);
-
-
-#define FID_streetKart_Source_streetKart_CheckpointSystem_Checkpoint_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execCheckCollision);
-
-
+#define FID_streetKart_Source_streetKart_CheckpointSystem_Checkpoint_h_17_RPC_WRAPPERS
+#define FID_streetKart_Source_streetKart_CheckpointSystem_Checkpoint_h_17_RPC_WRAPPERS_NO_PURE_DECLS
 #define FID_streetKart_Source_streetKart_CheckpointSystem_Checkpoint_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACheckpoint(); \
