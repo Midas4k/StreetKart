@@ -243,7 +243,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)float SteeringDamper;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)int DriveInt;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)bool Automatic;
-	float CarSpeed;
+	UPROPERTY(BlueprintReadOnly)float CarSpeed;
 	
 	float Combustible;
 	float RevLimiterTime;
