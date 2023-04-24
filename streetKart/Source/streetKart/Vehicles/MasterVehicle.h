@@ -250,7 +250,7 @@ protected:
 
 	FString GearOut;
 
-	float EngineRPM;
+	UPROPERTY(BlueprintReadOnly)float EngineRPM;
 	float EngineTorque;
 	float EngineAngularVelocity;
 	float RPM_to_RadPS;
@@ -258,7 +258,7 @@ protected:
 
 	
 	//TArray<float>GearRatio;
-	int Gear;
+	UPROPERTY(BlueprintReadOnly)int Gear;
 	//float MainGear;
 	float Efficiency;
 	float GearChangeTime;
