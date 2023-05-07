@@ -229,7 +229,7 @@ protected:
 	float AccelValue;
 	float DecelValue;
 	bool VThrottleFilter;
-	bool VBrakeFilter;
+	bool VBrakeFilter = true;
 	float BrakeValue;
 	TArray<float> BrakeTorque;
 	TArray<float> BrakeBiasRatio;
