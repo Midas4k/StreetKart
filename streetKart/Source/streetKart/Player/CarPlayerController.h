@@ -62,7 +62,6 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)FTransform RespawnLocation;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)FString SaveSlot;
 
-
 	
 public:
 	ACarPlayerController();
