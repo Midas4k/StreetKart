@@ -78,3 +78,5 @@ DerivedDataCache/*
 *.exp
 *.rsp
 *.pch
+
+streetKart/Saved/*

@@ -21,7 +21,6 @@ AMasterVehicle::AMasterVehicle()
 
 	
 	VehicleHullMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Vehicle Body"));
-	VehicleHullMesh->AttachToComponent(VehicleRoot,FAttachmentTransformRules::KeepRelativeTransform);
 	VehicleHullMesh->bCastDynamicShadow = true;
 	//VehicleHullMesh->SetRelativeLocation(FVector{.0f,.0f,.0f});
 	//VehicleHullMesh->SetRelativeRotation(FRotator{.0f,.0f,.0f});
@@ -126,14 +125,14 @@ AMasterVehicle::AMasterVehicle()
 	SpringArm->TargetArmLength = 400;
 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Main Camera"));
-	Camera->AttachToComponent(SpringArm,FAttachmentTransformRules::KeepWorldTransform);
+	Camera->SetupAttachment(SpringArm);
 #pragma endregion Camera Setup
 
 #pragma region Engine Struct
 	//ConstructorHelpers::FObjectFinder<UObject> EngineTorqueSearch(TEXT("/Game/Curves/EngineTorqueCurve"));
 	//if (EngineTorqueSearch.Succeeded()) EngineStruct.torque_curve = Cast<UCurveFloat>(EngineTorqueSearch.Object);
 
-	EngineStruct.idle_rpm = FVector2D(700.0f, 1500);
+	EngineStruct.idle_rpm = FVector2D(700.0f, 1500.0f);
 	EngineStruct.max_rpm = 7000.0f;
 	EngineStruct.inertia = 0.3f;
 	EngineStruct.back_torque = -90.0f;
@@ -456,12 +455,12 @@ void AMasterVehicle::ApplyTyreForce()
 	{
 		if(WheelContact[i])
 		{
-			FVector ForwardF = TopLinksArray[i]->GetForwardVector() * Fx[i] ;
-			FVector RightF =  TopLinksArray[i]->GetRightVector() * Fy[i] ;
+			FVector ForwardF = TopLinksArray[i]->GetForwardVector() * Fx[i];
+			FVector RightF =  TopLinksArray[i]->GetRightVector() * Fy[i];
 			FVector TotalF = (ForwardF + RightF)*100;
-			VehicleHullMesh->AddForceAtLocation(TotalF,HitResults[i].Location);
+			//VehicleHullMesh->AddForceAtLocation(TotalF,HitResults[i].Location);
 			
-			//VehicleHullMesh->AddForceAtLocation(TotalF,WheelMeshs[i]->GetComponentLocation());
+			VehicleHullMesh->AddForceAtLocation(TotalF,WheelMeshs[i]->GetComponentLocation());
 		}
 	}
 

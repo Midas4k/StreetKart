@@ -1,0 +1,14 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\source\\streetkart\\streetkart.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\streetkart\\shipping\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\unrealgame\\shipping\\streetkart\\definitions.streetkart.h",
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\source\\streetkart\\streetkart.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

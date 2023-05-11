@@ -1,0 +1,17 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\unrealgame\\inc\\streetkart\\mastermusclevehicle.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\streetkart\\shipping\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\unrealgame\\shipping\\streetkart\\definitions.streetkart.h",
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\source\\streetkart\\vehicles\\mastermusclevehicle.h",
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\source\\streetkart\\vehicles\\mastervehicle.h",
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\unrealgame\\inc\\streetkart\\mastervehicle.generated.h",
+            "d:\\actual shit\\dev\\projects\\streetkart\\streetkart\\intermediate\\build\\win64\\unrealgame\\inc\\streetkart\\mastermusclevehicle.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
