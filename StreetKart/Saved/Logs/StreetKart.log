@@ -5754,3 +5754,1417 @@ LogConfig: CVar [[QualityLevelMapping:high]] deferred - dummy variable created
 [2023.05.12-14.09.12:080][880]UATHelper: Packaging (Windows): Updating environment variables set by a Turnkey sub-process
 [2023.05.12-14.09.12:080][880]UATHelper: Packaging (Windows): The system cannot find the path specified.
 [2023.05.12-14.09.12:080][880]UATHelper: Packaging (Windows): The system cannot find the path specified.
+[2023.05.12-14.12.19:596][ 26]LogSlate: Window 'Output Log' being destroyed
+[2023.05.12-14.12.19:601][ 26]LogSlate: Window 'Output Log' being destroyed
+[2023.05.12-14.12.20:620][131]Candidate modules for hot reload:
+[2023.05.12-14.12.20:620][131]  streetKart
+[2023.05.12-14.12.20:626][131]Launching UnrealBuildTool... [D:/Program Files (x86)/UE_5.0/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.exe  -ModuleWithSuffix=streetKart,2734 streetKartEditor Win64 Development -Project="D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject" "D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject"  -IgnoreJunk]
+[2023.05.12-14.12.20:631][131]Warning: Starting HotReload took  0.0s.
+[2023.05.12-14.12.37:586][592]CompilerResultsLog: New page: Compilation - 12 May 2023, 16:12:37
+[2023.05.12-14.12.37:586][592]CompilerResultsLog: Log file: C:\Users\Oli\AppData\Local\UnrealBuildTool\Log.txt
+[2023.05.12-14.12.37:586][592]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Actual Shit\dev\Projects\StreetKart).
+[2023.05.12-14.12.37:586][592]CompilerResultsLog: Building streetKartEditor...
+[2023.05.12-14.12.37:586][592]CompilerResultsLog: Using Visual Studio 2019 14.29.30147 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.05.12-14.12.37:586][592]CompilerResultsLog: [Adaptive Build] Excluded from streetKart unity file: MasterVehicle.cpp
+[2023.05.12-14.12.37:586][592]CompilerResultsLog: Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+[2023.05.12-14.12.37:586][592]CompilerResultsLog:   Executing up to 8 processes, one per physical core
+[2023.05.12-14.12.37:586][592]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.05.12-14.12.37:586][592]CompilerResultsLog: [1/4] Compile MasterVehicle.cpp
+[2023.05.12-14.12.37:586][592]CompilerResultsLog: [2/4] Link UnrealEditor-streetKart-2734.lib
+[2023.05.12-14.12.37:586][592]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-2734.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-2734.exp
+[2023.05.12-14.12.37:586][592]CompilerResultsLog: [3/4] Link UnrealEditor-streetKart-2734.dll
+[2023.05.12-14.12.37:586][592]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-2734.suppressed.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-2734.suppressed.exp
+[2023.05.12-14.12.37:586][592]CompilerResultsLog: [4/4] WriteMetadata streetKartEditor.target
+[2023.05.12-14.12.37:586][592]CompilerResultsLog: Total time in Parallel executor: 14.73 seconds
+[2023.05.12-14.12.37:586][592]CompilerResultsLog: Total execution time: 16.02 seconds
+[2023.05.12-14.12.37:586][592]LogMainFrame: MainFrame: Module compiling took 16.977 seconds
+[2023.05.12-14.12.38:109][592]Display: HotReload took 17.5s.
+[2023.05.12-14.12.38:109][592]Display: Reload/Re-instancing Complete: 1 package changed, 14 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 3 scriptstructs remapped
+[2023.05.12-14.12.41:117][822]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2023.05.12-14.12.41:128][822]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.05.12-14.12.41:128][822]PIE: New page: PIE session: MainMenu (12 May 2023, 16:12:41)
+[2023.05.12-14.12.41:128][822]LogPlayLevel: Creating play world package: /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.12.41:134][822]LogPlayLevel: PIE: StaticDuplicateObject took: (0.006033s)
+[2023.05.12-14.12.41:134][822]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/maps/MainMenu.MainMenu to /Game/maps/UEDPIE_0_MainMenu.MainMenu (0.006146s)
+[2023.05.12-14.12.41:134][822]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.12.41:134][822]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.12.41:135][822]LogAIModule: Creating AISystem for world MainMenu
+[2023.05.12-14.12.41:135][822]LogPlayLevel: PIE: World Init took: (0.000875s)
+[2023.05.12-14.12.41:305][822]LogUObjectHash: Compacting FUObjectHashTables data took   2.67ms
+[2023.05.12-14.12.41:307][822]LogAudio: Display: Creating Audio Device:                 Id: 40, Scope: Unique, Realtime: True
+[2023.05.12-14.12.41:307][822]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.05.12-14.12.41:307][822]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.05.12-14.12.41:307][822]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.05.12-14.12.41:307][822]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.05.12-14.12.41:307][822]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.05.12-14.12.41:307][822]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2023.05.12-14.12.41:307][822]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.05.12-14.12.41:308][822]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.05.12-14.12.41:308][822]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.05.12-14.12.41:308][822]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.05.12-14.12.41:308][822]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.05.12-14.12.41:310][822]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2023.05.12-14.12.41:344][822]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Yeti Classic)
+[2023.05.12-14.12.41:344][822]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.05.12-14.12.41:344][822]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.05.12-14.12.41:344][822]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.05.12-14.12.41:345][822]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=40
+[2023.05.12-14.12.41:345][822]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=40
+[2023.05.12-14.12.41:347][822]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=40
+[2023.05.12-14.12.41:347][822]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=40
+[2023.05.12-14.12.41:347][822]LogInit: FAudioDevice initialized.
+[2023.05.12-14.12.41:347][822]LogAudio: Display: Audio Device (ID: 40) registered with world 'MainMenu'.
+[2023.05.12-14.12.41:368][822]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.12.41:368][822]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.12.41:372][822]LogWorld: Bringing World /Game/maps/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2023.05.12-15.12.41
+[2023.05.12-14.12.41:372][822]LogWorld: Bringing up level for play took: 0.003874
+[2023.05.12-14.12.41:374][822]LogOnline: OSS: Created online subsystem instance for: :Context_72
+[2023.05.12-14.12.41:378][822]PIE: Server logged in
+[2023.05.12-14.12.41:380][822]PIE: Play in editor total start time 0.253 seconds.
+[2023.05.12-14.12.41:380][822]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.12.41:396][822]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2023.05.12-14.12.42:423][895]LogNet: Browse: /Game/maps/SelectionScreen
+[2023.05.12-14.12.42:423][895]LogLoad: LoadMap: /Game/maps/SelectionScreen
+[2023.05.12-14.12.42:423][895]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.12.42:423][895]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.12.42:424][895]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.12.42:518][895]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.12.42:583][895]LogUObjectHash: Compacting FUObjectHashTables data took   3.29ms
+[2023.05.12-14.12.42:688][895]LogAudio: Display: Audio Device (ID: 40) registered with world 'SelectionScreen'.
+[2023.05.12-14.12.42:688][895]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.12.42:688][895]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.12.42:689][895]LogAIModule: Creating AISystem for world SelectionScreen
+[2023.05.12-14.12.42:689][895]LogPlayLevel: PIE: World Init took: (0.000889s)
+[2023.05.12-14.12.42:689][895]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.12.42:770][895]LogWorld: Bringing World /Game/maps/UEDPIE_0_SelectionScreen.SelectionScreen up for play (max tick rate 0) at 2023.05.12-15.12.42
+[2023.05.12-14.12.42:772][895]LogWorld: Bringing up level for play took: 0.082143
+[2023.05.12-14.12.42:772][895]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.12.42:774][895]LogLoad: Took 0.351342 seconds to LoadMap(/Game/maps/SelectionScreen)
+[2023.05.12-14.12.42:774][895]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.12.45:020][ 62]LogNet: Browse: /Game/maps/ElevateMap
+[2023.05.12-14.12.45:020][ 62]LogLoad: LoadMap: /Game/maps/ElevateMap
+[2023.05.12-14.12.45:020][ 62]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_SelectionScreen
+[2023.05.12-14.12.45:020][ 62]LogWorld: UWorld::CleanupWorld for SelectionScreen, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.12.45:027][ 62]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.12.45:114][ 62]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.12.45:119][ 62]LogUObjectHash: Compacting FUObjectHashTables data took   1.68ms
+[2023.05.12-14.12.45:143][ 62]LogAudio: Display: Audio Device (ID: 40) registered with world 'ElevateMap'.
+[2023.05.12-14.12.45:143][ 62]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.12.45:143][ 62]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.12.45:144][ 62]LogAIModule: Creating AISystem for world ElevateMap
+[2023.05.12-14.12.45:144][ 62]LogPlayLevel: PIE: World Init took: (0.000894s)
+[2023.05.12-14.12.45:144][ 62]LogLoad: Game class is 'MystreetKartGameModeBase_C'
+[2023.05.12-14.12.45:164][ 62]LogWorld: Bringing World /Game/maps/UEDPIE_0_ElevateMap.ElevateMap up for play (max tick rate 0) at 2023.05.12-15.12.45
+[2023.05.12-14.12.45:164][ 62]LogWorld: Bringing up level for play took: 0.019986
+[2023.05.12-14.12.45:165][ 62]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.12.45:171][ 62]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.12.45:171][ 62]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.12.45:171][ 62]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> NoCapture
+[2023.05.12-14.12.45:172][ 62]LogLoad: Took 0.151907 seconds to LoadMap(/Game/maps/ElevateMap)
+[2023.05.12-14.12.45:172][ 62]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.12.47:511][255]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2023.05.12-14.12.47:511][255]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2023.05.12-14.12.47:513][255]LogBlueprintUserMessages: [MyCarPlayerController_C_0] PAWN SET
+[2023.05.12-14.13.04:243][663]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.13.04:243][663]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_ElevateMap
+[2023.05.12-14.13.04:244][663]LogSlate: Window 'Street Kart Preview [NetMode: Standalone]  (64-bit/SM5)' being destroyed
+[2023.05.12-14.13.04:249][663]LogWorld: UWorld::CleanupWorld for ElevateMap, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.13.04:250][663]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.13.04:265][663]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.05.12-14.13.04:272][663]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.13.04:328][663]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=40
+[2023.05.12-14.13.04:329][663]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=40
+[2023.05.12-14.13.04:341][663]LogUObjectHash: Compacting FUObjectHashTables data took   1.75ms
+[2023.05.12-14.13.04:388][664]LogPlayLevel: Display: Destroying online subsystem :Context_72
+[2023.05.12-14.13.21:608][602]Candidate modules for hot reload:
+[2023.05.12-14.13.21:608][602]  streetKart
+[2023.05.12-14.13.21:614][602]Launching UnrealBuildTool... [D:/Program Files (x86)/UE_5.0/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.exe  -ModuleWithSuffix=streetKart,4175 streetKartEditor Win64 Development -Project="D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject" "D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject"  -IgnoreJunk]
+[2023.05.12-14.13.21:619][602]Warning: Starting HotReload took  0.0s.
+[2023.05.12-14.13.29:971][269]CompilerResultsLog: New page: Compilation - 12 May 2023, 16:13:29
+[2023.05.12-14.13.29:971][269]CompilerResultsLog: Log file: C:\Users\Oli\AppData\Local\UnrealBuildTool\Log.txt
+[2023.05.12-14.13.29:971][269]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Actual Shit\dev\Projects\StreetKart).
+[2023.05.12-14.13.29:971][269]CompilerResultsLog: Building streetKartEditor...
+[2023.05.12-14.13.29:971][269]CompilerResultsLog: Using Visual Studio 2019 14.29.30147 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.05.12-14.13.29:971][269]CompilerResultsLog: [Adaptive Build] Excluded from streetKart unity file: MasterVehicle.cpp
+[2023.05.12-14.13.29:971][269]CompilerResultsLog: Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+[2023.05.12-14.13.29:971][269]CompilerResultsLog:   Executing up to 8 processes, one per physical core
+[2023.05.12-14.13.29:971][269]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.05.12-14.13.29:972][269]CompilerResultsLog: [1/4] Compile MasterVehicle.cpp
+[2023.05.12-14.13.29:972][269]CompilerResultsLog: [2/4] Link UnrealEditor-streetKart-4175.lib
+[2023.05.12-14.13.29:972][269]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-4175.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-4175.exp
+[2023.05.12-14.13.29:972][269]CompilerResultsLog: [3/4] Link UnrealEditor-streetKart-4175.dll
+[2023.05.12-14.13.29:972][269]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-4175.suppressed.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-4175.suppressed.exp
+[2023.05.12-14.13.29:972][269]CompilerResultsLog: [4/4] WriteMetadata streetKartEditor.target
+[2023.05.12-14.13.29:972][269]CompilerResultsLog: Total time in Parallel executor: 7.06 seconds
+[2023.05.12-14.13.29:972][269]CompilerResultsLog: Total execution time: 8.24 seconds
+[2023.05.12-14.13.29:972][269]LogMainFrame: MainFrame: Module compiling took 8.372 seconds
+[2023.05.12-14.13.30:407][269]Display: HotReload took  8.8s.
+[2023.05.12-14.13.30:407][269]Display: Reload/Re-instancing Complete: 1 package changed, 14 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 3 scriptstructs remapped
+[2023.05.12-14.13.32:049][374]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2023.05.12-14.13.32:060][374]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.05.12-14.13.32:060][374]PIE: New page: PIE session: MainMenu (12 May 2023, 16:13:32)
+[2023.05.12-14.13.32:060][374]LogPlayLevel: Creating play world package: /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.13.32:066][374]LogPlayLevel: PIE: StaticDuplicateObject took: (0.005951s)
+[2023.05.12-14.13.32:066][374]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/maps/MainMenu.MainMenu to /Game/maps/UEDPIE_0_MainMenu.MainMenu (0.006043s)
+[2023.05.12-14.13.32:066][374]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.13.32:066][374]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.13.32:066][374]LogAIModule: Creating AISystem for world MainMenu
+[2023.05.12-14.13.32:067][374]LogPlayLevel: PIE: World Init took: (0.000826s)
+[2023.05.12-14.13.32:173][374]LogUObjectHash: Compacting FUObjectHashTables data took   2.12ms
+[2023.05.12-14.13.32:182][374]LogAudio: Display: Creating Audio Device:                 Id: 41, Scope: Unique, Realtime: True
+[2023.05.12-14.13.32:182][374]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.05.12-14.13.32:182][374]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.05.12-14.13.32:182][374]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.05.12-14.13.32:182][374]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.05.12-14.13.32:182][374]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.05.12-14.13.32:182][374]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2023.05.12-14.13.32:182][374]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.05.12-14.13.32:182][374]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.05.12-14.13.32:182][374]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.05.12-14.13.32:182][374]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.05.12-14.13.32:182][374]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.05.12-14.13.32:184][374]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2023.05.12-14.13.32:218][374]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Yeti Classic)
+[2023.05.12-14.13.32:219][374]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.05.12-14.13.32:219][374]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.05.12-14.13.32:219][374]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.05.12-14.13.32:219][374]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=41
+[2023.05.12-14.13.32:219][374]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=41
+[2023.05.12-14.13.32:221][374]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=41
+[2023.05.12-14.13.32:221][374]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=41
+[2023.05.12-14.13.32:221][374]LogInit: FAudioDevice initialized.
+[2023.05.12-14.13.32:221][374]LogAudio: Display: Audio Device (ID: 41) registered with world 'MainMenu'.
+[2023.05.12-14.13.32:243][374]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.13.32:244][374]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.13.32:248][374]LogWorld: Bringing World /Game/maps/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2023.05.12-15.13.32
+[2023.05.12-14.13.32:248][374]LogWorld: Bringing up level for play took: 0.003787
+[2023.05.12-14.13.32:250][374]LogOnline: OSS: Created online subsystem instance for: :Context_73
+[2023.05.12-14.13.32:254][374]PIE: Server logged in
+[2023.05.12-14.13.32:256][374]PIE: Play in editor total start time 0.197 seconds.
+[2023.05.12-14.13.32:257][374]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.13.32:319][374]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2023.05.12-14.13.33:298][445]LogNet: Browse: /Game/maps/SelectionScreen
+[2023.05.12-14.13.33:298][445]LogLoad: LoadMap: /Game/maps/SelectionScreen
+[2023.05.12-14.13.33:298][445]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.13.33:299][445]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.13.33:299][445]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.13.33:374][445]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.13.33:416][445]LogUObjectHash: Compacting FUObjectHashTables data took   1.50ms
+[2023.05.12-14.13.33:503][445]LogAudio: Display: Audio Device (ID: 41) registered with world 'SelectionScreen'.
+[2023.05.12-14.13.33:503][445]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.13.33:503][445]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.13.33:503][445]LogAIModule: Creating AISystem for world SelectionScreen
+[2023.05.12-14.13.33:504][445]LogPlayLevel: PIE: World Init took: (0.000917s)
+[2023.05.12-14.13.33:504][445]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.13.33:587][445]LogWorld: Bringing World /Game/maps/UEDPIE_0_SelectionScreen.SelectionScreen up for play (max tick rate 0) at 2023.05.12-15.13.33
+[2023.05.12-14.13.33:588][445]LogWorld: Bringing up level for play took: 0.084528
+[2023.05.12-14.13.33:589][445]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.13.33:591][445]LogLoad: Took 0.293086 seconds to LoadMap(/Game/maps/SelectionScreen)
+[2023.05.12-14.13.33:591][445]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.13.35:819][617]LogNet: Browse: /Game/maps/ElevateMap
+[2023.05.12-14.13.35:819][617]LogLoad: LoadMap: /Game/maps/ElevateMap
+[2023.05.12-14.13.35:819][617]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_SelectionScreen
+[2023.05.12-14.13.35:820][617]LogWorld: UWorld::CleanupWorld for SelectionScreen, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.13.35:826][617]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.13.35:883][617]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.13.35:887][617]LogUObjectHash: Compacting FUObjectHashTables data took   1.46ms
+[2023.05.12-14.13.35:912][617]LogAudio: Display: Audio Device (ID: 41) registered with world 'ElevateMap'.
+[2023.05.12-14.13.35:912][617]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.13.35:912][617]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.13.35:913][617]LogAIModule: Creating AISystem for world ElevateMap
+[2023.05.12-14.13.35:913][617]LogPlayLevel: PIE: World Init took: (0.000890s)
+[2023.05.12-14.13.35:913][617]LogLoad: Game class is 'MystreetKartGameModeBase_C'
+[2023.05.12-14.13.35:934][617]LogWorld: Bringing World /Game/maps/UEDPIE_0_ElevateMap.ElevateMap up for play (max tick rate 0) at 2023.05.12-15.13.35
+[2023.05.12-14.13.35:934][617]LogWorld: Bringing up level for play took: 0.020390
+[2023.05.12-14.13.35:934][617]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.13.35:941][617]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.13.35:941][617]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.13.35:941][617]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> NoCapture
+[2023.05.12-14.13.35:941][617]LogLoad: Took 0.121871 seconds to LoadMap(/Game/maps/ElevateMap)
+[2023.05.12-14.13.35:941][617]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.13.38:317][811]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2023.05.12-14.13.38:317][811]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2023.05.12-14.13.38:319][811]LogBlueprintUserMessages: [MyCarPlayerController_C_0] PAWN SET
+[2023.05.12-14.13.58:972][544]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.13.58:972][544]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_ElevateMap
+[2023.05.12-14.13.58:973][544]LogSlate: Window 'Street Kart Preview [NetMode: Standalone]  (64-bit/SM5)' being destroyed
+[2023.05.12-14.13.58:978][544]LogWorld: UWorld::CleanupWorld for ElevateMap, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.13.58:979][544]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.13.58:996][544]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.05.12-14.13.59:003][544]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.13.59:061][544]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=41
+[2023.05.12-14.13.59:063][544]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=41
+[2023.05.12-14.13.59:072][544]LogUObjectHash: Compacting FUObjectHashTables data took   1.58ms
+[2023.05.12-14.13.59:122][545]LogPlayLevel: Display: Destroying online subsystem :Context_73
+[2023.05.12-14.14.18:328][813]Candidate modules for hot reload:
+[2023.05.12-14.14.18:328][813]  streetKart
+[2023.05.12-14.14.18:335][813]Launching UnrealBuildTool... [D:/Program Files (x86)/UE_5.0/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.exe  -ModuleWithSuffix=streetKart,0482 streetKartEditor Win64 Development -Project="D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject" "D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject"  -IgnoreJunk]
+[2023.05.12-14.14.18:339][813]Warning: Starting HotReload took  0.0s.
+[2023.05.12-14.14.26:779][488]CompilerResultsLog: New page: Compilation - 12 May 2023, 16:14:26
+[2023.05.12-14.14.26:779][488]CompilerResultsLog: Log file: C:\Users\Oli\AppData\Local\UnrealBuildTool\Log.txt
+[2023.05.12-14.14.26:779][488]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Actual Shit\dev\Projects\StreetKart).
+[2023.05.12-14.14.26:780][488]CompilerResultsLog: Building streetKartEditor...
+[2023.05.12-14.14.26:780][488]CompilerResultsLog: Using Visual Studio 2019 14.29.30147 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.05.12-14.14.26:780][488]CompilerResultsLog: [Adaptive Build] Excluded from streetKart unity file: MasterVehicle.cpp
+[2023.05.12-14.14.26:780][488]CompilerResultsLog: Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+[2023.05.12-14.14.26:780][488]CompilerResultsLog:   Executing up to 8 processes, one per physical core
+[2023.05.12-14.14.26:780][488]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.05.12-14.14.26:780][488]CompilerResultsLog: [1/4] Compile MasterVehicle.cpp
+[2023.05.12-14.14.26:780][488]CompilerResultsLog: [2/4] Link UnrealEditor-streetKart-0482.lib
+[2023.05.12-14.14.26:780][488]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-0482.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-0482.exp
+[2023.05.12-14.14.26:780][488]CompilerResultsLog: [3/4] Link UnrealEditor-streetKart-0482.dll
+[2023.05.12-14.14.26:780][488]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-0482.suppressed.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-0482.suppressed.exp
+[2023.05.12-14.14.26:780][488]CompilerResultsLog: [4/4] WriteMetadata streetKartEditor.target
+[2023.05.12-14.14.26:780][488]CompilerResultsLog: Total time in Parallel executor: 7.14 seconds
+[2023.05.12-14.14.26:780][488]CompilerResultsLog: Total execution time: 8.32 seconds
+[2023.05.12-14.14.26:780][488]LogMainFrame: MainFrame: Module compiling took 8.461 seconds
+[2023.05.12-14.14.27:224][488]Display: HotReload took  8.9s.
+[2023.05.12-14.14.27:224][488]Display: Reload/Re-instancing Complete: 1 package changed, 14 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 3 scriptstructs remapped
+[2023.05.12-14.14.29:023][607]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2023.05.12-14.14.29:034][607]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.05.12-14.14.29:034][607]PIE: New page: PIE session: MainMenu (12 May 2023, 16:14:29)
+[2023.05.12-14.14.29:034][607]LogPlayLevel: Creating play world package: /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.14.29:040][607]LogPlayLevel: PIE: StaticDuplicateObject took: (0.005975s)
+[2023.05.12-14.14.29:040][607]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/maps/MainMenu.MainMenu to /Game/maps/UEDPIE_0_MainMenu.MainMenu (0.006075s)
+[2023.05.12-14.14.29:040][607]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.14.29:040][607]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.14.29:041][607]LogAIModule: Creating AISystem for world MainMenu
+[2023.05.12-14.14.29:041][607]LogPlayLevel: PIE: World Init took: (0.000846s)
+[2023.05.12-14.14.29:155][607]LogUObjectHash: Compacting FUObjectHashTables data took   2.06ms
+[2023.05.12-14.14.29:165][607]LogAudio: Display: Creating Audio Device:                 Id: 42, Scope: Unique, Realtime: True
+[2023.05.12-14.14.29:165][607]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.05.12-14.14.29:165][607]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.05.12-14.14.29:165][607]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.05.12-14.14.29:165][607]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.05.12-14.14.29:165][607]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.05.12-14.14.29:165][607]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2023.05.12-14.14.29:165][607]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.05.12-14.14.29:166][607]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.05.12-14.14.29:166][607]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.05.12-14.14.29:166][607]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.05.12-14.14.29:166][607]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.05.12-14.14.29:168][607]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2023.05.12-14.14.29:202][607]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Yeti Classic)
+[2023.05.12-14.14.29:202][607]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.05.12-14.14.29:202][607]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.05.12-14.14.29:202][607]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.05.12-14.14.29:203][607]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=42
+[2023.05.12-14.14.29:203][607]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=42
+[2023.05.12-14.14.29:205][607]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=42
+[2023.05.12-14.14.29:205][607]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=42
+[2023.05.12-14.14.29:205][607]LogInit: FAudioDevice initialized.
+[2023.05.12-14.14.29:205][607]LogAudio: Display: Audio Device (ID: 42) registered with world 'MainMenu'.
+[2023.05.12-14.14.29:229][607]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.14.29:229][607]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.14.29:233][607]LogWorld: Bringing World /Game/maps/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2023.05.12-15.14.29
+[2023.05.12-14.14.29:234][607]LogWorld: Bringing up level for play took: 0.004143
+[2023.05.12-14.14.29:236][607]LogOnline: OSS: Created online subsystem instance for: :Context_74
+[2023.05.12-14.14.29:240][607]PIE: Server logged in
+[2023.05.12-14.14.29:241][607]PIE: Play in editor total start time 0.208 seconds.
+[2023.05.12-14.14.29:243][607]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.14.29:293][607]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2023.05.12-14.14.30:119][666]LogNet: Browse: /Game/maps/SelectionScreen
+[2023.05.12-14.14.30:119][666]LogLoad: LoadMap: /Game/maps/SelectionScreen
+[2023.05.12-14.14.30:119][666]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.14.30:119][666]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.14.30:120][666]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.14.30:193][666]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.14.30:237][666]LogUObjectHash: Compacting FUObjectHashTables data took   1.51ms
+[2023.05.12-14.14.30:321][666]LogAudio: Display: Audio Device (ID: 42) registered with world 'SelectionScreen'.
+[2023.05.12-14.14.30:321][666]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.14.30:321][666]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.14.30:321][666]LogAIModule: Creating AISystem for world SelectionScreen
+[2023.05.12-14.14.30:322][666]LogPlayLevel: PIE: World Init took: (0.000931s)
+[2023.05.12-14.14.30:322][666]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.14.30:403][666]LogWorld: Bringing World /Game/maps/UEDPIE_0_SelectionScreen.SelectionScreen up for play (max tick rate 0) at 2023.05.12-15.14.30
+[2023.05.12-14.14.30:404][666]LogWorld: Bringing up level for play took: 0.082654
+[2023.05.12-14.14.30:405][666]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.14.30:408][666]LogLoad: Took 0.288824 seconds to LoadMap(/Game/maps/SelectionScreen)
+[2023.05.12-14.14.30:408][666]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.14.32:479][824]LogNet: Browse: /Game/maps/ElevateMap
+[2023.05.12-14.14.32:480][824]LogLoad: LoadMap: /Game/maps/ElevateMap
+[2023.05.12-14.14.32:480][824]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_SelectionScreen
+[2023.05.12-14.14.32:480][824]LogWorld: UWorld::CleanupWorld for SelectionScreen, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.14.32:486][824]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.14.32:539][824]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.14.32:546][824]LogUObjectHash: Compacting FUObjectHashTables data took   1.44ms
+[2023.05.12-14.14.32:571][824]LogAudio: Display: Audio Device (ID: 42) registered with world 'ElevateMap'.
+[2023.05.12-14.14.32:571][824]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.14.32:571][824]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.14.32:572][824]LogAIModule: Creating AISystem for world ElevateMap
+[2023.05.12-14.14.32:572][824]LogPlayLevel: PIE: World Init took: (0.000882s)
+[2023.05.12-14.14.32:572][824]LogLoad: Game class is 'MystreetKartGameModeBase_C'
+[2023.05.12-14.14.32:592][824]LogWorld: Bringing World /Game/maps/UEDPIE_0_ElevateMap.ElevateMap up for play (max tick rate 0) at 2023.05.12-15.14.32
+[2023.05.12-14.14.32:593][824]LogWorld: Bringing up level for play took: 0.020548
+[2023.05.12-14.14.32:593][824]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.14.32:599][824]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.14.32:599][824]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.14.32:599][824]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> NoCapture
+[2023.05.12-14.14.32:600][824]LogLoad: Took 0.120188 seconds to LoadMap(/Game/maps/ElevateMap)
+[2023.05.12-14.14.32:600][824]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.14.34:967][ 17]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2023.05.12-14.14.34:968][ 17]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2023.05.12-14.14.34:970][ 17]LogBlueprintUserMessages: [MyCarPlayerController_C_0] PAWN SET
+[2023.05.12-14.14.51:732][399]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.14.51:733][399]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_ElevateMap
+[2023.05.12-14.14.51:734][399]LogSlate: Window 'Street Kart Preview [NetMode: Standalone]  (64-bit/SM5)' being destroyed
+[2023.05.12-14.14.51:738][399]LogWorld: UWorld::CleanupWorld for ElevateMap, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.14.51:739][399]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.14.51:750][399]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.05.12-14.14.51:758][399]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.14.51:815][399]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=42
+[2023.05.12-14.14.51:817][399]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=42
+[2023.05.12-14.14.51:826][399]LogUObjectHash: Compacting FUObjectHashTables data took   1.62ms
+[2023.05.12-14.14.51:895][400]LogPlayLevel: Display: Destroying online subsystem :Context_74
+[2023.05.12-14.14.53:132][515]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2023.05.12-14.14.53:143][515]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.05.12-14.14.53:143][515]PIE: New page: PIE session: MainMenu (12 May 2023, 16:14:53)
+[2023.05.12-14.14.53:143][515]LogPlayLevel: Creating play world package: /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.14.53:149][515]LogPlayLevel: PIE: StaticDuplicateObject took: (0.005949s)
+[2023.05.12-14.14.53:149][515]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/maps/MainMenu.MainMenu to /Game/maps/UEDPIE_0_MainMenu.MainMenu (0.006050s)
+[2023.05.12-14.14.53:149][515]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.14.53:149][515]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.14.53:150][515]LogAIModule: Creating AISystem for world MainMenu
+[2023.05.12-14.14.53:150][515]LogPlayLevel: PIE: World Init took: (0.000978s)
+[2023.05.12-14.14.53:205][515]LogUObjectHash: Compacting FUObjectHashTables data took   1.68ms
+[2023.05.12-14.14.53:208][515]LogAudio: Display: Creating Audio Device:                 Id: 43, Scope: Unique, Realtime: True
+[2023.05.12-14.14.53:208][515]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.05.12-14.14.53:208][515]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.05.12-14.14.53:208][515]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.05.12-14.14.53:208][515]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.05.12-14.14.53:208][515]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.05.12-14.14.53:208][515]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2023.05.12-14.14.53:208][515]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.05.12-14.14.53:208][515]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.05.12-14.14.53:209][515]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.05.12-14.14.53:209][515]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.05.12-14.14.53:209][515]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.05.12-14.14.53:211][515]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2023.05.12-14.14.53:245][515]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Yeti Classic)
+[2023.05.12-14.14.53:245][515]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.05.12-14.14.53:245][515]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.05.12-14.14.53:245][515]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.05.12-14.14.53:246][515]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=43
+[2023.05.12-14.14.53:246][515]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=43
+[2023.05.12-14.14.53:248][515]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=43
+[2023.05.12-14.14.53:248][515]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=43
+[2023.05.12-14.14.53:248][515]LogInit: FAudioDevice initialized.
+[2023.05.12-14.14.53:248][515]LogAudio: Display: Audio Device (ID: 43) registered with world 'MainMenu'.
+[2023.05.12-14.14.53:266][515]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.14.53:266][515]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.14.53:270][515]LogWorld: Bringing World /Game/maps/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2023.05.12-15.14.53
+[2023.05.12-14.14.53:270][515]LogWorld: Bringing up level for play took: 0.003590
+[2023.05.12-14.14.53:272][515]LogOnline: OSS: Created online subsystem instance for: :Context_75
+[2023.05.12-14.14.53:276][515]PIE: Server logged in
+[2023.05.12-14.14.53:278][515]PIE: Play in editor total start time 0.135 seconds.
+[2023.05.12-14.14.53:279][515]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.14.53:326][515]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2023.05.12-14.14.55:197][665]LogNet: Browse: /Game/maps/SelectionScreen
+[2023.05.12-14.14.55:197][665]LogLoad: LoadMap: /Game/maps/SelectionScreen
+[2023.05.12-14.14.55:197][665]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.14.55:197][665]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.14.55:198][665]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.14.55:286][665]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.14.55:290][665]LogUObjectHash: Compacting FUObjectHashTables data took   1.57ms
+[2023.05.12-14.14.55:350][665]LogAudio: Display: Audio Device (ID: 43) registered with world 'SelectionScreen'.
+[2023.05.12-14.14.55:350][665]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.14.55:350][665]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.14.55:350][665]LogAIModule: Creating AISystem for world SelectionScreen
+[2023.05.12-14.14.55:351][665]LogPlayLevel: PIE: World Init took: (0.000925s)
+[2023.05.12-14.14.55:351][665]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.14.55:432][665]LogWorld: Bringing World /Game/maps/UEDPIE_0_SelectionScreen.SelectionScreen up for play (max tick rate 0) at 2023.05.12-15.14.55
+[2023.05.12-14.14.55:433][665]LogWorld: Bringing up level for play took: 0.082068
+[2023.05.12-14.14.55:433][665]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.14.55:435][665]LogLoad: Took 0.238324 seconds to LoadMap(/Game/maps/SelectionScreen)
+[2023.05.12-14.14.55:435][665]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.14.59:149][954]LogNet: Browse: /Game/maps/ElevateMap
+[2023.05.12-14.14.59:149][954]LogLoad: LoadMap: /Game/maps/ElevateMap
+[2023.05.12-14.14.59:149][954]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_SelectionScreen
+[2023.05.12-14.14.59:150][954]LogWorld: UWorld::CleanupWorld for SelectionScreen, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.14.59:154][954]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.14.59:214][954]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.14.59:218][954]LogUObjectHash: Compacting FUObjectHashTables data took   1.59ms
+[2023.05.12-14.14.59:236][954]LogAudio: Display: Audio Device (ID: 43) registered with world 'ElevateMap'.
+[2023.05.12-14.14.59:236][954]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.14.59:236][954]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.14.59:236][954]LogAIModule: Creating AISystem for world ElevateMap
+[2023.05.12-14.14.59:237][954]LogPlayLevel: PIE: World Init took: (0.000909s)
+[2023.05.12-14.14.59:237][954]LogLoad: Game class is 'MystreetKartGameModeBase_C'
+[2023.05.12-14.14.59:257][954]LogWorld: Bringing World /Game/maps/UEDPIE_0_ElevateMap.ElevateMap up for play (max tick rate 0) at 2023.05.12-15.14.59
+[2023.05.12-14.14.59:258][954]LogWorld: Bringing up level for play took: 0.020643
+[2023.05.12-14.14.59:258][954]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.14.59:264][954]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.14.59:264][954]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.14.59:264][954]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> NoCapture
+[2023.05.12-14.14.59:265][954]LogLoad: Took 0.115792 seconds to LoadMap(/Game/maps/ElevateMap)
+[2023.05.12-14.14.59:265][954]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.15.01:637][148]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2023.05.12-14.15.01:637][148]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2023.05.12-14.15.01:639][148]LogBlueprintUserMessages: [MyCarPlayerController_C_0] PAWN SET
+[2023.05.12-14.15.18:443][544]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.15.18:443][544]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.15.18:443][544]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2023.05.12-14.15.18:443][544]LogBlueprintUserMessages: Warning: Time Dilation must be between 0.000100 and 20.000000.  Clamped value to that range.
+[2023.05.12-14.15.19:257][613]LogNet: Browse: /Game/maps/SelectionScreen
+[2023.05.12-14.15.19:257][613]LogLoad: LoadMap: /Game/maps/SelectionScreen
+[2023.05.12-14.15.19:257][613]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_ElevateMap
+[2023.05.12-14.15.19:258][613]LogWorld: UWorld::CleanupWorld for ElevateMap, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.15.19:258][613]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.15.19:348][613]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.15.19:352][613]LogUObjectHash: Compacting FUObjectHashTables data took   1.71ms
+[2023.05.12-14.15.19:412][613]LogAudio: Display: Audio Device (ID: 43) registered with world 'SelectionScreen'.
+[2023.05.12-14.15.19:412][613]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.15.19:412][613]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.15.19:413][613]LogAIModule: Creating AISystem for world SelectionScreen
+[2023.05.12-14.15.19:413][613]LogPlayLevel: PIE: World Init took: (0.000898s)
+[2023.05.12-14.15.19:413][613]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.15.19:494][613]LogWorld: Bringing World /Game/maps/UEDPIE_0_SelectionScreen.SelectionScreen up for play (max tick rate 0) at 2023.05.12-15.15.19
+[2023.05.12-14.15.19:495][613]LogWorld: Bringing up level for play took: 0.081911
+[2023.05.12-14.15.19:496][613]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.15.19:497][613]LogLoad: Took 0.241306 seconds to LoadMap(/Game/maps/SelectionScreen)
+[2023.05.12-14.15.19:498][613]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.15.21:353][755]LogNet: Browse: /Game/maps/DirtMap
+[2023.05.12-14.15.21:353][755]LogLoad: LoadMap: /Game/maps/DirtMap
+[2023.05.12-14.15.21:353][755]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_SelectionScreen
+[2023.05.12-14.15.21:354][755]LogWorld: UWorld::CleanupWorld for SelectionScreen, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.15.21:358][755]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.15.21:439][755]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.15.21:445][755]LogUObjectHash: Compacting FUObjectHashTables data took   1.57ms
+[2023.05.12-14.15.21:463][755]LogAudio: Display: Audio Device (ID: 43) registered with world 'DirtMap'.
+[2023.05.12-14.15.21:463][755]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.15.21:463][755]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.15.21:464][755]LogAIModule: Creating AISystem for world DirtMap
+[2023.05.12-14.15.21:464][755]LogPlayLevel: PIE: World Init took: (0.000890s)
+[2023.05.12-14.15.21:464][755]LogLoad: Game class is 'MystreetKartGameModeBase_C'
+[2023.05.12-14.15.21:475][755]LogWorld: Bringing World /Game/maps/UEDPIE_0_DirtMap.DirtMap up for play (max tick rate 0) at 2023.05.12-15.15.21
+[2023.05.12-14.15.21:476][755]LogWorld: Bringing up level for play took: 0.011171
+[2023.05.12-14.15.21:476][755]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.15.21:482][755]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.15.21:483][755]LogLoad: Took 0.129359 seconds to LoadMap(/Game/maps/DirtMap)
+[2023.05.12-14.15.21:483][755]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.15.23:841][942]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2023.05.12-14.15.23:841][942]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2023.05.12-14.15.23:843][942]LogBlueprintUserMessages: [MyCarPlayerController_C_0] PAWN SET
+[2023.05.12-14.16.12:103][789]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.16.12:103][789]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.16.12:103][789]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2023.05.12-14.16.15:464][ 66]LogNet: Browse: /Game/maps/SelectionScreen
+[2023.05.12-14.16.15:464][ 66]LogLoad: LoadMap: /Game/maps/SelectionScreen
+[2023.05.12-14.16.15:464][ 66]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_DirtMap
+[2023.05.12-14.16.15:466][ 66]LogWorld: UWorld::CleanupWorld for DirtMap, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.16.15:466][ 66]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.16.15:524][ 66]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.16.15:528][ 66]LogUObjectHash: Compacting FUObjectHashTables data took   1.59ms
+[2023.05.12-14.16.15:588][ 66]LogAudio: Display: Audio Device (ID: 43) registered with world 'SelectionScreen'.
+[2023.05.12-14.16.15:588][ 66]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.16.15:588][ 66]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.16.15:588][ 66]LogAIModule: Creating AISystem for world SelectionScreen
+[2023.05.12-14.16.15:589][ 66]LogPlayLevel: PIE: World Init took: (0.000913s)
+[2023.05.12-14.16.15:589][ 66]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.16.15:670][ 66]LogWorld: Bringing World /Game/maps/UEDPIE_0_SelectionScreen.SelectionScreen up for play (max tick rate 0) at 2023.05.12-15.16.15
+[2023.05.12-14.16.15:671][ 66]LogWorld: Bringing up level for play took: 0.082632
+[2023.05.12-14.16.15:672][ 66]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.16.15:674][ 66]LogLoad: Took 0.209733 seconds to LoadMap(/Game/maps/SelectionScreen)
+[2023.05.12-14.16.15:674][ 66]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.16.16:828][154]LogNet: Browse: /Game/maps/MainMenu
+[2023.05.12-14.16.16:829][154]LogLoad: LoadMap: /Game/maps/MainMenu
+[2023.05.12-14.16.16:829][154]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_SelectionScreen
+[2023.05.12-14.16.16:829][154]LogWorld: UWorld::CleanupWorld for SelectionScreen, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.16.16:834][154]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.16.16:893][154]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.16.16:898][154]LogUObjectHash: Compacting FUObjectHashTables data took   1.74ms
+[2023.05.12-14.16.16:902][154]LogPlayLevel: Creating play world package: /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.16.16:908][154]LogPlayLevel: PIE: StaticDuplicateObject took: (0.006053s)
+[2023.05.12-14.16.16:908][154]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/maps/MainMenu.MainMenu to /Game/maps/UEDPIE_0_MainMenu.MainMenu (0.006205s)
+[2023.05.12-14.16.16:908][154]LogAudio: Display: Audio Device (ID: 43) registered with world 'MainMenu'.
+[2023.05.12-14.16.16:908][154]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.16.16:908][154]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.16.16:908][154]LogAIModule: Creating AISystem for world MainMenu
+[2023.05.12-14.16.16:909][154]LogPlayLevel: PIE: World Init took: (0.000892s)
+[2023.05.12-14.16.16:909][154]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.16.16:911][154]LogWorld: Bringing World /Game/maps/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2023.05.12-15.16.16
+[2023.05.12-14.16.16:911][154]LogWorld: Bringing up level for play took: 0.002443
+[2023.05.12-14.16.16:912][154]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.16.16:914][154]LogLoad: Took 0.085066 seconds to LoadMap(/Game/maps/UEDPIE_0_MainMenu)
+[2023.05.12-14.16.16:914][154]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.16.17:568][210]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.16.17:568][210]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.16.17:568][210]LogSlate: Window 'Street Kart Preview [NetMode: Standalone]  (64-bit/SM5)' being destroyed
+[2023.05.12-14.16.17:582][210]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.16.17:583][210]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.16.17:593][210]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.05.12-14.16.17:601][210]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.16.17:657][210]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=43
+[2023.05.12-14.16.17:659][210]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=43
+[2023.05.12-14.16.17:667][210]LogUObjectHash: Compacting FUObjectHashTables data took   1.62ms
+[2023.05.12-14.16.17:720][211]LogPlayLevel: Display: Destroying online subsystem :Context_75
+[2023.05.12-14.17.48:804][658]Candidate modules for hot reload:
+[2023.05.12-14.17.48:804][658]  streetKart
+[2023.05.12-14.17.48:810][658]Launching UnrealBuildTool... [D:/Program Files (x86)/UE_5.0/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.exe  -ModuleWithSuffix=streetKart,8045 streetKartEditor Win64 Development -Project="D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject" "D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject"  -IgnoreJunk]
+[2023.05.12-14.17.48:814][658]Warning: Starting HotReload took  0.0s.
+[2023.05.12-14.17.57:449][352]CompilerResultsLog: New page: Compilation - 12 May 2023, 16:17:57
+[2023.05.12-14.17.57:449][352]CompilerResultsLog: Log file: C:\Users\Oli\AppData\Local\UnrealBuildTool\Log.txt
+[2023.05.12-14.17.57:449][352]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Actual Shit\dev\Projects\StreetKart).
+[2023.05.12-14.17.57:449][352]CompilerResultsLog: Building streetKartEditor...
+[2023.05.12-14.17.57:449][352]CompilerResultsLog: Using Visual Studio 2019 14.29.30147 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.05.12-14.17.57:449][352]CompilerResultsLog: [Adaptive Build] Excluded from streetKart unity file: MasterVehicle.cpp
+[2023.05.12-14.17.57:449][352]CompilerResultsLog: Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+[2023.05.12-14.17.57:449][352]CompilerResultsLog:   Executing up to 8 processes, one per physical core
+[2023.05.12-14.17.57:449][352]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.05.12-14.17.57:449][352]CompilerResultsLog: [1/4] Compile MasterVehicle.cpp
+[2023.05.12-14.17.57:449][352]CompilerResultsLog: D:\Program Files (x86)\UE_5.0\Engine\Source\Runtime\Core\Public\Math\UnrealMathUtility.h(986): error C2672: 'FMath::Lerp': no matching overloaded function found
+[2023.05.12-14.17.57:449][352]CompilerResultsLog: D:\Actual Shit\dev\Projects\StreetKart\streetKart\Source\streetKart\Vehicles\MasterVehicle.cpp(390): note: see reference to function template instantiation 'T2 FMath::Lerp<float,double,int,0>(const T1 &,const T2 &,const T3 &)' being compiled
+[2023.05.12-14.17.57:449][352]CompilerResultsLog:         with
+[2023.05.12-14.17.57:449][352]CompilerResultsLog:         [
+[2023.05.12-14.17.57:449][352]CompilerResultsLog:             T2=double,
+[2023.05.12-14.17.57:449][352]CompilerResultsLog:             T1=float,
+[2023.05.12-14.17.57:449][352]CompilerResultsLog:             T3=int
+[2023.05.12-14.17.57:449][352]CompilerResultsLog:         ]
+[2023.05.12-14.17.57:449][352]CompilerResultsLog: D:\Program Files (x86)\UE_5.0\Engine\Source\Runtime\Core\Public\Math\UnrealMathUtility.h(986): error C2783: 'T FMath::Lerp(const T &,const T &,const U &)': could not deduce template argument for '__formal'
+[2023.05.12-14.17.57:449][352]CompilerResultsLog: D:\Program Files (x86)\UE_5.0\Engine\Source\Runtime\Core\Public\Math\UnrealMathUtility.h(965): note: see declaration of 'FMath::Lerp'
+[2023.05.12-14.17.57:449][352]LogMainFrame: MainFrame: Module compiling took 8.654 seconds
+[2023.05.12-14.17.57:449][352]Warning: HotReload failed, recompile failed
+[2023.05.12-14.18.20:335][754]LogSlate: Window 'Message Log' being destroyed
+[2023.05.12-14.18.20:341][754]LogSlate: Window 'Message Log' being destroyed
+[2023.05.12-14.18.31:670][919]Candidate modules for hot reload:
+[2023.05.12-14.18.31:670][919]  streetKart
+[2023.05.12-14.18.31:676][919]Launching UnrealBuildTool... [D:/Program Files (x86)/UE_5.0/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.exe  -ModuleWithSuffix=streetKart,8852 streetKartEditor Win64 Development -Project="D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject" "D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject"  -IgnoreJunk]
+[2023.05.12-14.18.31:680][919]Warning: Starting HotReload took  0.0s.
+[2023.05.12-14.18.40:026][587]CompilerResultsLog: New page: Compilation - 12 May 2023, 16:18:40
+[2023.05.12-14.18.40:026][587]CompilerResultsLog: Log file: C:\Users\Oli\AppData\Local\UnrealBuildTool\Log.txt
+[2023.05.12-14.18.40:026][587]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Actual Shit\dev\Projects\StreetKart).
+[2023.05.12-14.18.40:026][587]CompilerResultsLog: Building streetKartEditor...
+[2023.05.12-14.18.40:026][587]CompilerResultsLog: Using Visual Studio 2019 14.29.30147 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.05.12-14.18.40:026][587]CompilerResultsLog: [Adaptive Build] Excluded from streetKart unity file: MasterVehicle.cpp
+[2023.05.12-14.18.40:027][587]CompilerResultsLog: Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+[2023.05.12-14.18.40:027][587]CompilerResultsLog:   Executing up to 8 processes, one per physical core
+[2023.05.12-14.18.40:027][587]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.05.12-14.18.40:027][587]CompilerResultsLog: [1/4] Compile MasterVehicle.cpp
+[2023.05.12-14.18.40:027][587]CompilerResultsLog: [2/4] Link UnrealEditor-streetKart-8852.lib
+[2023.05.12-14.18.40:027][587]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-8852.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-8852.exp
+[2023.05.12-14.18.40:027][587]CompilerResultsLog: [3/4] Link UnrealEditor-streetKart-8852.dll
+[2023.05.12-14.18.40:027][587]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-8852.suppressed.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-8852.suppressed.exp
+[2023.05.12-14.18.40:027][587]CompilerResultsLog: [4/4] WriteMetadata streetKartEditor.target
+[2023.05.12-14.18.40:027][587]CompilerResultsLog: Total time in Parallel executor: 7.07 seconds
+[2023.05.12-14.18.40:027][587]CompilerResultsLog: Total execution time: 8.23 seconds
+[2023.05.12-14.18.40:027][587]LogMainFrame: MainFrame: Module compiling took 8.366 seconds
+[2023.05.12-14.18.40:467][587]Display: HotReload took  8.8s.
+[2023.05.12-14.18.40:467][587]Display: Reload/Re-instancing Complete: 1 package changed, 14 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 3 scriptstructs remapped
+[2023.05.12-14.18.42:000][683]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2023.05.12-14.18.42:011][683]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.05.12-14.18.42:011][683]PIE: New page: PIE session: MainMenu (12 May 2023, 16:18:42)
+[2023.05.12-14.18.42:011][683]LogPlayLevel: Creating play world package: /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.18.42:017][683]LogPlayLevel: PIE: StaticDuplicateObject took: (0.006056s)
+[2023.05.12-14.18.42:017][683]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/maps/MainMenu.MainMenu to /Game/maps/UEDPIE_0_MainMenu.MainMenu (0.006156s)
+[2023.05.12-14.18.42:017][683]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.18.42:018][683]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.18.42:018][683]LogAIModule: Creating AISystem for world MainMenu
+[2023.05.12-14.18.42:018][683]LogPlayLevel: PIE: World Init took: (0.000887s)
+[2023.05.12-14.18.42:131][683]LogUObjectHash: Compacting FUObjectHashTables data took   2.15ms
+[2023.05.12-14.18.42:135][683]LogAudio: Display: Creating Audio Device:                 Id: 44, Scope: Unique, Realtime: True
+[2023.05.12-14.18.42:135][683]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.05.12-14.18.42:135][683]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.05.12-14.18.42:135][683]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.05.12-14.18.42:135][683]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.05.12-14.18.42:135][683]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.05.12-14.18.42:135][683]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2023.05.12-14.18.42:135][683]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.05.12-14.18.42:135][683]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.05.12-14.18.42:135][683]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.05.12-14.18.42:135][683]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.05.12-14.18.42:135][683]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.05.12-14.18.42:137][683]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2023.05.12-14.18.42:171][683]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Yeti Classic)
+[2023.05.12-14.18.42:172][683]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.05.12-14.18.42:172][683]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.05.12-14.18.42:172][683]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.05.12-14.18.42:173][683]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=44
+[2023.05.12-14.18.42:173][683]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=44
+[2023.05.12-14.18.42:174][683]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=44
+[2023.05.12-14.18.42:175][683]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=44
+[2023.05.12-14.18.42:175][683]LogInit: FAudioDevice initialized.
+[2023.05.12-14.18.42:175][683]LogAudio: Display: Audio Device (ID: 44) registered with world 'MainMenu'.
+[2023.05.12-14.18.42:194][683]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.18.42:195][683]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.18.42:198][683]LogWorld: Bringing World /Game/maps/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2023.05.12-15.18.42
+[2023.05.12-14.18.42:198][683]LogWorld: Bringing up level for play took: 0.003727
+[2023.05.12-14.18.42:201][683]LogOnline: OSS: Created online subsystem instance for: :Context_76
+[2023.05.12-14.18.42:205][683]PIE: Server logged in
+[2023.05.12-14.18.42:206][683]PIE: Play in editor total start time 0.196 seconds.
+[2023.05.12-14.18.42:207][683]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.18.42:245][683]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2023.05.12-14.18.42:976][733]LogNet: Browse: /Game/maps/SelectionScreen
+[2023.05.12-14.18.42:977][733]LogLoad: LoadMap: /Game/maps/SelectionScreen
+[2023.05.12-14.18.42:977][733]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.18.42:977][733]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.18.42:978][733]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.18.43:064][733]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.18.43:107][733]LogUObjectHash: Compacting FUObjectHashTables data took   1.62ms
+[2023.05.12-14.18.43:194][733]LogAudio: Display: Audio Device (ID: 44) registered with world 'SelectionScreen'.
+[2023.05.12-14.18.43:194][733]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.18.43:194][733]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.18.43:195][733]LogAIModule: Creating AISystem for world SelectionScreen
+[2023.05.12-14.18.43:195][733]LogPlayLevel: PIE: World Init took: (0.001030s)
+[2023.05.12-14.18.43:195][733]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.18.43:282][733]LogWorld: Bringing World /Game/maps/UEDPIE_0_SelectionScreen.SelectionScreen up for play (max tick rate 0) at 2023.05.12-15.18.43
+[2023.05.12-14.18.43:283][733]LogWorld: Bringing up level for play took: 0.087748
+[2023.05.12-14.18.43:283][733]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.18.43:285][733]LogLoad: Took 0.308917 seconds to LoadMap(/Game/maps/SelectionScreen)
+[2023.05.12-14.18.43:286][733]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.18.44:986][864]LogNet: Browse: /Game/maps/ElevateMap
+[2023.05.12-14.18.44:986][864]LogLoad: LoadMap: /Game/maps/ElevateMap
+[2023.05.12-14.18.44:986][864]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_SelectionScreen
+[2023.05.12-14.18.44:987][864]LogWorld: UWorld::CleanupWorld for SelectionScreen, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.18.44:991][864]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.18.45:066][864]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.18.45:071][864]LogUObjectHash: Compacting FUObjectHashTables data took   1.48ms
+[2023.05.12-14.18.45:096][864]LogAudio: Display: Audio Device (ID: 44) registered with world 'ElevateMap'.
+[2023.05.12-14.18.45:096][864]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.18.45:096][864]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.18.45:096][864]LogAIModule: Creating AISystem for world ElevateMap
+[2023.05.12-14.18.45:097][864]LogPlayLevel: PIE: World Init took: (0.000917s)
+[2023.05.12-14.18.45:097][864]LogLoad: Game class is 'MystreetKartGameModeBase_C'
+[2023.05.12-14.18.45:117][864]LogWorld: Bringing World /Game/maps/UEDPIE_0_ElevateMap.ElevateMap up for play (max tick rate 0) at 2023.05.12-15.18.45
+[2023.05.12-14.18.45:118][864]LogWorld: Bringing up level for play took: 0.020704
+[2023.05.12-14.18.45:118][864]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.18.45:124][864]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.18.45:124][864]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.18.45:124][864]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> NoCapture
+[2023.05.12-14.18.45:125][864]LogLoad: Took 0.138834 seconds to LoadMap(/Game/maps/ElevateMap)
+[2023.05.12-14.18.45:125][864]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.18.47:478][ 55]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2023.05.12-14.18.47:478][ 55]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2023.05.12-14.18.47:480][ 55]LogBlueprintUserMessages: [MyCarPlayerController_C_0] PAWN SET
+[2023.05.12-14.20.12:953][127]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.20.12:953][127]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_ElevateMap
+[2023.05.12-14.20.12:956][127]LogSlate: Window 'Street Kart Preview [NetMode: Standalone]  (64-bit/SM5)' being destroyed
+[2023.05.12-14.20.12:960][127]LogWorld: UWorld::CleanupWorld for ElevateMap, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.20.12:961][127]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.20.12:974][127]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.05.12-14.20.12:982][127]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.20.13:039][127]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=44
+[2023.05.12-14.20.13:041][127]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=44
+[2023.05.12-14.20.13:050][127]LogUObjectHash: Compacting FUObjectHashTables data took   1.78ms
+[2023.05.12-14.20.13:116][128]LogPlayLevel: Display: Destroying online subsystem :Context_76
+[2023.05.12-14.20.28:862][309]Candidate modules for hot reload:
+[2023.05.12-14.20.28:862][309]  streetKart
+[2023.05.12-14.20.28:869][309]Launching UnrealBuildTool... [D:/Program Files (x86)/UE_5.0/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.exe  -ModuleWithSuffix=streetKart,1812 streetKartEditor Win64 Development -Project="D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject" "D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject"  -IgnoreJunk]
+[2023.05.12-14.20.28:873][309]Warning: Starting HotReload took  0.0s.
+[2023.05.12-14.20.37:186][968]CompilerResultsLog: New page: Compilation - 12 May 2023, 16:20:37
+[2023.05.12-14.20.37:186][968]CompilerResultsLog: Log file: C:\Users\Oli\AppData\Local\UnrealBuildTool\Log.txt
+[2023.05.12-14.20.37:186][968]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Actual Shit\dev\Projects\StreetKart).
+[2023.05.12-14.20.37:186][968]CompilerResultsLog: Building streetKartEditor...
+[2023.05.12-14.20.37:186][968]CompilerResultsLog: Using Visual Studio 2019 14.29.30147 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.05.12-14.20.37:186][968]CompilerResultsLog: [Adaptive Build] Excluded from streetKart unity file: MasterVehicle.cpp
+[2023.05.12-14.20.37:186][968]CompilerResultsLog: Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+[2023.05.12-14.20.37:186][968]CompilerResultsLog:   Executing up to 8 processes, one per physical core
+[2023.05.12-14.20.37:186][968]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.05.12-14.20.37:186][968]CompilerResultsLog: [1/4] Compile MasterVehicle.cpp
+[2023.05.12-14.20.37:186][968]CompilerResultsLog: [2/4] Link UnrealEditor-streetKart-1812.lib
+[2023.05.12-14.20.37:186][968]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-1812.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-1812.exp
+[2023.05.12-14.20.37:186][968]CompilerResultsLog: [3/4] Link UnrealEditor-streetKart-1812.dll
+[2023.05.12-14.20.37:186][968]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-1812.suppressed.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-1812.suppressed.exp
+[2023.05.12-14.20.37:186][968]CompilerResultsLog: [4/4] WriteMetadata streetKartEditor.target
+[2023.05.12-14.20.37:186][968]CompilerResultsLog: Total time in Parallel executor: 7.00 seconds
+[2023.05.12-14.20.37:186][968]CompilerResultsLog: Total execution time: 8.20 seconds
+[2023.05.12-14.20.37:186][968]LogMainFrame: MainFrame: Module compiling took 8.332 seconds
+[2023.05.12-14.20.37:632][968]Display: HotReload took  8.8s.
+[2023.05.12-14.20.37:632][968]Display: Reload/Re-instancing Complete: 1 package changed, 14 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 3 scriptstructs remapped
+[2023.05.12-14.20.39:780][117]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2023.05.12-14.20.39:792][117]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.05.12-14.20.39:792][117]PIE: New page: PIE session: MainMenu (12 May 2023, 16:20:39)
+[2023.05.12-14.20.39:792][117]LogPlayLevel: Creating play world package: /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.20.39:798][117]LogPlayLevel: PIE: StaticDuplicateObject took: (0.005953s)
+[2023.05.12-14.20.39:798][117]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/maps/MainMenu.MainMenu to /Game/maps/UEDPIE_0_MainMenu.MainMenu (0.006044s)
+[2023.05.12-14.20.39:798][117]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.20.39:798][117]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.20.39:799][117]LogAIModule: Creating AISystem for world MainMenu
+[2023.05.12-14.20.39:799][117]LogPlayLevel: PIE: World Init took: (0.000836s)
+[2023.05.12-14.20.39:916][117]LogUObjectHash: Compacting FUObjectHashTables data took   2.28ms
+[2023.05.12-14.20.39:923][117]LogAudio: Display: Creating Audio Device:                 Id: 45, Scope: Unique, Realtime: True
+[2023.05.12-14.20.39:923][117]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.05.12-14.20.39:923][117]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.05.12-14.20.39:923][117]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.05.12-14.20.39:923][117]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.05.12-14.20.39:923][117]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.05.12-14.20.39:923][117]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2023.05.12-14.20.39:923][117]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.05.12-14.20.39:923][117]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.05.12-14.20.39:923][117]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.05.12-14.20.39:923][117]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.05.12-14.20.39:924][117]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.05.12-14.20.39:925][117]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2023.05.12-14.20.39:959][117]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Yeti Classic)
+[2023.05.12-14.20.39:960][117]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.05.12-14.20.39:960][117]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.05.12-14.20.39:960][117]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.05.12-14.20.39:961][117]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=45
+[2023.05.12-14.20.39:961][117]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=45
+[2023.05.12-14.20.39:962][117]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=45
+[2023.05.12-14.20.39:963][117]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=45
+[2023.05.12-14.20.39:963][117]LogInit: FAudioDevice initialized.
+[2023.05.12-14.20.39:963][117]LogAudio: Display: Audio Device (ID: 45) registered with world 'MainMenu'.
+[2023.05.12-14.20.39:981][117]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.20.39:981][117]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.20.39:984][117]LogWorld: Bringing World /Game/maps/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2023.05.12-15.20.39
+[2023.05.12-14.20.39:985][117]LogWorld: Bringing up level for play took: 0.003796
+[2023.05.12-14.20.39:987][117]LogOnline: OSS: Created online subsystem instance for: :Context_77
+[2023.05.12-14.20.39:991][117]PIE: Server logged in
+[2023.05.12-14.20.39:993][117]PIE: Play in editor total start time 0.201 seconds.
+[2023.05.12-14.20.39:994][117]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.20.40:045][117]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2023.05.12-14.20.40:903][178]LogNet: Browse: /Game/maps/SelectionScreen
+[2023.05.12-14.20.40:904][178]LogLoad: LoadMap: /Game/maps/SelectionScreen
+[2023.05.12-14.20.40:904][178]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.20.40:904][178]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.20.40:905][178]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.20.40:962][178]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.20.41:006][178]LogUObjectHash: Compacting FUObjectHashTables data took   1.56ms
+[2023.05.12-14.20.41:096][178]LogAudio: Display: Audio Device (ID: 45) registered with world 'SelectionScreen'.
+[2023.05.12-14.20.41:096][178]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.20.41:096][178]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.20.41:096][178]LogAIModule: Creating AISystem for world SelectionScreen
+[2023.05.12-14.20.41:097][178]LogPlayLevel: PIE: World Init took: (0.000891s)
+[2023.05.12-14.20.41:097][178]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.20.41:179][178]LogWorld: Bringing World /Game/maps/UEDPIE_0_SelectionScreen.SelectionScreen up for play (max tick rate 0) at 2023.05.12-15.20.41
+[2023.05.12-14.20.41:180][178]LogWorld: Bringing up level for play took: 0.082768
+[2023.05.12-14.20.41:180][178]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.20.41:182][178]LogLoad: Took 0.278478 seconds to LoadMap(/Game/maps/SelectionScreen)
+[2023.05.12-14.20.41:182][178]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.20.43:780][376]LogNet: Browse: /Game/maps/ElevateMap
+[2023.05.12-14.20.43:780][376]LogLoad: LoadMap: /Game/maps/ElevateMap
+[2023.05.12-14.20.43:780][376]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_SelectionScreen
+[2023.05.12-14.20.43:781][376]LogWorld: UWorld::CleanupWorld for SelectionScreen, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.20.43:785][376]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.20.43:840][376]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.20.43:845][376]LogUObjectHash: Compacting FUObjectHashTables data took   1.44ms
+[2023.05.12-14.20.43:870][376]LogAudio: Display: Audio Device (ID: 45) registered with world 'ElevateMap'.
+[2023.05.12-14.20.43:870][376]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.20.43:870][376]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.20.43:871][376]LogAIModule: Creating AISystem for world ElevateMap
+[2023.05.12-14.20.43:871][376]LogPlayLevel: PIE: World Init took: (0.000905s)
+[2023.05.12-14.20.43:871][376]LogLoad: Game class is 'MystreetKartGameModeBase_C'
+[2023.05.12-14.20.43:892][376]LogWorld: Bringing World /Game/maps/UEDPIE_0_ElevateMap.ElevateMap up for play (max tick rate 0) at 2023.05.12-15.20.43
+[2023.05.12-14.20.43:892][376]LogWorld: Bringing up level for play took: 0.020717
+[2023.05.12-14.20.43:892][376]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.20.43:899][376]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.20.43:899][376]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.20.43:899][376]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> NoCapture
+[2023.05.12-14.20.43:899][376]LogLoad: Took 0.119040 seconds to LoadMap(/Game/maps/ElevateMap)
+[2023.05.12-14.20.43:899][376]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.20.46:276][570]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2023.05.12-14.20.46:276][570]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2023.05.12-14.20.46:278][570]LogBlueprintUserMessages: [MyCarPlayerController_C_0] PAWN SET
+[2023.05.12-14.20.57:672][518]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.20.57:672][518]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_ElevateMap
+[2023.05.12-14.20.57:673][518]LogSlate: Window 'Street Kart Preview [NetMode: Standalone]  (64-bit/SM5)' being destroyed
+[2023.05.12-14.20.57:679][518]LogWorld: UWorld::CleanupWorld for ElevateMap, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.20.57:679][518]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.20.57:694][518]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.05.12-14.20.57:703][518]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.20.57:761][518]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=45
+[2023.05.12-14.20.57:763][518]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=45
+[2023.05.12-14.20.57:772][518]LogUObjectHash: Compacting FUObjectHashTables data took   1.57ms
+[2023.05.12-14.20.57:846][519]LogPlayLevel: Display: Destroying online subsystem :Context_77
+[2023.05.12-14.21.22:353][808]Candidate modules for hot reload:
+[2023.05.12-14.21.22:353][808]  streetKart
+[2023.05.12-14.21.22:359][808]Launching UnrealBuildTool... [D:/Program Files (x86)/UE_5.0/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.exe  -ModuleWithSuffix=streetKart,1152 streetKartEditor Win64 Development -Project="D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject" "D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject"  -IgnoreJunk]
+[2023.05.12-14.21.22:363][808]Warning: Starting HotReload took  0.0s.
+[2023.05.12-14.21.30:492][440]CompilerResultsLog: New page: Compilation - 12 May 2023, 16:21:30
+[2023.05.12-14.21.30:492][440]CompilerResultsLog: Log file: C:\Users\Oli\AppData\Local\UnrealBuildTool\Log.txt
+[2023.05.12-14.21.30:492][440]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Actual Shit\dev\Projects\StreetKart).
+[2023.05.12-14.21.30:492][440]CompilerResultsLog: Building streetKartEditor...
+[2023.05.12-14.21.30:492][440]CompilerResultsLog: Using Visual Studio 2019 14.29.30147 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.05.12-14.21.30:492][440]CompilerResultsLog: [Adaptive Build] Excluded from streetKart unity file: MasterVehicle.cpp
+[2023.05.12-14.21.30:492][440]CompilerResultsLog: Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+[2023.05.12-14.21.30:492][440]CompilerResultsLog:   Executing up to 8 processes, one per physical core
+[2023.05.12-14.21.30:492][440]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.05.12-14.21.30:492][440]CompilerResultsLog: [1/4] Compile MasterVehicle.cpp
+[2023.05.12-14.21.30:492][440]CompilerResultsLog: [2/4] Link UnrealEditor-streetKart-1152.lib
+[2023.05.12-14.21.30:492][440]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-1152.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-1152.exp
+[2023.05.12-14.21.30:492][440]CompilerResultsLog: [3/4] Link UnrealEditor-streetKart-1152.dll
+[2023.05.12-14.21.30:492][440]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-1152.suppressed.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-1152.suppressed.exp
+[2023.05.12-14.21.30:492][440]CompilerResultsLog: [4/4] WriteMetadata streetKartEditor.target
+[2023.05.12-14.21.30:492][440]CompilerResultsLog: Total time in Parallel executor: 6.87 seconds
+[2023.05.12-14.21.30:492][440]CompilerResultsLog: Total execution time: 8.02 seconds
+[2023.05.12-14.21.30:492][440]LogMainFrame: MainFrame: Module compiling took 8.151 seconds
+[2023.05.12-14.21.30:941][440]Display: HotReload took  8.6s.
+[2023.05.12-14.21.30:941][440]Display: Reload/Re-instancing Complete: 1 package changed, 14 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 3 scriptstructs remapped
+[2023.05.12-14.21.33:900][656]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2023.05.12-14.21.33:911][656]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.05.12-14.21.33:911][656]PIE: New page: PIE session: MainMenu (12 May 2023, 16:21:33)
+[2023.05.12-14.21.33:911][656]LogPlayLevel: Creating play world package: /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.21.33:918][656]LogPlayLevel: PIE: StaticDuplicateObject took: (0.005985s)
+[2023.05.12-14.21.33:918][656]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/maps/MainMenu.MainMenu to /Game/maps/UEDPIE_0_MainMenu.MainMenu (0.006084s)
+[2023.05.12-14.21.33:918][656]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.21.33:918][656]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.21.33:918][656]LogAIModule: Creating AISystem for world MainMenu
+[2023.05.12-14.21.33:918][656]LogPlayLevel: PIE: World Init took: (0.000815s)
+[2023.05.12-14.21.34:033][656]LogUObjectHash: Compacting FUObjectHashTables data took   2.16ms
+[2023.05.12-14.21.34:038][656]LogAudio: Display: Creating Audio Device:                 Id: 46, Scope: Unique, Realtime: True
+[2023.05.12-14.21.34:038][656]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.05.12-14.21.34:038][656]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.05.12-14.21.34:038][656]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.05.12-14.21.34:038][656]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.05.12-14.21.34:038][656]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.05.12-14.21.34:038][656]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2023.05.12-14.21.34:038][656]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.05.12-14.21.34:038][656]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.05.12-14.21.34:039][656]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.05.12-14.21.34:039][656]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.05.12-14.21.34:039][656]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.05.12-14.21.34:041][656]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2023.05.12-14.21.34:074][656]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Yeti Classic)
+[2023.05.12-14.21.34:075][656]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.05.12-14.21.34:075][656]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.05.12-14.21.34:075][656]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.05.12-14.21.34:076][656]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=46
+[2023.05.12-14.21.34:076][656]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=46
+[2023.05.12-14.21.34:078][656]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=46
+[2023.05.12-14.21.34:078][656]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=46
+[2023.05.12-14.21.34:078][656]LogInit: FAudioDevice initialized.
+[2023.05.12-14.21.34:078][656]LogAudio: Display: Audio Device (ID: 46) registered with world 'MainMenu'.
+[2023.05.12-14.21.34:097][656]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.21.34:097][656]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.21.34:101][656]LogWorld: Bringing World /Game/maps/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2023.05.12-15.21.34
+[2023.05.12-14.21.34:101][656]LogWorld: Bringing up level for play took: 0.003837
+[2023.05.12-14.21.34:103][656]LogOnline: OSS: Created online subsystem instance for: :Context_78
+[2023.05.12-14.21.34:107][656]PIE: Server logged in
+[2023.05.12-14.21.34:109][656]PIE: Play in editor total start time 0.199 seconds.
+[2023.05.12-14.21.34:110][656]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.21.34:147][656]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2023.05.12-14.21.34:933][710]LogNet: Browse: /Game/maps/SelectionScreen
+[2023.05.12-14.21.34:933][710]LogLoad: LoadMap: /Game/maps/SelectionScreen
+[2023.05.12-14.21.34:933][710]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.21.34:933][710]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.21.34:934][710]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.21.34:992][710]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.21.35:029][710]LogUObjectHash: Compacting FUObjectHashTables data took   1.66ms
+[2023.05.12-14.21.35:118][710]LogAudio: Display: Audio Device (ID: 46) registered with world 'SelectionScreen'.
+[2023.05.12-14.21.35:118][710]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.21.35:118][710]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.21.35:118][710]LogAIModule: Creating AISystem for world SelectionScreen
+[2023.05.12-14.21.35:119][710]LogPlayLevel: PIE: World Init took: (0.000962s)
+[2023.05.12-14.21.35:119][710]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.21.35:200][710]LogWorld: Bringing World /Game/maps/UEDPIE_0_SelectionScreen.SelectionScreen up for play (max tick rate 0) at 2023.05.12-15.21.35
+[2023.05.12-14.21.35:201][710]LogWorld: Bringing up level for play took: 0.082471
+[2023.05.12-14.21.35:202][710]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.21.35:204][710]LogLoad: Took 0.271175 seconds to LoadMap(/Game/maps/SelectionScreen)
+[2023.05.12-14.21.35:204][710]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.21.36:769][827]LogNet: Browse: /Game/maps/ElevateMap
+[2023.05.12-14.21.36:769][827]LogLoad: LoadMap: /Game/maps/ElevateMap
+[2023.05.12-14.21.36:769][827]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_SelectionScreen
+[2023.05.12-14.21.36:770][827]LogWorld: UWorld::CleanupWorld for SelectionScreen, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.21.36:774][827]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.21.36:828][827]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.21.36:833][827]LogUObjectHash: Compacting FUObjectHashTables data took   1.56ms
+[2023.05.12-14.21.36:858][827]LogAudio: Display: Audio Device (ID: 46) registered with world 'ElevateMap'.
+[2023.05.12-14.21.36:858][827]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.21.36:858][827]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.21.36:859][827]LogAIModule: Creating AISystem for world ElevateMap
+[2023.05.12-14.21.36:859][827]LogPlayLevel: PIE: World Init took: (0.000991s)
+[2023.05.12-14.21.36:859][827]LogLoad: Game class is 'MystreetKartGameModeBase_C'
+[2023.05.12-14.21.36:880][827]LogWorld: Bringing World /Game/maps/UEDPIE_0_ElevateMap.ElevateMap up for play (max tick rate 0) at 2023.05.12-15.21.36
+[2023.05.12-14.21.36:881][827]LogWorld: Bringing up level for play took: 0.021259
+[2023.05.12-14.21.36:881][827]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.21.36:886][827]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.21.36:886][827]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.21.36:886][827]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> NoCapture
+[2023.05.12-14.21.36:887][827]LogLoad: Took 0.118864 seconds to LoadMap(/Game/maps/ElevateMap)
+[2023.05.12-14.21.36:887][827]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.21.39:263][ 20]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2023.05.12-14.21.39:263][ 20]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2023.05.12-14.21.39:266][ 20]LogBlueprintUserMessages: [MyCarPlayerController_C_0] PAWN SET
+[2023.05.12-14.21.59:553][724]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.21.59:553][724]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_ElevateMap
+[2023.05.12-14.21.59:554][724]LogSlate: Window 'Street Kart Preview [NetMode: Standalone]  (64-bit/SM5)' being destroyed
+[2023.05.12-14.21.59:558][724]LogWorld: UWorld::CleanupWorld for ElevateMap, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.21.59:559][724]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.21.59:573][724]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.05.12-14.21.59:581][724]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.21.59:638][724]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.21.59:638][724]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=46
+[2023.05.12-14.21.59:639][724]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=46
+[2023.05.12-14.21.59:648][724]LogUObjectHash: Compacting FUObjectHashTables data took   1.61ms
+[2023.05.12-14.21.59:714][725]LogPlayLevel: Display: Destroying online subsystem :Context_78
+[2023.05.12-14.22.12:182][901]Candidate modules for hot reload:
+[2023.05.12-14.22.12:182][901]  streetKart
+[2023.05.12-14.22.12:188][901]Launching UnrealBuildTool... [D:/Program Files (x86)/UE_5.0/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.exe  -ModuleWithSuffix=streetKart,0427 streetKartEditor Win64 Development -Project="D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject" "D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject"  -IgnoreJunk]
+[2023.05.12-14.22.12:192][901]Warning: Starting HotReload took  0.0s.
+[2023.05.12-14.22.20:523][563]CompilerResultsLog: New page: Compilation - 12 May 2023, 16:22:20
+[2023.05.12-14.22.20:523][563]CompilerResultsLog: Log file: C:\Users\Oli\AppData\Local\UnrealBuildTool\Log.txt
+[2023.05.12-14.22.20:523][563]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Actual Shit\dev\Projects\StreetKart).
+[2023.05.12-14.22.20:523][563]CompilerResultsLog: Building streetKartEditor...
+[2023.05.12-14.22.20:523][563]CompilerResultsLog: Using Visual Studio 2019 14.29.30147 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.05.12-14.22.20:523][563]CompilerResultsLog: [Adaptive Build] Excluded from streetKart unity file: MasterVehicle.cpp
+[2023.05.12-14.22.20:523][563]CompilerResultsLog: Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+[2023.05.12-14.22.20:523][563]CompilerResultsLog:   Executing up to 8 processes, one per physical core
+[2023.05.12-14.22.20:523][563]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.05.12-14.22.20:523][563]CompilerResultsLog: [1/4] Compile MasterVehicle.cpp
+[2023.05.12-14.22.20:523][563]CompilerResultsLog: [2/4] Link UnrealEditor-streetKart-0427.lib
+[2023.05.12-14.22.20:523][563]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-0427.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-0427.exp
+[2023.05.12-14.22.20:523][563]CompilerResultsLog: [3/4] Link UnrealEditor-streetKart-0427.dll
+[2023.05.12-14.22.20:523][563]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-0427.suppressed.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-0427.suppressed.exp
+[2023.05.12-14.22.20:523][563]CompilerResultsLog: [4/4] WriteMetadata streetKartEditor.target
+[2023.05.12-14.22.20:523][563]CompilerResultsLog: Total time in Parallel executor: 7.05 seconds
+[2023.05.12-14.22.20:523][563]CompilerResultsLog: Total execution time: 8.22 seconds
+[2023.05.12-14.22.20:523][563]LogMainFrame: MainFrame: Module compiling took 8.351 seconds
+[2023.05.12-14.22.20:976][563]Display: HotReload took  8.8s.
+[2023.05.12-14.22.20:976][563]Display: Reload/Re-instancing Complete: 1 package changed, 14 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 3 scriptstructs remapped
+[2023.05.12-14.22.22:621][669]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2023.05.12-14.22.22:632][669]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.05.12-14.22.22:632][669]PIE: New page: PIE session: MainMenu (12 May 2023, 16:22:22)
+[2023.05.12-14.22.22:632][669]LogPlayLevel: Creating play world package: /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.22.22:638][669]LogPlayLevel: PIE: StaticDuplicateObject took: (0.006139s)
+[2023.05.12-14.22.22:638][669]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/maps/MainMenu.MainMenu to /Game/maps/UEDPIE_0_MainMenu.MainMenu (0.006239s)
+[2023.05.12-14.22.22:638][669]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.22.22:638][669]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.22.22:639][669]LogAIModule: Creating AISystem for world MainMenu
+[2023.05.12-14.22.22:639][669]LogPlayLevel: PIE: World Init took: (0.000849s)
+[2023.05.12-14.22.22:757][669]LogUObjectHash: Compacting FUObjectHashTables data took   2.13ms
+[2023.05.12-14.22.22:765][669]LogAudio: Display: Creating Audio Device:                 Id: 47, Scope: Unique, Realtime: True
+[2023.05.12-14.22.22:765][669]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.05.12-14.22.22:765][669]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.05.12-14.22.22:765][669]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.05.12-14.22.22:765][669]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.05.12-14.22.22:765][669]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.05.12-14.22.22:765][669]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2023.05.12-14.22.22:765][669]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.05.12-14.22.22:765][669]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.05.12-14.22.22:765][669]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.05.12-14.22.22:765][669]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.05.12-14.22.22:765][669]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.05.12-14.22.22:767][669]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2023.05.12-14.22.22:801][669]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Yeti Classic)
+[2023.05.12-14.22.22:802][669]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.05.12-14.22.22:802][669]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.05.12-14.22.22:802][669]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.05.12-14.22.22:803][669]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=47
+[2023.05.12-14.22.22:803][669]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=47
+[2023.05.12-14.22.22:805][669]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=47
+[2023.05.12-14.22.22:805][669]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=47
+[2023.05.12-14.22.22:805][669]LogInit: FAudioDevice initialized.
+[2023.05.12-14.22.22:805][669]LogAudio: Display: Audio Device (ID: 47) registered with world 'MainMenu'.
+[2023.05.12-14.22.22:828][669]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.22.22:828][669]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.22.22:832][669]LogWorld: Bringing World /Game/maps/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2023.05.12-15.22.22
+[2023.05.12-14.22.22:833][669]LogWorld: Bringing up level for play took: 0.004198
+[2023.05.12-14.22.22:835][669]LogOnline: OSS: Created online subsystem instance for: :Context_79
+[2023.05.12-14.22.22:839][669]PIE: Server logged in
+[2023.05.12-14.22.22:840][669]PIE: Play in editor total start time 0.209 seconds.
+[2023.05.12-14.22.22:842][669]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.22.22:877][669]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2023.05.12-14.22.23:604][716]LogNet: Browse: /Game/maps/SelectionScreen
+[2023.05.12-14.22.23:604][716]LogLoad: LoadMap: /Game/maps/SelectionScreen
+[2023.05.12-14.22.23:604][716]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.22.23:605][716]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.22.23:605][716]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.22.23:695][716]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.22.23:738][716]LogUObjectHash: Compacting FUObjectHashTables data took   1.53ms
+[2023.05.12-14.22.23:830][716]LogAudio: Display: Audio Device (ID: 47) registered with world 'SelectionScreen'.
+[2023.05.12-14.22.23:830][716]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.22.23:830][716]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.22.23:830][716]LogAIModule: Creating AISystem for world SelectionScreen
+[2023.05.12-14.22.23:831][716]LogPlayLevel: PIE: World Init took: (0.000927s)
+[2023.05.12-14.22.23:831][716]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.22.23:913][716]LogWorld: Bringing World /Game/maps/UEDPIE_0_SelectionScreen.SelectionScreen up for play (max tick rate 0) at 2023.05.12-15.22.23
+[2023.05.12-14.22.23:914][716]LogWorld: Bringing up level for play took: 0.083201
+[2023.05.12-14.22.23:915][716]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.22.23:917][716]LogLoad: Took 0.312502 seconds to LoadMap(/Game/maps/SelectionScreen)
+[2023.05.12-14.22.23:917][716]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.22.25:784][859]LogNet: Browse: /Game/maps/ElevateMap
+[2023.05.12-14.22.25:784][859]LogLoad: LoadMap: /Game/maps/ElevateMap
+[2023.05.12-14.22.25:784][859]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_SelectionScreen
+[2023.05.12-14.22.25:784][859]LogWorld: UWorld::CleanupWorld for SelectionScreen, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.22.25:789][859]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.22.25:866][859]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.22.25:870][859]LogUObjectHash: Compacting FUObjectHashTables data took   1.44ms
+[2023.05.12-14.22.25:895][859]LogAudio: Display: Audio Device (ID: 47) registered with world 'ElevateMap'.
+[2023.05.12-14.22.25:895][859]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.22.25:895][859]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.22.25:895][859]LogAIModule: Creating AISystem for world ElevateMap
+[2023.05.12-14.22.25:896][859]LogPlayLevel: PIE: World Init took: (0.000906s)
+[2023.05.12-14.22.25:896][859]LogLoad: Game class is 'MystreetKartGameModeBase_C'
+[2023.05.12-14.22.25:917][859]LogWorld: Bringing World /Game/maps/UEDPIE_0_ElevateMap.ElevateMap up for play (max tick rate 0) at 2023.05.12-15.22.25
+[2023.05.12-14.22.25:917][859]LogWorld: Bringing up level for play took: 0.021281
+[2023.05.12-14.22.25:918][859]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.22.25:924][859]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.22.25:924][859]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.22.25:924][859]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> NoCapture
+[2023.05.12-14.22.25:924][859]LogLoad: Took 0.140485 seconds to LoadMap(/Game/maps/ElevateMap)
+[2023.05.12-14.22.25:925][859]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.22.28:281][ 51]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2023.05.12-14.22.28:281][ 51]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2023.05.12-14.22.28:283][ 51]LogBlueprintUserMessages: [MyCarPlayerController_C_0] PAWN SET
+[2023.05.12-14.22.39:178][971]LogBlueprintNodeCache: Display: The blueprint template-node cache is full. As a result, you may experience interactions which are slower than normal. To avoid this, increase the cache's cap in the blueprint editor prefences.
+[2023.05.12-14.22.56:512][448]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.22.56:512][448]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_ElevateMap
+[2023.05.12-14.22.56:513][448]LogSlate: Window 'Street Kart Preview [NetMode: Standalone]  (64-bit/SM5)' being destroyed
+[2023.05.12-14.22.56:518][448]LogWorld: UWorld::CleanupWorld for ElevateMap, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.22.56:519][448]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.22.56:531][448]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.05.12-14.22.56:539][448]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.22.56:596][448]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.22.56:597][448]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=47
+[2023.05.12-14.22.56:598][448]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=47
+[2023.05.12-14.22.56:610][448]LogUObjectHash: Compacting FUObjectHashTables data took   1.60ms
+[2023.05.12-14.22.56:678][449]LogPlayLevel: Display: Destroying online subsystem :Context_79
+[2023.05.12-14.23.04:715][708]Candidate modules for hot reload:
+[2023.05.12-14.23.04:716][708]  streetKart
+[2023.05.12-14.23.04:722][708]Launching UnrealBuildTool... [D:/Program Files (x86)/UE_5.0/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.exe  -ModuleWithSuffix=streetKart,2568 streetKartEditor Win64 Development -Project="D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject" "D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject"  -IgnoreJunk]
+[2023.05.12-14.23.04:726][708]Warning: Starting HotReload took  0.0s.
+[2023.05.12-14.23.12:973][368]CompilerResultsLog: New page: Compilation - 12 May 2023, 16:23:12
+[2023.05.12-14.23.12:973][368]CompilerResultsLog: Log file: C:\Users\Oli\AppData\Local\UnrealBuildTool\Log.txt
+[2023.05.12-14.23.12:973][368]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Actual Shit\dev\Projects\StreetKart).
+[2023.05.12-14.23.12:973][368]CompilerResultsLog: Building streetKartEditor...
+[2023.05.12-14.23.12:973][368]CompilerResultsLog: Using Visual Studio 2019 14.29.30147 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.05.12-14.23.12:973][368]CompilerResultsLog: [Adaptive Build] Excluded from streetKart unity file: MasterVehicle.cpp
+[2023.05.12-14.23.12:973][368]CompilerResultsLog: Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+[2023.05.12-14.23.12:973][368]CompilerResultsLog:   Executing up to 8 processes, one per physical core
+[2023.05.12-14.23.12:973][368]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.05.12-14.23.12:973][368]CompilerResultsLog: [1/4] Compile MasterVehicle.cpp
+[2023.05.12-14.23.12:973][368]CompilerResultsLog: [2/4] Link UnrealEditor-streetKart-2568.lib
+[2023.05.12-14.23.12:973][368]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-2568.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-2568.exp
+[2023.05.12-14.23.12:973][368]CompilerResultsLog: [3/4] Link UnrealEditor-streetKart-2568.dll
+[2023.05.12-14.23.12:973][368]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-2568.suppressed.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-2568.suppressed.exp
+[2023.05.12-14.23.12:973][368]CompilerResultsLog: [4/4] WriteMetadata streetKartEditor.target
+[2023.05.12-14.23.12:973][368]CompilerResultsLog: Total time in Parallel executor: 6.95 seconds
+[2023.05.12-14.23.12:973][368]CompilerResultsLog: Total execution time: 8.13 seconds
+[2023.05.12-14.23.12:973][368]LogMainFrame: MainFrame: Module compiling took 8.276 seconds
+[2023.05.12-14.23.13:414][368]Display: HotReload took  8.7s.
+[2023.05.12-14.23.13:414][368]Display: Reload/Re-instancing Complete: 1 package changed, 14 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 3 scriptstructs remapped
+[2023.05.12-14.23.14:913][460]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2023.05.12-14.23.14:924][460]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.05.12-14.23.14:925][460]PIE: New page: PIE session: MainMenu (12 May 2023, 16:23:14)
+[2023.05.12-14.23.14:925][460]LogPlayLevel: Creating play world package: /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.23.14:931][460]LogPlayLevel: PIE: StaticDuplicateObject took: (0.006039s)
+[2023.05.12-14.23.14:931][460]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/maps/MainMenu.MainMenu to /Game/maps/UEDPIE_0_MainMenu.MainMenu (0.006135s)
+[2023.05.12-14.23.14:931][460]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.23.14:931][460]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.23.14:931][460]LogAIModule: Creating AISystem for world MainMenu
+[2023.05.12-14.23.14:932][460]LogPlayLevel: PIE: World Init took: (0.000921s)
+[2023.05.12-14.23.15:060][460]LogUObjectHash: Compacting FUObjectHashTables data took   2.09ms
+[2023.05.12-14.23.15:067][460]LogAudio: Display: Creating Audio Device:                 Id: 48, Scope: Unique, Realtime: True
+[2023.05.12-14.23.15:067][460]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.05.12-14.23.15:067][460]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.05.12-14.23.15:067][460]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.05.12-14.23.15:067][460]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.05.12-14.23.15:067][460]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.05.12-14.23.15:067][460]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2023.05.12-14.23.15:067][460]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.05.12-14.23.15:067][460]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.05.12-14.23.15:068][460]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.05.12-14.23.15:068][460]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.05.12-14.23.15:068][460]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.05.12-14.23.15:070][460]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2023.05.12-14.23.15:104][460]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Yeti Classic)
+[2023.05.12-14.23.15:105][460]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.05.12-14.23.15:105][460]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.05.12-14.23.15:105][460]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.05.12-14.23.15:106][460]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=48
+[2023.05.12-14.23.15:106][460]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=48
+[2023.05.12-14.23.15:107][460]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=48
+[2023.05.12-14.23.15:107][460]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=48
+[2023.05.12-14.23.15:107][460]LogInit: FAudioDevice initialized.
+[2023.05.12-14.23.15:107][460]LogAudio: Display: Audio Device (ID: 48) registered with world 'MainMenu'.
+[2023.05.12-14.23.15:131][460]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.23.15:131][460]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.23.15:135][460]LogWorld: Bringing World /Game/maps/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2023.05.12-15.23.15
+[2023.05.12-14.23.15:135][460]LogWorld: Bringing up level for play took: 0.003835
+[2023.05.12-14.23.15:137][460]LogOnline: OSS: Created online subsystem instance for: :Context_80
+[2023.05.12-14.23.15:141][460]PIE: Server logged in
+[2023.05.12-14.23.15:143][460]PIE: Play in editor total start time 0.219 seconds.
+[2023.05.12-14.23.15:144][460]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.23.15:195][460]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2023.05.12-14.23.15:852][502]LogNet: Browse: /Game/maps/SelectionScreen
+[2023.05.12-14.23.15:852][502]LogLoad: LoadMap: /Game/maps/SelectionScreen
+[2023.05.12-14.23.15:852][502]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.23.15:853][502]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.23.15:853][502]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.23.15:906][502]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.23.15:953][502]LogUObjectHash: Compacting FUObjectHashTables data took   1.76ms
+[2023.05.12-14.23.16:048][502]LogAudio: Display: Audio Device (ID: 48) registered with world 'SelectionScreen'.
+[2023.05.12-14.23.16:048][502]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.23.16:048][502]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.23.16:049][502]LogAIModule: Creating AISystem for world SelectionScreen
+[2023.05.12-14.23.16:049][502]LogPlayLevel: PIE: World Init took: (0.000902s)
+[2023.05.12-14.23.16:049][502]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.23.16:132][502]LogWorld: Bringing World /Game/maps/UEDPIE_0_SelectionScreen.SelectionScreen up for play (max tick rate 0) at 2023.05.12-15.23.16
+[2023.05.12-14.23.16:133][502]LogWorld: Bringing up level for play took: 0.084169
+[2023.05.12-14.23.16:134][502]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.23.16:136][502]LogLoad: Took 0.283571 seconds to LoadMap(/Game/maps/SelectionScreen)
+[2023.05.12-14.23.16:136][502]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.23.18:317][671]LogNet: Browse: /Game/maps/ElevateMap
+[2023.05.12-14.23.18:317][671]LogLoad: LoadMap: /Game/maps/ElevateMap
+[2023.05.12-14.23.18:317][671]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_SelectionScreen
+[2023.05.12-14.23.18:318][671]LogWorld: UWorld::CleanupWorld for SelectionScreen, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.23.18:323][671]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.23.18:406][671]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.23.18:412][671]LogUObjectHash: Compacting FUObjectHashTables data took   1.43ms
+[2023.05.12-14.23.18:436][671]LogAudio: Display: Audio Device (ID: 48) registered with world 'ElevateMap'.
+[2023.05.12-14.23.18:436][671]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.23.18:436][671]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.23.18:436][671]LogAIModule: Creating AISystem for world ElevateMap
+[2023.05.12-14.23.18:437][671]LogPlayLevel: PIE: World Init took: (0.000873s)
+[2023.05.12-14.23.18:437][671]LogLoad: Game class is 'MystreetKartGameModeBase_C'
+[2023.05.12-14.23.18:458][671]LogWorld: Bringing World /Game/maps/UEDPIE_0_ElevateMap.ElevateMap up for play (max tick rate 0) at 2023.05.12-15.23.18
+[2023.05.12-14.23.18:458][671]LogWorld: Bringing up level for play took: 0.021704
+[2023.05.12-14.23.18:459][671]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.23.18:466][671]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.23.18:466][671]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.23.18:466][671]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> NoCapture
+[2023.05.12-14.23.18:466][671]LogLoad: Took 0.148868 seconds to LoadMap(/Game/maps/ElevateMap)
+[2023.05.12-14.23.18:466][671]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.23.20:812][861]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2023.05.12-14.23.20:812][861]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2023.05.12-14.23.20:814][861]LogBlueprintUserMessages: [MyCarPlayerController_C_0] PAWN SET
+[2023.05.12-14.23.47:622][ 97]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.23.47:623][ 97]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_ElevateMap
+[2023.05.12-14.23.47:623][ 97]LogSlate: Window 'Street Kart Preview [NetMode: Standalone]  (64-bit/SM5)' being destroyed
+[2023.05.12-14.23.47:628][ 97]LogWorld: UWorld::CleanupWorld for ElevateMap, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.23.47:629][ 97]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.23.47:640][ 97]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.05.12-14.23.47:647][ 97]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.23.47:698][ 97]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.23.47:698][ 97]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=48
+[2023.05.12-14.23.47:700][ 97]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=48
+[2023.05.12-14.23.47:709][ 97]LogUObjectHash: Compacting FUObjectHashTables data took   1.64ms
+[2023.05.12-14.23.47:775][ 98]LogPlayLevel: Display: Destroying online subsystem :Context_80
+[2023.05.12-14.23.57:064][389]Candidate modules for hot reload:
+[2023.05.12-14.23.57:064][389]  streetKart
+[2023.05.12-14.23.57:070][389]Launching UnrealBuildTool... [D:/Program Files (x86)/UE_5.0/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.exe  -ModuleWithSuffix=streetKart,2424 streetKartEditor Win64 Development -Project="D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject" "D:/Actual Shit/dev/Projects/StreetKart/streetKart/streetKart.uproject"  -IgnoreJunk]
+[2023.05.12-14.23.57:074][389]Warning: Starting HotReload took  0.0s.
+[2023.05.12-14.24.05:277][ 39]CompilerResultsLog: New page: Compilation - 12 May 2023, 16:24:05
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog: Log file: C:\Users\Oli\AppData\Local\UnrealBuildTool\Log.txt
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Actual Shit\dev\Projects\StreetKart).
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog: Building streetKartEditor...
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog: Using Visual Studio 2019 14.29.30147 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog: [Adaptive Build] Excluded from streetKart unity file: MasterVehicle.cpp
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog: Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog:   Executing up to 8 processes, one per physical core
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog: Building 4 actions with 4 processes...
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog: [1/4] Compile MasterVehicle.cpp
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog: [2/4] Link UnrealEditor-streetKart-2424.lib
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-2424.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-2424.exp
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog: [3/4] Link UnrealEditor-streetKart-2424.dll
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog:    Creating library D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-2424.suppressed.lib and object D:\Actual Shit\dev\Projects\StreetKart\streetKart\Intermediate\Build\Win64\UnrealEditor\Development\streetKart\UnrealEditor-streetKart-2424.suppressed.exp
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog: [4/4] WriteMetadata streetKartEditor.target
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog: Total time in Parallel executor: 6.97 seconds
+[2023.05.12-14.24.05:278][ 39]CompilerResultsLog: Total execution time: 8.09 seconds
+[2023.05.12-14.24.05:278][ 39]LogMainFrame: MainFrame: Module compiling took 8.232 seconds
+[2023.05.12-14.24.05:683][ 39]Display: HotReload took  8.6s.
+[2023.05.12-14.24.05:683][ 39]Display: Reload/Re-instancing Complete: 1 package changed, 14 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 3 scriptstructs remapped
+[2023.05.12-14.24.07:117][127]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2023.05.12-14.24.07:128][127]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.05.12-14.24.07:128][127]PIE: New page: PIE session: MainMenu (12 May 2023, 16:24:07)
+[2023.05.12-14.24.07:128][127]LogPlayLevel: Creating play world package: /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.24.07:134][127]LogPlayLevel: PIE: StaticDuplicateObject took: (0.005982s)
+[2023.05.12-14.24.07:134][127]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/maps/MainMenu.MainMenu to /Game/maps/UEDPIE_0_MainMenu.MainMenu (0.006076s)
+[2023.05.12-14.24.07:134][127]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.24.07:134][127]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.24.07:135][127]LogAIModule: Creating AISystem for world MainMenu
+[2023.05.12-14.24.07:135][127]LogPlayLevel: PIE: World Init took: (0.000843s)
+[2023.05.12-14.24.07:261][127]LogUObjectHash: Compacting FUObjectHashTables data took   1.95ms
+[2023.05.12-14.24.07:272][127]LogAudio: Display: Creating Audio Device:                 Id: 49, Scope: Unique, Realtime: True
+[2023.05.12-14.24.07:272][127]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.05.12-14.24.07:272][127]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.05.12-14.24.07:272][127]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.05.12-14.24.07:272][127]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.05.12-14.24.07:272][127]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.05.12-14.24.07:272][127]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2023.05.12-14.24.07:272][127]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.05.12-14.24.07:272][127]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.05.12-14.24.07:273][127]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.05.12-14.24.07:273][127]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.05.12-14.24.07:273][127]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.05.12-14.24.07:275][127]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2023.05.12-14.24.07:309][127]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Yeti Classic)
+[2023.05.12-14.24.07:309][127]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.05.12-14.24.07:309][127]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.05.12-14.24.07:309][127]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.05.12-14.24.07:309][127]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=49
+[2023.05.12-14.24.07:309][127]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=49
+[2023.05.12-14.24.07:312][127]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=49
+[2023.05.12-14.24.07:312][127]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=49
+[2023.05.12-14.24.07:312][127]LogInit: FAudioDevice initialized.
+[2023.05.12-14.24.07:312][127]LogAudio: Display: Audio Device (ID: 49) registered with world 'MainMenu'.
+[2023.05.12-14.24.07:329][127]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.24.07:329][127]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.24.07:332][127]LogWorld: Bringing World /Game/maps/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2023.05.12-15.24.07
+[2023.05.12-14.24.07:333][127]LogWorld: Bringing up level for play took: 0.003548
+[2023.05.12-14.24.07:335][127]LogOnline: OSS: Created online subsystem instance for: :Context_81
+[2023.05.12-14.24.07:339][127]PIE: Server logged in
+[2023.05.12-14.24.07:341][127]PIE: Play in editor total start time 0.213 seconds.
+[2023.05.12-14.24.07:342][127]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.24.07:392][127]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2023.05.12-14.24.08:407][203]LogNet: Browse: /Game/maps/SelectionScreen
+[2023.05.12-14.24.08:407][203]LogLoad: LoadMap: /Game/maps/SelectionScreen
+[2023.05.12-14.24.08:407][203]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_MainMenu
+[2023.05.12-14.24.08:408][203]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.24.08:408][203]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.24.08:504][203]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.24.08:507][203]LogUObjectHash: Compacting FUObjectHashTables data took   1.43ms
+[2023.05.12-14.24.08:568][203]LogAudio: Display: Audio Device (ID: 49) registered with world 'SelectionScreen'.
+[2023.05.12-14.24.08:568][203]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.24.08:569][203]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.24.08:569][203]LogAIModule: Creating AISystem for world SelectionScreen
+[2023.05.12-14.24.08:569][203]LogPlayLevel: PIE: World Init took: (0.000917s)
+[2023.05.12-14.24.08:569][203]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.24.08:652][203]LogWorld: Bringing World /Game/maps/UEDPIE_0_SelectionScreen.SelectionScreen up for play (max tick rate 0) at 2023.05.12-15.24.08
+[2023.05.12-14.24.08:653][203]LogWorld: Bringing up level for play took: 0.083733
+[2023.05.12-14.24.08:654][203]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.24.08:656][203]LogLoad: Took 0.248385 seconds to LoadMap(/Game/maps/SelectionScreen)
+[2023.05.12-14.24.08:656][203]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.24.10:346][333]LogNet: Browse: /Game/maps/ElevateMap
+[2023.05.12-14.24.10:347][333]LogLoad: LoadMap: /Game/maps/ElevateMap
+[2023.05.12-14.24.10:347][333]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_SelectionScreen
+[2023.05.12-14.24.10:347][333]LogWorld: UWorld::CleanupWorld for SelectionScreen, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.24.10:352][333]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.24.10:404][333]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.24.10:412][333]LogUObjectHash: Compacting FUObjectHashTables data took   1.42ms
+[2023.05.12-14.24.10:430][333]LogAudio: Display: Audio Device (ID: 49) registered with world 'ElevateMap'.
+[2023.05.12-14.24.10:430][333]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.24.10:430][333]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.24.10:430][333]LogAIModule: Creating AISystem for world ElevateMap
+[2023.05.12-14.24.10:431][333]LogPlayLevel: PIE: World Init took: (0.000884s)
+[2023.05.12-14.24.10:431][333]LogLoad: Game class is 'MystreetKartGameModeBase_C'
+[2023.05.12-14.24.10:452][333]LogWorld: Bringing World /Game/maps/UEDPIE_0_ElevateMap.ElevateMap up for play (max tick rate 0) at 2023.05.12-15.24.10
+[2023.05.12-14.24.10:453][333]LogWorld: Bringing up level for play took: 0.021786
+[2023.05.12-14.24.10:453][333]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.24.10:459][333]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.24.10:459][333]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.24.10:459][333]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> NoCapture
+[2023.05.12-14.24.10:460][333]LogLoad: Took 0.113374 seconds to LoadMap(/Game/maps/ElevateMap)
+[2023.05.12-14.24.10:460][333]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.24.12:839][524]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2023.05.12-14.24.12:839][524]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2023.05.12-14.24.12:841][524]LogBlueprintUserMessages: [MyCarPlayerController_C_0] PAWN SET
+[2023.05.12-14.24.37:649][589]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.24.37:649][589]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.24.37:649][589]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2023.05.12-14.24.37:649][589]LogBlueprintUserMessages: Warning: Time Dilation must be between 0.000100 and 20.000000.  Clamped value to that range.
+[2023.05.12-14.24.38:604][669]LogNet: Browse: /Game/maps/SelectionScreen
+[2023.05.12-14.24.38:605][669]LogLoad: LoadMap: /Game/maps/SelectionScreen
+[2023.05.12-14.24.38:605][669]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_ElevateMap
+[2023.05.12-14.24.38:606][669]LogWorld: UWorld::CleanupWorld for ElevateMap, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.24.38:606][669]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.24.38:696][669]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.24.38:725][669]LogUObjectHash: Compacting FUObjectHashTables data took   1.57ms
+[2023.05.12-14.24.38:802][669]LogAudio: Display: Audio Device (ID: 49) registered with world 'SelectionScreen'.
+[2023.05.12-14.24.38:802][669]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.24.38:802][669]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.24.38:802][669]LogAIModule: Creating AISystem for world SelectionScreen
+[2023.05.12-14.24.38:803][669]LogPlayLevel: PIE: World Init took: (0.000913s)
+[2023.05.12-14.24.38:803][669]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.24.38:889][669]LogWorld: Bringing World /Game/maps/UEDPIE_0_SelectionScreen.SelectionScreen up for play (max tick rate 0) at 2023.05.12-15.24.38
+[2023.05.12-14.24.38:890][669]LogWorld: Bringing up level for play took: 0.086847
+[2023.05.12-14.24.38:890][669]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.24.38:892][669]LogLoad: Took 0.287901 seconds to LoadMap(/Game/maps/SelectionScreen)
+[2023.05.12-14.24.38:892][669]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.24.41:722][890]LogNet: Browse: /Game/maps/ElevateMap
+[2023.05.12-14.24.41:722][890]LogLoad: LoadMap: /Game/maps/ElevateMap
+[2023.05.12-14.24.41:722][890]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_SelectionScreen
+[2023.05.12-14.24.41:723][890]LogWorld: UWorld::CleanupWorld for SelectionScreen, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.24.41:727][890]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.24.41:805][890]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.24.41:810][890]LogUObjectHash: Compacting FUObjectHashTables data took   1.59ms
+[2023.05.12-14.24.41:833][890]LogAudio: Display: Audio Device (ID: 49) registered with world 'ElevateMap'.
+[2023.05.12-14.24.41:833][890]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.24.41:833][890]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.24.41:833][890]LogAIModule: Creating AISystem for world ElevateMap
+[2023.05.12-14.24.41:834][890]LogPlayLevel: PIE: World Init took: (0.000894s)
+[2023.05.12-14.24.41:834][890]LogLoad: Game class is 'MystreetKartGameModeBase_C'
+[2023.05.12-14.24.41:855][890]LogWorld: Bringing World /Game/maps/UEDPIE_0_ElevateMap.ElevateMap up for play (max tick rate 0) at 2023.05.12-15.24.41
+[2023.05.12-14.24.41:856][890]LogWorld: Bringing up level for play took: 0.021812
+[2023.05.12-14.24.41:856][890]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.24.41:862][890]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.24.41:863][890]LogLoad: Took 0.140631 seconds to LoadMap(/Game/maps/ElevateMap)
+[2023.05.12-14.24.41:863][890]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.24.44:221][ 84]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2023.05.12-14.24.44:221][ 84]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2023.05.12-14.24.44:224][ 84]LogBlueprintUserMessages: [MyCarPlayerController_C_0] PAWN SET
+[2023.05.12-14.25.01:627][514]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.25.01:627][514]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.25.01:627][514]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2023.05.12-14.25.01:627][514]LogBlueprintUserMessages: Warning: Time Dilation must be between 0.000100 and 20.000000.  Clamped value to that range.
+[2023.05.12-14.25.02:654][600]LogNet: Browse: /Game/maps/SelectionScreen
+[2023.05.12-14.25.02:654][600]LogLoad: LoadMap: /Game/maps/SelectionScreen
+[2023.05.12-14.25.02:655][600]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_ElevateMap
+[2023.05.12-14.25.02:655][600]LogWorld: UWorld::CleanupWorld for ElevateMap, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.25.02:656][600]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.25.02:752][600]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.25.02:756][600]LogUObjectHash: Compacting FUObjectHashTables data took   1.55ms
+[2023.05.12-14.25.02:816][600]LogAudio: Display: Audio Device (ID: 49) registered with world 'SelectionScreen'.
+[2023.05.12-14.25.02:816][600]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.25.02:816][600]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.25.02:817][600]LogAIModule: Creating AISystem for world SelectionScreen
+[2023.05.12-14.25.02:817][600]LogPlayLevel: PIE: World Init took: (0.000995s)
+[2023.05.12-14.25.02:817][600]LogLoad: Game class is 'MyMenuGamemodeBase_C'
+[2023.05.12-14.25.02:900][600]LogWorld: Bringing World /Game/maps/UEDPIE_0_SelectionScreen.SelectionScreen up for play (max tick rate 0) at 2023.05.12-15.25.02
+[2023.05.12-14.25.02:901][600]LogWorld: Bringing up level for play took: 0.083450
+[2023.05.12-14.25.02:901][600]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.25.02:903][600]LogLoad: Took 0.248453 seconds to LoadMap(/Game/maps/SelectionScreen)
+[2023.05.12-14.25.02:903][600]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.25.04:526][725]LogNet: Browse: /Game/maps/DirtMap
+[2023.05.12-14.25.04:526][725]LogLoad: LoadMap: /Game/maps/DirtMap
+[2023.05.12-14.25.04:526][725]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_SelectionScreen
+[2023.05.12-14.25.04:526][725]LogWorld: UWorld::CleanupWorld for SelectionScreen, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.25.04:531][725]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.25.04:605][725]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.25.04:609][725]LogUObjectHash: Compacting FUObjectHashTables data took   1.45ms
+[2023.05.12-14.25.04:625][725]LogAudio: Display: Audio Device (ID: 49) registered with world 'DirtMap'.
+[2023.05.12-14.25.04:625][725]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.25.04:625][725]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.25.04:626][725]LogAIModule: Creating AISystem for world DirtMap
+[2023.05.12-14.25.04:626][725]LogPlayLevel: PIE: World Init took: (0.000900s)
+[2023.05.12-14.25.04:626][725]LogLoad: Game class is 'MystreetKartGameModeBase_C'
+[2023.05.12-14.25.04:638][725]LogWorld: Bringing World /Game/maps/UEDPIE_0_DirtMap.DirtMap up for play (max tick rate 0) at 2023.05.12-15.25.04
+[2023.05.12-14.25.04:639][725]LogWorld: Bringing up level for play took: 0.012640
+[2023.05.12-14.25.04:639][725]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.25.04:645][725]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.25.04:646][725]LogLoad: Took 0.120133 seconds to LoadMap(/Game/maps/DirtMap)
+[2023.05.12-14.25.04:646][725]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.25.07:017][914]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2023.05.12-14.25.07:017][914]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2023.05.12-14.25.07:020][914]LogBlueprintUserMessages: [MyCarPlayerController_C_0] PAWN SET
+[2023.05.12-14.25.56:274][849]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.25.56:274][849]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.25.56:274][849]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2023.05.12-14.25.59:292][ 84]LogNet: Browse: /Game/maps/DirtMap
+[2023.05.12-14.25.59:292][ 84]LogLoad: LoadMap: /Game/maps/DirtMap
+[2023.05.12-14.25.59:292][ 84]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_DirtMap
+[2023.05.12-14.25.59:293][ 84]LogWorld: UWorld::CleanupWorld for DirtMap, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.25.59:294][ 84]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.25.59:345][ 84]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.25.59:349][ 84]LogUObjectHash: Compacting FUObjectHashTables data took   1.41ms
+[2023.05.12-14.25.59:365][ 84]LogAudio: Display: Audio Device (ID: 49) registered with world 'DirtMap'.
+[2023.05.12-14.25.59:365][ 84]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2023.05.12-14.25.59:365][ 84]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2023.05.12-14.25.59:365][ 84]LogAIModule: Creating AISystem for world DirtMap
+[2023.05.12-14.25.59:366][ 84]LogPlayLevel: PIE: World Init took: (0.000862s)
+[2023.05.12-14.25.59:366][ 84]LogLoad: Game class is 'MystreetKartGameModeBase_C'
+[2023.05.12-14.25.59:378][ 84]LogWorld: Bringing World /Game/maps/UEDPIE_0_DirtMap.DirtMap up for play (max tick rate 0) at 2023.05.12-15.25.59
+[2023.05.12-14.25.59:378][ 84]LogWorld: Bringing up level for play took: 0.012240
+[2023.05.12-14.25.59:379][ 84]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2023.05.12-14.25.59:384][ 84]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.25.59:385][ 84]LogLoad: Took 0.092783 seconds to LoadMap(/Game/maps/DirtMap)
+[2023.05.12-14.25.59:385][ 84]LogInput: Error: Duplicate mapping of key Gamepad_LeftY for axis Forward
+[2023.05.12-14.26.01:740][272]LogViewport: Display: Viewport MouseLockMode Changed, DoNotLock -> LockOnCapture
+[2023.05.12-14.26.01:740][272]LogViewport: Display: Viewport MouseCaptureMode Changed, NoCapture -> CapturePermanently
+[2023.05.12-14.26.01:742][272]LogBlueprintUserMessages: [MyCarPlayerController_C_0] PAWN SET
+[2023.05.12-14.26.04:192][469]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(802)]!
+[2023.05.12-14.26.04:192][469]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2023.05.12-14.26.04:192][469]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently -> NoCapture
+[2023.05.12-14.26.04:192][469]LogBlueprintUserMessages: Warning: Time Dilation must be between 0.000100 and 20.000000.  Clamped value to that range.
+[2023.05.12-14.26.07:740][757]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.05.12-14.26.07:740][757]LogWorld: BeginTearingDown for /Game/maps/UEDPIE_0_DirtMap
+[2023.05.12-14.26.07:740][757]LogSlate: Window 'Street Kart Preview [NetMode: Standalone]  (64-bit/SM5)' being destroyed
+[2023.05.12-14.26.07:755][757]LogWorld: UWorld::CleanupWorld for DirtMap, bSessionEnded=true, bCleanupResources=true
+[2023.05.12-14.26.07:756][757]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.26.07:770][757]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2023.05.12-14.26.07:777][757]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.05.12-14.26.07:829][757]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.05.12-14.26.07:829][757]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=49
+[2023.05.12-14.26.07:831][757]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=49
+[2023.05.12-14.26.07:840][757]LogUObjectHash: Compacting FUObjectHashTables data took   1.43ms
+[2023.05.12-14.26.07:926][758]LogPlayLevel: Display: Destroying online subsystem :Context_81

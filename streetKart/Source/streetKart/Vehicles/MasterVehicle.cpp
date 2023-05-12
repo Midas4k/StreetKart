@@ -383,7 +383,10 @@ void AMasterVehicle::GetSuspensionForce(float dt)
 				SuspensionStruct.ForceMax);
 		}else
 		{
-			Fz[i] = 0;
+			//Fz[i] = 0;
+			float offset = VehicleHullMesh->GetComponentLocation().Z - WheelMeshs[i]->GetComponentLocation().Z;
+			GEngine->AddOnScreenDebugMessage(-1, .0f, FColor::Yellow, FString::Printf(TEXT("Offset %f"), offset));
+			Fz[i] = offset *2;
 			
 		}
 
@@ -391,10 +394,10 @@ void AMasterVehicle::GetSuspensionForce(float dt)
 
 		//MassPerWheel = CarMass / WheelNum
 		const float massPerWheel = VehicleHullMesh->GetMass() * .25f;
-		const float reboundStiffness = SuspHitDepth[i] * 10; //change 10 if too high
+		const float reboundStiffness = SuspHitDepth[i] * 2; //change 10 if too high
 
 		const int isGround = WheelContact[i] == true;
-		SuspHitForce[i] = massPerWheel * FMath::Min(reboundStiffness, 50) * isGround;
+		SuspHitForce[i] = massPerWheel * FMath::Min(reboundStiffness, 20) * isGround;
 		
 		
 
