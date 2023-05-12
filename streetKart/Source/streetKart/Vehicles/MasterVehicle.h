@@ -119,6 +119,7 @@ protected:
 	virtual void SimpleDownforce();
 	virtual void AutoReverse();
 	virtual void AutoShift();
+	virtual void temp();
 	
 
 	
@@ -215,6 +216,8 @@ protected:
 	TArray<float>Fz;
 	TArray<float>Fx;
 	TArray<float>Fy;
+	TArray<float>SuspHitDepth;
+	TArray<float>SuspHitForce;
 	float LastSusLengths[4];
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)TArray<USceneComponent*>WheelMeshs;
 

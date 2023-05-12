@@ -175,6 +175,8 @@ void AMasterVehicle::BeginPlay()
 	Fx.SetNum(4);
 	Fy.SetNum(4);
 	Fz.SetNum(4);
+	SuspHitDepth.SetNum(4);
+	SuspHitForce.SetNum(4);
 	WheelInertia.SetNum(4);
 	WheelAngularVelocity.SetNum(4);
 	LongSlipVelocity.SetNum(4);
@@ -350,6 +352,10 @@ void AMasterVehicle::UpdateSuspension()
 			FVector length = TopLinksArray[i]->GetUpVector() * WheelStruct.Radius;
 			FVector difference = HitResults[i].Location + length;
 
+			
+			//SuspHitDepth = max(MinLength - Length , 0)
+			SuspHitDepth[i] = FMath::Max( (SuspensionStruct.RestLength - SuspensionStruct.Travel) - (difference - TopLinksArray[i]->GetComponentLocation()).Length(),0);
+			
 			float VLength =FMath::Clamp( (difference - TopLinksArray[i]->GetComponentLocation()).Length(),
 				SuspensionStruct.RestLength - SuspensionStruct.Travel,
 				SuspensionStruct.RestLength + SuspensionStruct.Travel);
@@ -377,11 +383,20 @@ void AMasterVehicle::GetSuspensionForce(float dt)
 				SuspensionStruct.ForceMax);
 		}else
 		{
-			Fz[i] = -100;
+			Fz[i] = 0;
+			
 		}
 
 		LastSusLengths[i] = SusLengths[i];
 
+		//MassPerWheel = CarMass / WheelNum
+		const float massPerWheel = VehicleHullMesh->GetMass() * .25f;
+		const float reboundStiffness = SuspHitDepth[i] * 10; //change 10 if too high
+
+		const int isGround = WheelContact[i] == true;
+		SuspHitForce[i] = massPerWheel * FMath::Min(reboundStiffness, 50) * isGround;
+		
+		
 
 	}
 }
@@ -390,7 +405,8 @@ void AMasterVehicle::ApplySuspensionForce()
 {
 	for(int i =0; i<4; i++)
 	{
-		FVector force = TopLinksArray[i]->GetUpVector() * (Fz[i] * 200);
+		const float upForce = (Fz[i] + SuspHitForce[i]) * 200;
+		FVector force = TopLinksArray[i]->GetUpVector() * upForce;
 		VehicleHullMesh->AddForceAtLocation(force,TopLinksArray[i]->GetComponentLocation());
 	}
 }
@@ -977,7 +993,7 @@ void AMasterVehicle::AutoReverse()
 void AMasterVehicle::AutoShift()
 {
 	
-	if(UKismetSystemLibrary::GetGameTimeInSeconds(GetWorld()) - lastAutoShiftTime > 2)
+	if(UKismetSystemLibrary::GetGameTimeInSeconds(GetWorld()) - lastAutoShiftTime > 1)
 	{
 		if(!SwapThrottleBrake)
 		{
@@ -998,6 +1014,15 @@ void AMasterVehicle::AutoShift()
 		}
 	}
 }
+
+void AMasterVehicle::temp()
+{
+	//Body Roll Torque
+	//T1 = cross(L1,F1)
+	//T2 = cross(L2,F2)
+	//BodyRollTorque = T1+ T2
+}
+
 
 
 
